@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  items: { q: string; a: string }[];
+}
+const { items } = Astro.props;
+---
+
+<div class="mx-auto max-w-3xl divide-y divide-border overflow-hidden rounded-xl border border-border bg-surface">
+  {
+    items.map((it) => (
+      <details class="group px-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-primary [&::-webkit-details-marker]:hidden">
+          {it.q}
+          <Icon
+            name="ph:plus-bold"
+            class="shrink-0 text-secondary transition-transform duration-200 group-open:rotate-45"
+          />
+        </summary>
+        <p class="pb-5 text-[0.95rem] leading-relaxed text-muted">{it.a}</p>
+      </details>
+    ))
+  }
+</div>

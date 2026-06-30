@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { pricing } from '../lib/site';
+import { withBase } from '../lib/url';
+
+const factors = [
+  { icon: 'ph:ruler-duotone', label: 'Adancimea putului' },
+  { icon: 'ph:circle-dashed-duotone', label: 'Diametrul ales' },
+  { icon: 'ph:mountains-duotone', label: 'Tipul de sol si roca' },
+  { icon: 'ph:stack-duotone', label: 'Materialele de tubaj' },
+  { icon: 'ph:map-pin-duotone', label: 'Zona si accesul' },
+  { icon: 'ph:calendar-dots-duotone', label: 'Sezonul' },
+];
+const included = [
+  'Forajul propriu-zis',
+  'Tubaj PVC si filtre',
+  'Denisiparea putului',
+  'Test de debit la final',
+];
+---
+
+<BaseLayout
+  title="Preturi foraje puturi apa"
+  description="Preturi orientative pentru foraje puturi apa, denisipari si pompe de caldura. Deviz personalizat, gratuit, fara costuri ascunse."
+>
+  <PageHero
+    eyebrow="Preturi"
+    title="Preturi orientative, fara costuri ascunse"
+    subtitle="Pretul final depinde de cativa factori, dar pleci mereu de la un deviz clar. Iata la ce sa te astepti."
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Preturi' }]}
+  />
+
+  <!-- Factori -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <span class="eyebrow">De ce variaza pretul</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl">Factorii care influenteaza costul</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          factors.map((f) => (
+            <div class="flex items-center gap-3 rounded-xl border border-border bg-surface px-5 py-4 shadow-sm">
+              <Icon name={f.icon} class="text-2xl text-secondary" />
+              <span class="font-medium text-primary">{f.label}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabel -->
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="wrap">
+      <h2 class="text-3xl sm:text-4xl">Tarife orientative</h2>
+      <div class="mt-8 overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th class="px-5 py-4 font-semibold">Serviciu</th>
+              <th class="px-5 py-4 font-semibold">Pret orientativ</th>
+              <th class="hidden px-5 py-4 font-semibold sm:table-cell">Observatii</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            {
+              pricing.map((row) => (
+                <tr class="transition-colors hover:bg-background">
+                  <td class="px-5 py-4 font-medium text-primary">{row.service}</td>
+                  <td class="px-5 py-4 font-bold text-secondary">{row.price}</td>
+                  <td class="hidden px-5 py-4 text-muted sm:table-cell">{row.note}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-muted">
+        <Icon name="ph:info-duotone" class="-mt-0.5 inline text-base text-secondary" /> Preturile sunt
+        orientative. Oferta exacta o stabilim dupa o scurta evaluare a terenului.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ce include -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap grid items-center gap-10 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow">Transparenta</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl">Ce include pretul</h2>
+        <p class="mt-4 leading-relaxed text-muted">
+          Vrem sa stii exact pe ce dai banii. In oferta noastra includem tot ce e necesar ca putul
+          sa functioneze, fara surprize pe parcurs.
+        </p>
+        <ul class="mt-6 space-y-3">
+          {
+            included.map((t) => (
+              <li class="flex items-center gap-3 text-sm font-medium text-primary">
+                <Icon name="ph:check-circle-fill" class="text-lg text-success" />
+                {t}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="rounded-xl border border-secondary/20 bg-secondary-soft p-8 text-center">
+        <h3 class="text-2xl text-primary">Vrei un pret exact?</h3>
+        <p class="mx-auto mt-3 max-w-md text-muted">
+          Spune-ne unde te afli si ce ai nevoie, iar noi iti pregatim un deviz personalizat, gratuit.
+        </p>
+        <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+          <Button href={withBase('contact')} variant="cta" icon="ph:paper-plane-tilt-fill">Cere deviz gratuit</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

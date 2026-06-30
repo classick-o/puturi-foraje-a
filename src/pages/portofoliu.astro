@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { Icon } from 'astro-icon/components';
+import { withBase } from '../lib/url';
+
+const projects = [
+  { img: '21047659', loc: 'Otopeni, Ilfov', depth: '45 m', service: 'Foraj put apa' },
+  { img: '14840752', loc: 'Floresti, Cluj', depth: '62 m', service: 'Foraj + pompa' },
+  { img: '31249536', loc: 'Giroc, Timis', depth: '38 m', service: 'Foraj put apa' },
+  { img: '15391048', loc: 'Bragadiru, Ilfov', depth: '52 m', service: 'Foraj put apa' },
+  { img: '28240873', loc: 'Sanandrei, Timis', depth: '40 m', service: 'Denisipare' },
+  { img: '36834230', loc: 'Magurele, Ilfov', depth: '70 m', service: 'Irigatii' },
+  { img: '8961260', loc: 'Chiajna, Ilfov', depth: '48 m', service: 'Foraj + hidrofor' },
+  { img: '8961006', loc: 'Domnesti, Ilfov', depth: '55 m', service: 'Foraj put apa' },
+  { img: '1078879', loc: 'Sibiu', depth: '80 m', service: 'Pompa de caldura' },
+];
+const url = (id: string) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=800`;
+---
+
+<BaseLayout
+  title="Portofoliu - lucrari realizate"
+  description="Lucrari de foraje puturi realizate in toata tara: puturi pentru gospodarie, irigatii, denisipari si pompe de caldura."
+>
+  <PageHero
+    eyebrow="Portofoliu"
+    title="Lucrari realizate in toata tara"
+    subtitle="O selectie de proiecte executate de echipa noastra - foraje, denisipari si sisteme de pompare."
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Portofoliu' }]}
+  />
+
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          projects.map((p) => (
+            <article class="group overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+              <div class="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={url(p.img)}
+                  alt={`Lucrare foraje in ${p.loc}`}
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span class="absolute left-3 top-3 rounded-md bg-primary/90 px-2.5 py-1 text-xs font-semibold text-white">
+                  {p.service}
+                </span>
+              </div>
+              <div class="flex items-center justify-between p-4">
+                <span class="flex items-center gap-1.5 text-sm font-medium text-primary">
+                  <Icon name="ph:map-pin-fill" class="text-secondary" />
+                  {p.loc}
+                </span>
+                <span class="text-sm text-muted">Adancime {p.depth}</span>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Vrei sa fii urmatorul proiect reusit?" />
+</BaseLayout>

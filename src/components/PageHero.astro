@@ -1,0 +1,35 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  breadcrumb?: { label: string; href?: string }[];
+}
+const { eyebrow, title, subtitle, breadcrumb = [] } = Astro.props;
+---
+
+<section class="border-b border-border bg-surface">
+  <div class="wrap py-12 sm:py-16">
+    {
+      breadcrumb.length > 0 && (
+        <nav class="mb-4 flex flex-wrap items-center gap-1.5 text-sm text-muted" aria-label="Breadcrumb">
+          {breadcrumb.map((b, i) => (
+            <>
+              {i > 0 && <span class="opacity-50">/</span>}
+              {b.href ? (
+                <a href={b.href} class="transition-colors hover:text-secondary">
+                  {b.label}
+                </a>
+              ) : (
+                <span class="text-primary">{b.label}</span>
+              )}
+            </>
+          ))}
+        </nav>
+      )
+    }
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1 class="mt-2 text-3xl sm:text-4xl lg:text-[2.75rem]">{title}</h1>
+    {subtitle && <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{subtitle}</p>}
+  </div>
+</section>

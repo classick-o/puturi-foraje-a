@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Faq from '../components/Faq.astro';
+import { withBase } from '../lib/url';
+
+const groups = [
+  {
+    title: 'General',
+    items: [
+      { q: 'Ce zone acoperiti?', a: 'Lucram la nivel national. Spune-ne unde te afli si confirmam disponibilitatea pentru localitatea ta.' },
+      { q: 'In cat timp veniti?', a: 'De regula ne programam rapid; in zonele apropiate putem ajunge in cateva zile, in functie de incarcare.' },
+      { q: 'Lucrati si iarna?', a: 'Da, executam foraje pe tot parcursul anului, cu adaptari acolo unde vremea o cere.' },
+    ],
+  },
+  {
+    title: 'Pret',
+    items: [
+      { q: 'Cat costa un foraj de put?', a: 'Porneste de la circa 160 lei/ml si depinde de adancime, diametru, sol si materiale. Iti dam un deviz exact, gratuit.' },
+      { q: 'De ce variaza pretul?', a: 'Pentru ca fiecare teren e diferit: adancimea la care e apa, diametrul, tipul de sol si materialele influenteaza costul.' },
+      { q: 'Ce include pretul?', a: 'Forajul, tubajul si filtrele, denisiparea si testul de debit. Iti spunem clar ce intra in oferta, fara costuri ascunse.' },
+      { q: 'Dati deviz gratuit?', a: 'Da, devizul este gratuit si fara obligatii.' },
+    ],
+  },
+  {
+    title: 'Tehnic',
+    items: [
+      { q: 'La ce adancime gasiti apa?', a: 'Depinde de zona si de panza freatica locala, in general intre 10 si 80 m pentru gospodarie.' },
+      { q: 'Ce diametru si tubaj folositi?', a: 'Uzual 125-200 mm, cu tubaj din PVC alimentar sau inox si filtre potrivite stratului.' },
+      { q: 'Cat dureaza un foraj?', a: 'Pentru adancimi obisnuite, de regula o zi. La adancimi mari poate dura mai mult; iti spunem din start.' },
+      { q: 'Pe ce tip de sol puteti fora?', a: 'Pe majoritatea tipurilor de teren, inclusiv medii dure, folosind tehnologia potrivita fiecarei situatii.' },
+    ],
+  },
+  {
+    title: 'Legal si autorizatii',
+    items: [
+      { q: 'Imi trebuie autorizatie?', a: 'Conform Legii Apelor 107/2006, peste anumite adancimi sau debite este nevoie de aviz de la Apele Romane. Te consiliem in functie de cazul tau.' },
+      { q: 'Cine se ocupa de acte?', a: 'Te consiliem si pregatim documentatia necesara, ca tu sa nu te complici cu actele.' },
+    ],
+  },
+  {
+    title: 'Garantie si intretinere',
+    items: [
+      { q: 'Ce garantie oferiti?', a: 'Pana la 5 ani garantie in scris, in contract, in functie de tipul lucrarii.' },
+      { q: 'Cat de des trebuie denisipat putul?', a: 'Recomandam o denisipare la 3-4 ani, sau mai devreme daca scade debitul ori apa iese cu nisip.' },
+      { q: 'Apa este potabila?', a: 'Depinde de strat si zona. Recomandam o analiza de laborator; putem fora si la stratul cu apa de calitate mai buna.' },
+    ],
+  },
+];
+
+const allItems = groups.flatMap((g) => g.items);
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<BaseLayout
+  title="Intrebari frecvente despre foraje puturi"
+  description="Raspunsuri la cele mai dese intrebari despre foraje puturi apa: pret, adancime, autorizatii, garantie si intretinere."
+  jsonLd={faqLd}
+>
+  <PageHero
+    eyebrow="Intrebari frecvente"
+    title="Raspunsuri la intrebarile tale"
+    subtitle="Am adunat cele mai dese intrebari despre foraje, preturi, autorizatii si garantie."
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Intrebari frecvente' }]}
+  />
+
+  <section class="py-16 sm:py-20">
+    <div class="wrap space-y-12">
+      {
+        groups.map((g) => (
+          <div>
+            <h2 class="mb-6 text-2xl">{g.title}</h2>
+            <Faq items={g.items} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

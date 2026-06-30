@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Inlocuieste cu domeniul real la mutarea pe hosting propriu.
+Sitemap: https://classick-o.github.io/puturi-foraje-a/sitemap-index.xml

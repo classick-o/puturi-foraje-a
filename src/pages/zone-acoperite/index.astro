@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Button from '../../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { zones } from '../../lib/site';
+import { withBase } from '../../lib/url';
+
+const featured = { name: 'Bucuresti si Ilfov', slug: 'foraje-puturi-bucuresti' };
+---
+
+<BaseLayout
+  title="Zone acoperite - foraje puturi in toata tara"
+  description="Executam foraje puturi apa la nivel national. Vezi zonele in care lucram si cere o oferta pentru localitatea ta."
+>
+  <PageHero
+    eyebrow="Zone acoperite"
+    title="Lucram in toata tara"
+    subtitle="Ne deplasam la nivel national. Daca nu vezi zona ta in lista, intreaba-ne - cel mai probabil ajungem si la tine."
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Zone acoperite' }]}
+  />
+
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <!-- Featured -->
+      <a
+        href={withBase(`zone-acoperite/${featured.slug}`)}
+        class="group flex flex-col items-start justify-between gap-6 rounded-xl border border-secondary/20 bg-secondary-soft p-8 transition-colors hover:border-secondary/40 sm:flex-row sm:items-center"
+      >
+        <div class="flex items-center gap-4">
+          <span class="inline-flex h-14 w-14 items-center justify-center rounded-[10px] bg-primary text-2xl text-accent">
+            <Icon name="ph:map-pin-duotone" />
+          </span>
+          <div>
+            <h2 class="text-xl text-primary">Foraje puturi {featured.name}</h2>
+            <p class="mt-1 text-sm text-muted">Zona cu cea mai mare cerere - vezi detalii specifice.</p>
+          </div>
+        </div>
+        <span class="inline-flex items-center gap-1 font-semibold text-secondary">
+          Vezi pagina
+          <Icon name="ph:arrow-right-bold" class="text-xs transition-transform group-hover:translate-x-1" />
+        </span>
+      </a>
+
+      <!-- Lista judete -->
+      <h2 class="mt-14 text-2xl">Judete in care am executat lucrari</h2>
+      <ul class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        {
+          zones.map((z) => (
+            <li class="flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-3 text-sm font-medium text-primary shadow-sm">
+              <Icon name="ph:map-pin-duotone" class="text-secondary" />
+              {z}
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-10 flex flex-col items-start gap-4 rounded-xl border border-border bg-surface p-6 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-muted">Nu iti gasesti localitatea? Spune-ne unde te afli si verificam disponibilitatea.</p>
+        <Button href={withBase('contact')} variant="primary" iconRight="ph:arrow-right-bold">Intreaba pentru zona ta</Button>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

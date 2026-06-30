@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+import { withBase } from '../../lib/url';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order).slice(0, 6);
+const localFacts = [
+  { icon: 'ph:ruler-duotone', title: 'Adancimi uzuale', text: 'In Bucuresti si Ilfov, apa de calitate se gaseste frecvent intre 40 si 90 m, in functie de zona.' },
+  { icon: 'ph:mountains-duotone', title: 'Tipul terenului', text: 'Straturi alternante de argila, nisip si pietris - adaptam tehnologia de foraj la fiecare locatie.' },
+  { icon: 'ph:lightning-duotone', title: 'Deplasare rapida', text: 'Fiind aproape, ajungem repede la tine pentru evaluare si executie.' },
+];
+---
+
+<BaseLayout
+  title="Foraje puturi apa Bucuresti si Ilfov | Pret corect"
+  description="Foraje puturi de apa in Bucuresti si Ilfov: executie, denisipari si pompe de caldura. Adancimi uzuale, deplasare rapida, garantie in scris."
+>
+  <PageHero
+    eyebrow="Zona: Bucuresti si Ilfov"
+    title="Foraje puturi apa in Bucuresti si Ilfov"
+    subtitle="Cunoastem bine terenul din zona si stim la ce adancimi sa cautam apa de calitate. Deplasare rapida si garantie in scris."
+    breadcrumb={[
+      { label: 'Acasa', href: withBase('') },
+      { label: 'Zone acoperite', href: withBase('zone-acoperite') },
+      { label: 'Bucuresti si Ilfov' },
+    ]}
+  />
+
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <h2 class="text-3xl sm:text-4xl">Ce trebuie sa stii despre zona</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        {
+          localFacts.map((f) => (
+            <div class="rounded-xl border border-border bg-surface p-6 shadow-sm">
+              <span class="inline-flex h-12 w-12 items-center justify-center rounded-[10px] bg-secondary-soft text-2xl text-secondary">
+                <Icon name={f.icon} />
+              </span>
+              <h3 class="mt-4 text-lg font-bold text-primary">{f.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{f.text}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <h2 class="mt-16 text-3xl sm:text-4xl">Servicii oferite in zona</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          services.map((s) => (
+            <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
+          ))
+        }
+      </div>
+
+      <div class="mt-16">
+        <TrustBar />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Faci un put in Bucuresti sau Ilfov? Cere oferta." />
+</BaseLayout>

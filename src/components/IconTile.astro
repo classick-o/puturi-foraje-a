@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  icon: string;
+  size?: 'md' | 'lg';
+  class?: string;
+}
+const { icon, size = 'md', class: cls = '' } = Astro.props;
+const dim = size === 'lg' ? 'h-14 w-14 text-[1.75rem]' : 'h-12 w-12 text-2xl';
+---
+
+<span
+  class={`inline-flex items-center justify-center rounded-[10px] bg-secondary-soft text-secondary ${dim} ${cls}`}
+>
+  <Icon name={icon} />
+</span>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../lib/site';
+import { withBase } from '../lib/url';
+---
+
+<BaseLayout title="Termeni si conditii" description="Termenii si conditiile de utilizare a site-ului." noindex={true}>
+  <PageHero
+    title="Termeni si conditii"
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Termeni si conditii' }]}
+  />
+
+  <section class="py-14 sm:py-16">
+    <div class="wrap">
+      <div class="rte mx-auto max-w-3xl">
+        <p class="rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm text-ink/80">
+          Document orientativ (sablon). Completeaza datele firmei si verifica textul cu un specialist
+          inainte de publicare.
+        </p>
+
+        <h2>1. Despre site</h2>
+        <p>
+          Acest site este operat de {site.legalName} si are rol de prezentare a serviciilor de foraje
+          si puturi de apa.
+        </p>
+
+        <h2>2. Utilizarea site-ului</h2>
+        <p>
+          Continutul are caracter informativ. Preturile si informatiile afisate sunt orientative si
+          pot fi modificate fara notificare prealabila.
+        </p>
+
+        <h2>3. Oferte si comenzi</h2>
+        <p>
+          Solicitarile transmise prin formular nu constituie un contract. Orice lucrare se stabileste
+          ulterior, printr-o oferta si un acord intre parti.
+        </p>
+
+        <h2>4. Proprietate intelectuala</h2>
+        <p>
+          Continutul site-ului (texte, sigle, imagini proprii) apartine {site.legalName} si nu poate
+          fi reutilizat fara acord.
+        </p>
+
+        <h2>5. Limitarea raspunderii</h2>
+        <p>
+          Depunem eforturi pentru acuratetea informatiilor, dar nu garantam ca acestea sunt complete
+          sau lipsite de erori in orice moment.
+        </p>
+
+        <h2>6. Contact</h2>
+        <p>Pentru intrebari legate de acesti termeni, scrie-ne la {site.email}.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

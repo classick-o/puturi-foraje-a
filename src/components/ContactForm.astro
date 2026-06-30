@@ -1,0 +1,92 @@
+---
+import Button from './Button.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '../lib/url';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+
+const inputCls =
+  'w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-ink transition-colors placeholder:text-muted/60 focus:border-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/35';
+const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
+---
+
+<form id="contact-form" class="rounded-xl border border-border bg-surface p-6 shadow-sm sm:p-8" novalidate>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label class={labelCls} for="nume">Nume</label>
+      <input id="nume" name="nume" class={inputCls} placeholder="Numele tau" />
+    </div>
+    <div>
+      <label class={labelCls} for="telefon">Telefon <span class="text-secondary">*</span></label>
+      <input id="telefon" name="telefon" type="tel" required class={inputCls} placeholder="07xx xxx xxx" />
+    </div>
+    <div>
+      <label class={labelCls} for="email">Email</label>
+      <input id="email" name="email" type="email" class={inputCls} placeholder="email@exemplu.ro" />
+    </div>
+    <div>
+      <label class={labelCls} for="localitate">Localitate / Judet</label>
+      <input id="localitate" name="localitate" class={inputCls} placeholder="Ex: Otopeni, Ilfov" />
+    </div>
+    <div class="sm:col-span-2">
+      <label class={labelCls} for="serviciu">Tip serviciu</label>
+      <select id="serviciu" name="serviciu" class={inputCls}>
+        <option value="">Alege serviciul...</option>
+        {services.map((s) => <option value={s.data.title}>{s.data.title}</option>)}
+        <option value="Altele">Altele / nu sunt sigur</option>
+      </select>
+    </div>
+    <div class="sm:col-span-2">
+      <label class={labelCls} for="mesaj">Detalii</label>
+      <textarea
+        id="mesaj"
+        name="mesaj"
+        rows="4"
+        class={inputCls}
+        placeholder="Adancime estimata, ce stii despre teren, alte detalii..."></textarea>
+    </div>
+  </div>
+
+  <label class="mt-4 flex items-start gap-2.5 text-sm text-muted">
+    <input type="checkbox" name="gdpr" required class="mt-0.5 h-4 w-4 accent-[#1D4ED8]" />
+    <span>
+      Sunt de acord cu prelucrarea datelor conform
+      <a href={withBase('politica-de-confidentialitate')} class="text-secondary underline underline-offset-2">
+        politicii de confidentialitate</a>.
+    </span>
+  </label>
+
+  <div class="mt-5">
+    <Button type="submit" variant="cta" size="lg" icon="ph:paper-plane-tilt-fill" class="w-full sm:w-auto">
+      Trimite cererea
+    </Button>
+  </div>
+
+  <p
+    id="form-status"
+    class="mt-4 hidden rounded-md border border-success/20 bg-success/10 px-4 py-3 text-sm font-medium text-success"
+    role="status"
+  >
+  </p>
+</form>
+
+<script>
+  // DEMO: formularul nu are inca backend. Pentru productie conecteaza un serviciu
+  // de formulare (ex. Web3Forms / Formspree): seteaza `action`, `method="post"`
+  // si elimina interceptarea de mai jos.
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('form-status');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    if (status) {
+      status.textContent =
+        'Multumim! Am primit solicitarea ta. Te contactam in cel mai scurt timp.';
+      status.classList.remove('hidden');
+    }
+    form.reset();
+  });
+</script>

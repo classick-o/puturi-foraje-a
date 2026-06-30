@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '../../lib/url';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Servicii foraje puturi apa"
+  description="Servicii complete de foraje: puturi apa, denisipari, pompe de caldura, mentenanta, avize, sisteme de pompare si multe altele."
+>
+  <PageHero
+    eyebrow="Servicii"
+    title="Servicii complete de foraje si puturi"
+    subtitle="De la forajul putului pana la punerea in functiune si documentatie - o singura firma pentru tot ce ai nevoie."
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Servicii' }]}
+  />
+
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          services.map((s) => (
+            <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
+          ))
+        }
+      </div>
+      <div class="mt-16">
+        <TrustBar />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+import IconTile from './IconTile.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  slug: string;
+  title: string;
+  icon: string;
+  excerpt: string;
+}
+const { slug, title, icon, excerpt } = Astro.props;
+---
+
+<a
+  href={withBase(`servicii/${slug}`)}
+  class="group flex flex-col rounded-xl border border-border bg-surface p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-secondary/30 hover:shadow-md"
+>
+  <IconTile icon={icon} />
+  <h3 class="mt-4 text-lg font-bold text-primary">{title}</h3>
+  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{excerpt}</p>
+  <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary">
+    Detalii
+    <Icon name="ph:arrow-right-bold" class="text-xs transition-transform group-hover:translate-x-1" />
+  </span>
+</a>

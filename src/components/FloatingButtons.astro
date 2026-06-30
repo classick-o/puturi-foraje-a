@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+import { site } from '../lib/site';
+---
+
+<div class="fixed bottom-4 right-4 z-40 flex flex-col gap-3 print:hidden">
+  <a
+    href={site.whatsapp}
+    target="_blank"
+    rel="noopener"
+    aria-label="Scrie pe WhatsApp"
+    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg transition-transform hover:-translate-y-0.5"
+  >
+    <Icon name="ph:whatsapp-logo-fill" class="text-2xl" />
+  </a>
+  <a
+    href={site.phoneHref}
+    aria-label="Suna acum"
+    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-white shadow-lg transition-transform hover:-translate-y-0.5 sm:hidden"
+  >
+    <Icon name="ph:phone-call-fill" class="text-2xl" />
+  </a>
+</div>

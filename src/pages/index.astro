@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+import SectionHeader from '../components/SectionHeader.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TrustBar from '../components/TrustBar.astro';
+import IconTile from '../components/IconTile.astro';
+import Steps from '../components/Steps.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site, whyUs, faqs, zones } from '../lib/site';
+import { withBase } from '../lib/url';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const posts = (await getCollection('blog')).sort((a, b) => (a.data.date < b.data.date ? 1 : -1)).slice(0, 3);
+
+const heroPoints = ['Deplasare rapida', 'Deviz gratuit', 'Garantie in scris', 'Ne ocupam de acte'];
+const heroImg = 'https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1100';
+
+const projects = [
+  { img: 'https://images.pexels.com/photos/15391048/pexels-photo-15391048.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Otopeni, Ilfov', depth: '45 m', service: 'Foraj put apa' },
+  { img: 'https://images.pexels.com/photos/14840752/pexels-photo-14840752.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Floresti, Cluj', depth: '62 m', service: 'Foraj + pompa' },
+  { img: 'https://images.pexels.com/photos/31249536/pexels-photo-31249536.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Giroc, Timis', depth: '38 m', service: 'Denisipare' },
+];
+---
+
+<BaseLayout title={`${site.name} | Foraje puturi de apa in toata tara`}>
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden bg-primary text-white">
+    <div
+      class="pointer-events-none absolute inset-0 opacity-50"
+      style="background-image: radial-gradient(60% 60% at 80% 0%, rgba(29,78,216,.45) 0, transparent 60%), radial-gradient(50% 50% at 0% 100%, rgba(251,191,36,.10) 0, transparent 60%);"
+    >
+    </div>
+    <div class="wrap relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <div>
+        <span class="eyebrow !text-accent">Foraje si puturi de apa</span>
+        <h1 class="mt-3 text-4xl font-extrabold leading-[1.08] !text-white sm:text-5xl">
+          Apa curata pe terenul tau, <span class="text-accent">garantata</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
+          Peste 15 ani de experienta, mii de foraje executate si garantie in scris. Lucram in
+          toata tara, cu pret corect si transparent.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button href={withBase('contact')} variant="cta" size="lg" icon="ph:paper-plane-tilt-fill">
+            Cere oferta gratuita
+          </Button>
+          <Button href={site.phoneHref} variant="outline-light" size="lg" icon="ph:phone-call-fill">
+            {site.phone}
+          </Button>
+        </div>
+        <ul class="mt-9 grid max-w-md grid-cols-2 gap-3 text-sm">
+          {
+            heroPoints.map((p) => (
+              <li class="flex items-center gap-2 text-white/85">
+                <Icon name="ph:check-circle-fill" class="text-lg text-accent" />
+                {p}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="relative">
+        <img
+          src={heroImg}
+          alt="Instalatie de foraj in lucru pentru un put de apa"
+          width="1100"
+          height="825"
+          loading="eager"
+          class="aspect-[4/3] w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10"
+        />
+        <div class="absolute -bottom-5 left-4 hidden rounded-xl border border-border bg-surface p-4 shadow-lg sm:block">
+          <div class="flex items-center gap-3">
+            <IconTile icon="ph:shield-check-duotone" />
+            <div>
+              <div class="text-sm font-bold text-primary">Garantie 5 ani</div>
+              <div class="text-xs text-muted">in scris, in contract</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <div class="wrap relative z-10 -mt-10 pb-2">
+    <TrustBar />
+  </div>
+
+  <!-- ============ SERVICII ============ -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Servicii"
+        title="Tot ce tine de foraje, intr-un singur loc"
+        subtitle="De la forajul putului pana la punerea in functiune si documentatie - ne ocupam noi de tot."
+      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          services.map((s) => (
+            <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DE CE NOI ============ -->
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="De ce sa ne alegi"
+        title="Calitate de incredere, la un pret corect"
+        subtitle="Nu suntem cei mai ieftini, ci cel mai bun raport calitate-pret. Iata ce primesti:"
+      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          whyUs.map((w) => (
+            <div class="rounded-xl border border-border bg-background p-6">
+              <IconTile icon={w.icon} />
+              <h3 class="mt-4 text-lg font-bold text-primary">{w.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{w.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CUM LUCRAM ============ -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <SectionHeader eyebrow="Cum lucram" title="De la primul telefon, pana la apa curata" />
+      <div class="mt-12">
+        <Steps />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESPRE PE SCURT ============ -->
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-2">
+      <div class="relative order-2 lg:order-1">
+        <img
+          src="https://images.pexels.com/photos/8961260/pexels-photo-8961260.jpeg?auto=compress&cs=tinysrgb&w=1000"
+          alt="Echipa de foraj pe santier, cu echipament de protectie"
+          width="1000"
+          height="667"
+          loading="lazy"
+          class="aspect-[3/2] w-full rounded-xl object-cover shadow-md"
+        />
+      </div>
+      <div class="order-1 lg:order-2">
+        <span class="eyebrow">Despre noi</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl">O echipa serioasa, cu utilaje proprii</h2>
+        <p class="mt-4 leading-relaxed text-muted">
+          Suntem o firma cu peste 15 ani de experienta in foraje puturi de apa, cu echipa si
+          utilaje proprii. Lucram corect, cu materiale de calitate si garantie in scris, si ne
+          ocupam inclusiv de documentatia necesara.
+        </p>
+        <ul class="mt-6 space-y-3">
+          {
+            ['Utilaje moderne, fara subcontractari', 'Materiale de calitate la tubaj si filtre', 'Suport si dupa finalizarea lucrarii'].map((t) => (
+              <li class="flex items-start gap-2.5 text-sm text-ink/90">
+                <Icon name="ph:check-circle-duotone" class="mt-0.5 text-lg text-secondary" />
+                {t}
+              </li>
+            ))
+          }
+        </ul>
+        <div class="mt-8">
+          <Button href={withBase('despre-noi')} variant="outline" iconRight="ph:arrow-right-bold">
+            Afla mai multe despre noi
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTOFOLIU TEASER ============ -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <SectionHeader
+          align="left"
+          eyebrow="Portofoliu"
+          title="Lucrari realizate recent"
+          subtitle="Cateva dintre proiectele noastre din toata tara."
+        />
+        <Button href={withBase('portofoliu')} variant="ghost" iconRight="ph:arrow-right-bold" class="hidden sm:inline-flex">
+          Vezi toate lucrarile
+        </Button>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          projects.map((p) => (
+            <article class="group overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+              <div class="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={`Lucrare foraje in ${p.loc}`}
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span class="absolute left-3 top-3 rounded-md bg-primary/90 px-2.5 py-1 text-xs font-semibold text-white">
+                  {p.service}
+                </span>
+              </div>
+              <div class="flex items-center justify-between p-4">
+                <span class="flex items-center gap-1.5 text-sm font-medium text-primary">
+                  <Icon name="ph:map-pin-fill" class="text-secondary" />
+                  {p.loc}
+                </span>
+                <span class="text-sm text-muted">Adancime {p.depth}</span>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ZONE ============ -->
+  <section class="bg-primary py-16 text-white sm:py-20">
+    <div class="wrap grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <div>
+        <span class="eyebrow !text-accent">Zone acoperite</span>
+        <h2 class="mt-2 text-3xl !text-white sm:text-4xl">Lucram in toata tara</h2>
+        <p class="mt-4 leading-relaxed text-white/75">
+          Ne deplasam la nivel national. Iata cateva dintre judetele in care am executat lucrari -
+          spune-ne unde te afli si venim si la tine.
+        </p>
+        <div class="mt-8">
+          <Button href={withBase('zone-acoperite')} variant="cta" iconRight="ph:arrow-right-bold">
+            Vezi zonele deservite
+          </Button>
+        </div>
+      </div>
+      <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {
+          zones.slice(0, 12).map((z) => (
+            <li class="flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white/85">
+              <Icon name="ph:map-pin-duotone" class="text-accent" />
+              {z}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALE ============ -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <SectionHeader eyebrow="Pareri clienti" title="Ce spun oamenii despre noi" />
+      <div class="mt-12">
+        <Testimonials limit={3} />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRET TRANSPARENT ============ -->
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="wrap grid items-center gap-10 rounded-xl border border-border bg-background p-8 sm:p-12 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow">Pret transparent</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl">Foraje de la 160 lei/ml</h2>
+        <p class="mt-4 leading-relaxed text-muted">
+          Pretul final depinde de adancime, diametru si tipul de sol, dar pleci mereu de la un deviz
+          clar, fara costuri ascunse. Iti spunem din start la ce sa te astepti.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button href={withBase('preturi')} variant="primary" iconRight="ph:arrow-right-bold">Vezi preturi</Button>
+          <Button href={withBase('contact')} variant="outline">Cere deviz exact</Button>
+        </div>
+      </div>
+      <ul class="space-y-3">
+        {
+          ['Deviz personalizat, gratuit', 'Tubaj si filtre incluse in pret', 'Fara costuri ascunse', 'Garantie in scris'].map((t) => (
+            <li class="flex items-center gap-3 rounded-md border border-border bg-surface px-4 py-3 text-sm font-medium text-primary">
+              <Icon name="ph:check-circle-fill" class="text-lg text-success" />
+              {t}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="py-16 sm:py-20">
+    <div class="wrap">
+      <SectionHeader eyebrow="Intrebari frecvente" title="Raspunsuri la cele mai dese intrebari" />
+      <div class="mt-12">
+        <Faq items={faqs.slice(0, 5)} />
+      </div>
+      <p class="mt-6 text-center text-sm text-muted">
+        Mai ai intrebari?
+        <a href={withBase('intrebari-frecvente')} class="font-semibold text-secondary underline underline-offset-2">
+          Vezi toate intrebarile frecvente
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <SectionHeader align="left" eyebrow="Blog" title="Articole utile despre foraje" />
+        <Button href={withBase('blog')} variant="ghost" iconRight="ph:arrow-right-bold" class="hidden sm:inline-flex">
+          Vezi blogul
+        </Button>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {
+          posts.map((post) => (
+            <a
+              href={withBase(`blog/${post.id}`)}
+              class="group flex flex-col overflow-hidden rounded-xl border border-border bg-background shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+            >
+              <div class="aspect-[16/9] overflow-hidden">
+                <img
+                  src={post.data.image}
+                  alt={post.data.title}
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <span class="text-xs font-semibold uppercase tracking-wide text-secondary">{post.data.category}</span>
+                <h3 class="mt-2 text-base font-bold leading-snug text-primary">{post.data.title}</h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{post.data.excerpt}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

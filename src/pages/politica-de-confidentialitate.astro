@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../lib/site';
+import { withBase } from '../lib/url';
+---
+
+<BaseLayout
+  title="Politica de confidentialitate"
+  description="Politica de confidentialitate si prelucrarea datelor cu caracter personal."
+  noindex={true}
+>
+  <PageHero
+    title="Politica de confidentialitate"
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Politica de confidentialitate' }]}
+  />
+
+  <section class="py-14 sm:py-16">
+    <div class="wrap">
+      <div class="rte mx-auto max-w-3xl">
+        <p class="rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm text-ink/80">
+          Document orientativ (sablon). Inainte de publicare, completeaza datele firmei si verifica
+          textul cu un specialist, conform Regulamentului (UE) 2016/679 (GDPR).
+        </p>
+
+        <h2>1. Cine suntem</h2>
+        <p>
+          {site.legalName} (denumita in continuare "noi") opereaza acest site si prelucreaza datele
+          cu caracter personal in calitate de operator. Ne poti contacta la {site.email}.
+        </p>
+
+        <h2>2. Ce date colectam</h2>
+        <p>
+          Colectam datele pe care ni le furnizezi prin formularul de contact: nume, numar de telefon,
+          email, localitate si detaliile solicitarii tale.
+        </p>
+
+        <h2>3. Scopul prelucrarii</h2>
+        <ul>
+          <li>Pentru a raspunde solicitarilor si a-ti transmite o oferta;</li>
+          <li>Pentru a ne organiza si executa lucrarile;</li>
+          <li>Pentru obligatii legale, acolo unde este cazul.</li>
+        </ul>
+
+        <h2>4. Temeiul legal</h2>
+        <p>
+          Prelucram datele pe baza consimtamantului tau si/sau pentru executarea pasilor premergatori
+          incheierii unui contract, la cererea ta.
+        </p>
+
+        <h2>5. Cat timp pastram datele</h2>
+        <p>Pastram datele doar atat cat este necesar scopurilor de mai sus sau cat impune legea.</p>
+
+        <h2>6. Drepturile tale</h2>
+        <p>
+          Ai dreptul de acces, rectificare, stergere, restrictionare, opozitie si portabilitate a
+          datelor. Pentru exercitarea lor, scrie-ne la {site.email}. Poti depune o plangere la ANSPDCP.
+        </p>
+
+        <h2>7. Contact</h2>
+        <p>Pentru orice intrebare legata de datele tale, ne poti scrie la {site.email}.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

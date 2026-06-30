@@ -1,0 +1,110 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+import { site, nav, zones } from '../lib/site';
+import { withBase } from '../lib/url';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order).slice(0, 6);
+const year = 2026;
+
+const socialLinks = [
+  { href: site.social.facebook, icon: 'ph:facebook-logo-fill', label: 'Facebook' },
+  { href: site.social.instagram, icon: 'ph:instagram-logo-fill', label: 'Instagram' },
+  { href: site.social.tiktok, icon: 'ph:tiktok-logo-fill', label: 'TikTok' },
+  { href: site.whatsapp, icon: 'ph:whatsapp-logo-fill', label: 'WhatsApp' },
+];
+---
+
+<footer class="bg-primary text-white/70">
+  <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-white/10 text-accent">
+          <Icon name="ph:drop-duotone" class="text-xl" />
+        </span>
+        <span class="text-lg font-extrabold text-white">{site.name}</span>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed">{site.description}</p>
+      <div class="mt-5 flex gap-2.5">
+        {
+          socialLinks.map((s) => (
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener"
+              aria-label={s.label}
+              class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/10 text-white/80 transition-colors hover:bg-accent hover:text-primary"
+            >
+              <Icon name={s.icon} class="text-lg" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Servicii</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {
+          services.map((s) => (
+            <li>
+              <a href={withBase(`servicii/${s.id}`)} class="transition-colors hover:text-white">
+                {s.data.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Zone deservite</h3>
+      <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
+        {
+          zones.slice(0, 10).map((z) => (
+            <li>
+              <a href={withBase('zone-acoperite')} class="transition-colors hover:text-white">
+                {z}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Contact</h3>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li class="flex items-start gap-2.5">
+          <Icon name="ph:phone-call-fill" class="mt-0.5 text-accent" />
+          <a href={site.phoneHref} class="hover:text-white">{site.phone}</a>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="ph:envelope-simple-fill" class="mt-0.5 text-accent" />
+          <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="ph:map-pin-fill" class="mt-0.5 text-accent" />
+          <span>{site.address}</span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="ph:clock-fill" class="mt-0.5 text-accent" />
+          <span>{site.schedule}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="wrap flex flex-col gap-3 py-5 text-xs sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {year} {site.legalName}. Toate drepturile rezervate.</p>
+      <div class="flex flex-wrap gap-x-4 gap-y-1">
+        <a href={withBase('politica-de-confidentialitate')} class="hover:text-white">Confidentialitate</a>
+        <a href={withBase('politica-cookies')} class="hover:text-white">Cookies</a>
+        <a href={withBase('termeni-si-conditii')} class="hover:text-white">Termeni</a>
+        <a href="https://anpc.ro" target="_blank" rel="noopener" class="hover:text-white">ANPC</a>
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" class="hover:text-white">SOL</a>
+      </div>
+    </div>
+  </div>
+</footer>

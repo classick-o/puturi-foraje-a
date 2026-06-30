@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens - directie PREMIUM (navy + auriu), vezi stack-ui.md
+   ============================================================ */
+@theme {
+  /* Culori brand */
+  --color-primary: #0B1F3B;          /* navy */
+  --color-secondary: #1D4ED8;        /* albastru */
+  --color-secondary-hover: #1E40AF;
+  --color-secondary-soft: #E8EFFD;
+  --color-accent: #FBBF24;           /* auriu */
+  --color-accent-hover: #F59E0B;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-ink: #111827;              /* text de continut */
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-success: #16A34A;
+
+  /* Font */
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Border radius - MAXIM 12px (cap-am si tokenii mari) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 12px;
+  --radius-3xl: 12px;
+
+  /* Umbre soft, tintate navy */
+  --shadow-sm: 0 1px 2px rgba(11, 31, 59, .06);
+  --shadow-md: 0 4px 12px rgba(11, 31, 59, .08);
+  --shadow-lg: 0 12px 28px rgba(11, 31, 59, .12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-ink font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight text-primary;
+    text-wrap: balance;
+  }
+  ::selection {
+    @apply bg-accent text-primary;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-secondary ring-offset-2 ring-offset-background;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      transition-duration: .001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container standard al site-ului */
+  .wrap {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8;
+  }
+  /* Mic titlu deasupra unui H2 */
+  .eyebrow {
+    @apply inline-block text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-secondary;
+  }
+  /* Continut editorial (blog, pagini legale) */
+  .rte {
+    @apply text-ink/90 leading-relaxed;
+  }
+  .rte :where(h2) { @apply mt-10 mb-3 text-2xl; }
+  .rte :where(h3) { @apply mt-8 mb-2 text-xl; }
+  .rte :where(p) { @apply my-4; }
+  .rte :where(ul) { @apply my-4 list-disc pl-6 space-y-2; }
+  .rte :where(ol) { @apply my-4 list-decimal pl-6 space-y-2; }
+  .rte :where(a) { @apply text-secondary underline underline-offset-2; }
+  .rte :where(strong) { @apply text-ink; }
+}

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { withBase } from '../lib/url';
+---
+
+<BaseLayout title="Politica de cookies" description="Politica privind utilizarea cookie-urilor pe acest site." noindex={true}>
+  <PageHero
+    title="Politica de cookies"
+    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Politica de cookies' }]}
+  />
+
+  <section class="py-14 sm:py-16">
+    <div class="wrap">
+      <div class="rte mx-auto max-w-3xl">
+        <p class="rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm text-ink/80">
+          Document orientativ (sablon). Adapteaza-l in functie de scripturile pe care le folosesti
+          efectiv (analytics, harti, retele sociale).
+        </p>
+
+        <h2>Ce sunt cookie-urile</h2>
+        <p>
+          Cookie-urile sunt fisiere mici stocate de browser, folosite pentru a face site-ul sa
+          functioneze corect si pentru a imbunatati experienta de navigare.
+        </p>
+
+        <h2>Ce cookie-uri folosim</h2>
+        <ul>
+          <li><strong>Esentiale</strong> - necesare pentru functionarea de baza a site-ului;</li>
+          <li><strong>De performanta</strong> - ne ajuta sa intelegem cum este folosit site-ul (daca sunt activate);</li>
+          <li><strong>De la terti</strong> - de exemplu harta integrata.</li>
+        </ul>
+
+        <h2>Cum le poti controla</h2>
+        <p>
+          Poti gestiona sau sterge cookie-urile din setarile browserului. Dezactivarea unora poate
+          afecta functionarea site-ului.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

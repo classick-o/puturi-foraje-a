@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { withBase } from '../lib/url';
+---
+
+<BaseLayout title="Pagina nu a fost gasita" description="Pagina cautata nu exista." noindex={true}>
+  <section class="py-24 sm:py-32">
+    <div class="wrap text-center">
+      <span class="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-secondary-soft text-4xl text-secondary">
+        <Icon name="ph:compass-tool-duotone" />
+      </span>
+      <p class="mt-6 text-5xl font-extrabold text-primary">404</p>
+      <h1 class="mt-2 text-2xl sm:text-3xl">Pagina nu a fost gasita</h1>
+      <p class="mx-auto mt-3 max-w-md text-muted">
+        Se pare ca pagina cautata nu exista sau a fost mutata. Hai sa te ducem inapoi pe drumul cel bun.
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <Button href={withBase('')} variant="primary" icon="ph:house-fill">Mergi la pagina principala</Button>
+        <Button href={withBase('contact')} variant="outline">Contacteaza-ne</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
