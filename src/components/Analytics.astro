@@ -1,0 +1,52 @@
+---
+// Loader Google tag (gtag) + Consent Mode v2 + tracking clic telefon/WhatsApp.
+// Se activeaza automat doar cand ID-urile din src/lib/tracking.ts sunt completate.
+import { tracking, ga4Enabled, adsEnabled, trackingEnabled } from '../lib/tracking';
+const loaderId = ga4Enabled ? tracking.ga4Id : tracking.adsId;
+---
+
+{
+  trackingEnabled && (
+    <Fragment>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${loaderId}`} />
+      <script define:vars={{ ga4Id: tracking.ga4Id, adsId: tracking.adsId, ga4Enabled, adsEnabled }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag('consent', 'default', {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          wait_for_update: 500,
+        });
+        try {
+          if (localStorage.getItem('cookie-consent') === 'granted') {
+            gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted',
+            });
+          }
+        } catch (e) {}
+
+        gtag('js', new Date());
+        if (ga4Enabled) gtag('config', ga4Id);
+        if (adsEnabled) gtag('config', adsId);
+
+        document.addEventListener('click', function (e) {
+          var a = e.target && e.target.closest ? e.target.closest('a') : null;
+          if (!a) return;
+          var href = a.getAttribute('href') || '';
+          if (href.indexOf('tel:') === 0) {
+            gtag('event', 'click_telefon');
+          } else if (href.indexOf('wa.me') !== -1 || href.toLowerCase().indexOf('whatsapp') !== -1) {
+            gtag('event', 'click_whatsapp');
+          }
+        });
+      </script>
+    </Fragment>
+  )
+}

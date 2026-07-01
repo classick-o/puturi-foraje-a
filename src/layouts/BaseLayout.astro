@@ -6,6 +6,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import Seo from '../components/Seo.astro';
+import Analytics from '../components/Analytics.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -40,6 +42,7 @@ const faviconHref = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/favicon.svg
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Analytics />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
     <meta name="theme-color" content="#0B1F3B" />
     <meta name="generator" content={Astro.generator} />
@@ -59,5 +62,6 @@ const faviconHref = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/favicon.svg
     </main>
     <Footer />
     <FloatingButtons />
+    <CookieConsent />
   </body>
 </html>

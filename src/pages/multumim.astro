@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { withBase } from '../lib/url';
+import { tracking, adsEnabled } from '../lib/tracking';
+
+// Conversia Google Ads pentru lead (formular trimis) - doar daca e configurata.
+const leadReady = adsEnabled && !tracking.leadConversionLabel.includes('XXXX');
+const sendTo = leadReady ? `${tracking.adsId}/${tracking.leadConversionLabel}` : '';
+---
+
+<BaseLayout
+  title="Multumim"
+  description="Am primit solicitarea ta. Te contactam in cel mai scurt timp."
+  noindex={true}
+>
+  <section class="py-24 sm:py-32">
+    <div class="wrap text-center">
+      <span class="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-secondary-soft text-4xl text-secondary">
+        <Icon name="ph:check-circle-duotone" />
+      </span>
+      <h1 class="mt-6 text-3xl sm:text-4xl">Multumim! Am primit solicitarea ta</h1>
+      <p class="mx-auto mt-3 max-w-md text-muted">
+        Te contactam in cel mai scurt timp cu un raspuns. Daca e urgent, ne poti suna direct.
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <Button href={withBase('')} variant="primary" icon="ph:house-fill">Inapoi la pagina principala</Button>
+        <Button href={withBase('servicii')} variant="outline">Vezi serviciile</Button>
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ sendTo }}>
+    if (window.gtag) {
+      window.gtag('event', 'generate_lead');
+      if (sendTo) window.gtag('event', 'conversion', { send_to: sendTo });
+    }
+  </script>
+</BaseLayout>

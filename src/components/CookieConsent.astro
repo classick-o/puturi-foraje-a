@@ -1,0 +1,74 @@
+---
+// Banner de consimtamant cookies. Actualizeaza Consent Mode v2 la "granted" pe Accept.
+// Apare doar cand tracking-ul e configurat (vezi src/lib/tracking.ts).
+import { trackingEnabled } from '../lib/tracking';
+import { withBase } from '../lib/url';
+const cookiesUrl = withBase('politica-cookies');
+---
+
+{
+  trackingEnabled && (
+    <Fragment>
+      <div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[60] hidden p-4 print:hidden">
+        <div class="wrap">
+          <div class="flex flex-col gap-4 rounded-xl border border-border bg-surface p-5 shadow-lg sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm text-muted">
+              Folosim cookie-uri pentru statistici si pentru campaniile de marketing. Vezi{' '}
+              <a href={cookiesUrl} class="text-secondary underline underline-offset-2">
+                politica de cookies
+              </a>
+              .
+            </p>
+            <div class="flex shrink-0 gap-2">
+              <button
+                id="cc-reject"
+                type="button"
+                class="rounded-md border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+              >
+                Refuz
+              </button>
+              <button
+                id="cc-accept"
+                type="button"
+                class="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-primary shadow-sm transition-colors hover:bg-accent-hover"
+              >
+                Accept
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script is:inline>
+        (function () {
+          var KEY = 'cookie-consent';
+          var banner = document.getElementById('cookie-banner');
+          function grant() {
+            if (window.gtag) {
+              window.gtag('consent', 'update', {
+                ad_storage: 'granted',
+                analytics_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted',
+              });
+            }
+          }
+          function decide(choice) {
+            try { localStorage.setItem(KEY, choice); } catch (e) {}
+            if (choice === 'granted') grant();
+            if (banner) banner.classList.add('hidden');
+          }
+          try {
+            if (!localStorage.getItem(KEY) && banner) banner.classList.remove('hidden');
+          } catch (e) {
+            if (banner) banner.classList.remove('hidden');
+          }
+          var accept = document.getElementById('cc-accept');
+          var reject = document.getElementById('cc-reject');
+          if (accept) accept.addEventListener('click', function () { decide('granted'); });
+          if (reject) reject.addEventListener('click', function () { decide('denied'); });
+        })();
+      </script>
+    </Fragment>
+  )
+}

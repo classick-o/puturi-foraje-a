@@ -61,32 +61,23 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
       Trimite cererea
     </Button>
   </div>
-
-  <p
-    id="form-status"
-    class="mt-4 hidden rounded-md border border-success/20 bg-success/10 px-4 py-3 text-sm font-medium text-success"
-    role="status"
-  >
-  </p>
 </form>
 
 <script>
-  // DEMO: formularul nu are inca backend. Pentru productie conecteaza un serviciu
-  // de formulare (ex. Web3Forms / Formspree): seteaza `action`, `method="post"`
-  // si elimina interceptarea de mai jos.
+  import { withBase } from '../lib/url';
+
+  // La trimitere: valideaza, apoi du userul pe pagina de multumire (/multumim),
+  // unde se declanseaza conversia Google Ads / GA4.
+  //
+  // TODO backend real: conecteaza un serviciu de formulare (Formspree / Web3Forms).
+  // Trimite datele cu fetch() catre endpoint-ul lor, apoi fa redirect la /multumim.
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
-  const status = document.getElementById('form-status');
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
-    if (status) {
-      status.textContent =
-        'Multumim! Am primit solicitarea ta. Te contactam in cel mai scurt timp.';
-      status.classList.remove('hidden');
-    }
-    form.reset();
+    window.location.href = withBase('multumim');
   });
 </script>
