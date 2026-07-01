@@ -79,41 +79,59 @@ const linkBase =
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
-        <Icon name="ph:list-bold" class="text-2xl" />
+        <Icon id="menu-icon-open" name="ph:list-bold" class="text-2xl" />
+        <Icon id="menu-icon-close" name="ph:x-bold" class="hidden text-2xl" />
       </button>
     </div>
   </div>
-
-  <div id="mobile-menu" class="hidden border-t border-border bg-surface lg:hidden">
-    <nav class="wrap flex flex-col gap-1 py-4" aria-label="Meniu mobil">
-      {
-        nav.map((item) => (
-          <a
-            href={item.href}
-            class="rounded-md px-3 py-2.5 text-base font-medium text-primary/85 hover:bg-secondary-soft"
-          >
-            {item.label}
-          </a>
-        ))
-      }
-      <div class="mt-3 flex flex-col gap-2">
-        <Button href={site.phoneHref} variant="outline" icon="ph:phone-call-fill">{site.phone}</Button>
-        <Button href={withBase('contact')} variant="cta">Cere oferta gratuita</Button>
-      </div>
-    </nav>
-  </div>
 </header>
+
+<!-- Meniu mobil: overlay peste continut (in afara <header> ca `fixed` sa fie relativ la viewport) -->
+<div
+  id="mobile-menu"
+  class="fixed inset-x-0 bottom-0 top-16 z-40 hidden overflow-y-auto bg-surface/70 backdrop-blur-xl lg:hidden"
+>
+  <nav class="wrap flex flex-col gap-1 py-6" aria-label="Meniu mobil">
+    {
+      nav.map((item) => (
+        <a
+          href={item.href}
+          class="rounded-md px-3 py-3 text-lg font-medium text-primary/85 hover:bg-secondary-soft"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+    <div class="mt-4 flex flex-col gap-2">
+      <Button href={site.phoneHref} variant="outline" icon="ph:phone-call-fill">{site.phone}</Button>
+      <Button href={withBase('contact')} variant="cta">Cere oferta gratuita</Button>
+    </div>
+  </nav>
+</div>
 
 <script>
   const btn = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
   const header = document.getElementById('site-header');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
 
-  btn?.addEventListener('click', () => {
-    const isOpen = menu?.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', String(isOpen));
-    // Blocheaza scroll-ul paginii cat timp meniul mobil e deschis
-    document.body.classList.toggle('overflow-hidden', isOpen);
+  const setMenu = (open: boolean) => {
+    menu?.classList.toggle('hidden', !open);
+    btn?.setAttribute('aria-expanded', String(open));
+    btn?.setAttribute('aria-label', open ? 'Inchide meniul' : 'Deschide meniul');
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    // Blocheaza scroll-ul paginii cat timp meniul e deschis
+    document.body.classList.toggle('overflow-hidden', open);
+  };
+
+  btn?.addEventListener('click', () => setMenu(menu?.classList.contains('hidden') ?? true));
+
+  // Inchide meniul la trecerea pe desktop
+  const mq = window.matchMedia('(min-width: 1024px)');
+  mq.addEventListener('change', (e) => {
+    if (e.matches) setMenu(false);
   });
 
   const onScroll = () => header?.classList.toggle('shadow-md', window.scrollY > 8);
