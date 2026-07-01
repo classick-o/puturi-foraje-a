@@ -89,24 +89,28 @@ const linkBase =
 <!-- Meniu mobil: overlay peste continut (in afara <header> ca `fixed` sa fie relativ la viewport) -->
 <div
   id="mobile-menu"
-  class="fixed inset-x-0 bottom-0 top-16 z-40 hidden overflow-y-auto bg-surface/70 backdrop-blur-xl lg:hidden"
+  class="fixed inset-x-0 bottom-0 top-16 z-40 hidden overflow-y-auto bg-white/10 backdrop-blur-xl lg:hidden"
 >
-  <nav class="wrap flex flex-col gap-1 py-6" aria-label="Meniu mobil">
-    {
-      nav.map((item) => (
-        <a
-          href={item.href}
-          class="rounded-md px-3 py-3 text-lg font-medium text-primary/85 hover:bg-secondary-soft"
-        >
-          {item.label}
-        </a>
-      ))
-    }
-    <div class="mt-4 flex flex-col gap-2">
-      <Button href={site.phoneHref} variant="outline" icon="ph:phone-call-fill">{site.phone}</Button>
-      <Button href={withBase('contact')} variant="cta">Cere oferta gratuita</Button>
-    </div>
-  </nav>
+  <!-- Panoul de meniu: fundal SOLID -->
+  <div class="border-b border-border bg-surface shadow-lg">
+    <nav class="wrap flex flex-col gap-1 py-6" aria-label="Meniu mobil">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class="rounded-md px-3 py-3 text-lg font-medium text-primary/85 hover:bg-secondary-soft"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <div class="mt-4 flex flex-col gap-2">
+        <Button href={site.phoneHref} variant="outline" icon="ph:phone-call-fill">{site.phone}</Button>
+        <Button href={withBase('contact')} variant="cta">Cere oferta gratuita</Button>
+      </div>
+    </nav>
+  </div>
+  <!-- Restul overlay-ului ramane transparent + blurat (fundalul div-ului parinte) -->
 </div>
 
 <script>
