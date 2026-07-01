@@ -11,6 +11,7 @@ import Steps from '../components/Steps.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
+import WaterBackground from '../components/WaterBackground.astro';
 import { site, whyUs, faqs, zones } from '../lib/site';
 import { withBase } from '../lib/url';
 
@@ -91,8 +92,9 @@ const projects = [
   </div>
 
   <!-- ============ SERVICII ============ -->
-  <section class="py-16 sm:py-20">
-    <div class="wrap">
+  <section class="relative overflow-hidden py-16 sm:py-20">
+    <WaterBackground />
+    <div class="wrap relative z-10">
       <SectionHeader
         eyebrow="Servicii"
         title="Tot ce tine de foraje, intr-un singur loc"

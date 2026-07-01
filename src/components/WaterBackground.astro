@@ -1,0 +1,131 @@
+---
+// Fundal cu efect de apa: valuri SVG pe doua straturi + lumini blurate care plutesc.
+// Doar CSS (zero JS), subtil, si respecta prefers-reduced-motion.
+// Se pune intr-o sectiune `relative overflow-hidden`, cu continutul pe `relative z-10`.
+---
+
+<div class="water-bg" aria-hidden="true">
+  <span class="water-blob water-blob-1"></span>
+  <span class="water-blob water-blob-2"></span>
+
+  <div class="waves waves-back">
+    <div class="waves-track">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"
+        ><path d="M0 96 C 240 32 480 160 720 96 C 960 32 1200 160 1440 96 L1440 200 L0 200 Z" /></svg
+      >
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"
+        ><path d="M0 96 C 240 32 480 160 720 96 C 960 32 1200 160 1440 96 L1440 200 L0 200 Z" /></svg
+      >
+    </div>
+  </div>
+
+  <div class="waves waves-front">
+    <div class="waves-track">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"
+        ><path d="M0 120 C 220 60 520 190 720 120 C 940 50 1180 190 1440 120 L1440 200 L0 200 Z" /></svg
+      >
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"
+        ><path d="M0 120 C 220 60 520 190 720 120 C 940 50 1180 190 1440 120 L1440 200 L0 200 Z" /></svg
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .water-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Lumini blurate (caustics) - fara border-radius, forma vine din gradient */
+  .water-blob {
+    position: absolute;
+    display: block;
+    filter: blur(48px);
+    will-change: transform;
+  }
+  .water-blob-1 {
+    width: 34rem;
+    height: 34rem;
+    left: -8rem;
+    top: -10rem;
+    background: radial-gradient(circle at center, rgba(29, 78, 216, 0.14), transparent 65%);
+    animation: blobFloat 17s ease-in-out infinite;
+  }
+  .water-blob-2 {
+    width: 30rem;
+    height: 30rem;
+    right: -7rem;
+    top: 2rem;
+    background: radial-gradient(circle at center, rgba(56, 189, 248, 0.16), transparent 65%);
+    animation: blobFloat 22s ease-in-out infinite reverse;
+  }
+
+  /* Valuri (doua straturi pentru adancime) */
+  .waves {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .waves-back {
+    height: 190px;
+    opacity: 0.3;
+  }
+  .waves-front {
+    height: 150px;
+    opacity: 0.45;
+  }
+  .waves-track {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation-name: waveDrift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+  .waves-back .waves-track {
+    animation-duration: 22s;
+  }
+  .waves-front .waves-track {
+    animation-duration: 14s;
+    animation-direction: reverse;
+  }
+  .waves-track svg {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+  .waves-back svg path {
+    fill: #1d4ed8;
+  }
+  .waves-front svg path {
+    fill: #38bdf8;
+  }
+
+  @keyframes waveDrift {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes blobFloat {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(1.5rem, 1rem) scale(1.08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .water-blob,
+    .waves-track {
+      animation: none !important;
+    }
+  }
+</style>
