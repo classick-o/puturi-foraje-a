@@ -112,6 +112,8 @@ const linkBase =
   btn?.addEventListener('click', () => {
     const isOpen = menu?.classList.toggle('hidden') === false;
     btn.setAttribute('aria-expanded', String(isOpen));
+    // Blocheaza scroll-ul paginii cat timp meniul mobil e deschis
+    document.body.classList.toggle('overflow-hidden', isOpen);
   });
 
   const onScroll = () => header?.classList.toggle('shadow-md', window.scrollY > 8);
