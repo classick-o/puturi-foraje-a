@@ -53,7 +53,7 @@ export const whyUs = [
     text: 'Operatori si ingineri cu experienta - nu subcontractam lucrarea.',
   },
   {
-    icon: 'ph:shield-check-duotone',
+    icon: 'ph:seal-check-duotone',
     title: 'Garantie in scris',
     text: 'Pana la 5 ani garantie, in contract, fara discutii ulterioare.',
   },
