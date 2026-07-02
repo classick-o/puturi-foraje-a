@@ -25,11 +25,11 @@ specs:
     value: "Adancime, diametru, tip tubaj, nivel hidrostatic"
 faq:
   - q: "Cat costa o denisipare?"
-    a: "Pretul porneste de la circa 1.200 lei si depinde de adancime, diametru si nivelul depunerilor."
+    a: "Depinde de adancime, diametru si gradul de colmatare. Suna-ne pentru un pret exact, gratuit."
   - q: "Cat de des trebuie facuta?"
     a: "Recomandam o denisipare la 3-4 ani, sau mai devreme daca observi scaderi de debit ori apa cu nisip."
 seoTitle: "Denisipari puturi | Recuperezi debitul si apa limpede"
-seoDescription: "Denisipare profesionala a puturilor: indepartam nisipul si depunerile, recuperam debitul. Interventie rapida, pret de la 1.200 lei. Cere oferta."
+seoDescription: "Denisipare profesionala a puturilor: indepartam nisipul si depunerile, recuperam debitul. Interventie rapida, pret la cerere. Cere oferta."
 ---
 
 ## Cand ai nevoie de denisipare

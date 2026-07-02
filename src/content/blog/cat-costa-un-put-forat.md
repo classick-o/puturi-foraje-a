@@ -8,11 +8,11 @@ seoTitle: "Cat costa un put forat in 2026? Ghid complet de preturi"
 seoDescription: "Cat costa un foraj de put de apa in 2026: pret pe metru liniar, factorii care influenteaza costul si ce intra in deviz. Ghid practic si transparent."
 ---
 
-Pretul unui put forat porneste, in general, de la circa **160 lei pe metru liniar** pentru diametre mici si creste in functie de diametru, adancime si dificultatea terenului. Mai jos gasesti ce influenteaza costul si ce ar trebui sa contina un deviz corect.
+Nu exista un pret unic pentru un put forat: costul depinde de adancime, diametru, tipul de sol si materiale. Cel mai corect afli printr-o oferta personalizata sau un simplu telefon. Mai jos vezi ce influenteaza pretul si ce ar trebui sa contina un deviz corect.
 
-## De la ce porneste pretul
+## Cum se stabileste pretul
 
-Pentru un [foraj de put de apa](/servicii/foraje-puturi-apa) standard, tariful pe metru liniar depinde in primul rand de diametrul ales si de adancimea la care se afla apa. Vezi o estimare pe categorii in [pagina de preturi](/preturi).
+Pentru un [foraj de put de apa](/servicii/foraje-puturi-apa), pretul se calculeaza in functie de conditiile concrete ale terenului tau, de aceea nu exista un tarif fix. Cel mai simplu ceri o oferta sau ne suni, iar noi iti dam un pret exact, gratuit. Vezi si [cum stabilim pretul](/preturi).
 
 ## Ce factori influenteaza costul
 

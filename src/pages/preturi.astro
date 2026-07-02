@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Button from '../components/Button.astro';
 import { Icon } from 'astro-icon/components';
-import { pricing } from '../lib/site';
+import { site } from '../lib/site';
 import { withBase } from '../lib/url';
 
 const factors = [
@@ -25,19 +25,46 @@ const included = [
 
 <BaseLayout
   title="Preturi foraje puturi apa"
-  description="Preturi orientative pentru foraje puturi apa, denisipari si pompe de caldura. Deviz personalizat, gratuit, fara costuri ascunse."
+  description="Cat costa un foraj de put? Pretul se stabileste personalizat, in functie de terenul tau. Suna-ne pentru o oferta exacta, gratuita."
 >
   <PageHero
-    eyebrow="Preturi"
-    title="Preturi orientative, fara costuri ascunse"
-    subtitle="Pretul final depinde de cativa factori, dar pleci mereu de la un deviz clar. Iata la ce sa te astepti."
+    title="Cat costa un foraj de put?"
+    subtitle="Nu afisam un pret fix, pentru ca fiecare lucrare e diferita. Cel mai corect afli printr-un telefon: iti dam un pret exact, gratuit."
     breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Preturi' }]}
   />
 
-  <!-- Factori -->
-  <section class="py-16 sm:py-20">
+  <!-- CTA telefon principal -->
+  <section class="py-14 sm:py-16">
     <div class="wrap">
-      <h2 class="text-3xl sm:text-4xl">Factorii care influenteaza costul</h2>
+      <div class="flex flex-col items-center gap-6 rounded-xl border border-secondary/20 bg-secondary-soft p-8 text-center sm:p-12">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-[10px] bg-primary text-3xl text-accent">
+          <Icon name="ph:phone-call-duotone" />
+        </span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl">Afla pretul exact printr-un telefon</h2>
+          <p class="mx-auto mt-3 max-w-xl text-muted">
+            Spune-ne ce ai nevoie si unde te afli, iar noi iti dam pe loc o estimare corecta.
+            Consultanta si devizul sunt gratuite, fara obligatii.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill">
+            Suna acum: {site.phone}
+          </Button>
+          <Button href={withBase('contact')} variant="outline" size="lg">Cere oferta online</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- De ce difera pretul -->
+  <section class="pb-16 sm:pb-20">
+    <div class="wrap">
+      <h2 class="text-3xl sm:text-4xl">De ce difera pretul</h2>
+      <p class="mt-3 max-w-2xl text-muted">
+        Pretul unui foraj se calculeaza in functie de conditiile concrete ale terenului tau. Iata ce
+        conteaza cel mai mult:
+      </p>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
           factors.map((f) => (
@@ -51,47 +78,14 @@ const included = [
     </div>
   </section>
 
-  <!-- Tabel -->
+  <!-- Ce include oferta -->
   <section class="bg-surface py-16 sm:py-20">
-    <div class="wrap">
-      <h2 class="text-3xl sm:text-4xl">Tarife orientative</h2>
-      <div class="mt-8 overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
-        <table class="w-full text-left text-sm">
-          <thead class="bg-primary text-white">
-            <tr>
-              <th class="px-5 py-4 font-semibold">Serviciu</th>
-              <th class="px-5 py-4 font-semibold">Pret orientativ</th>
-              <th class="hidden px-5 py-4 font-semibold sm:table-cell">Observatii</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-border">
-            {
-              pricing.map((row) => (
-                <tr class="transition-colors hover:bg-background">
-                  <td class="px-5 py-4 font-medium text-primary">{row.service}</td>
-                  <td class="px-5 py-4 font-bold text-secondary">{row.price}</td>
-                  <td class="hidden px-5 py-4 text-muted sm:table-cell">{row.note}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-      <p class="mt-4 text-sm text-muted">
-        <Icon name="ph:info-duotone" class="-mt-0.5 inline text-base text-secondary" /> Preturile sunt
-        orientative. Oferta exacta o stabilim dupa o scurta evaluare a terenului.
-      </p>
-    </div>
-  </section>
-
-  <!-- Ce include -->
-  <section class="py-16 sm:py-20">
     <div class="wrap grid items-center gap-10 lg:grid-cols-2">
       <div>
-        <h2 class="text-3xl sm:text-4xl">Ce include pretul</h2>
+        <h2 class="text-3xl sm:text-4xl">Ce include oferta</h2>
         <p class="mt-4 leading-relaxed text-muted">
-          Vrem sa stii exact pe ce dai banii. In oferta noastra includem tot ce e necesar ca putul
-          sa functioneze, fara surprize pe parcurs.
+          Vrem sa stii exact pe ce dai banii. In oferta pe care ti-o dam includem tot ce e necesar ca
+          putul sa functioneze, fara surprize pe parcurs.
         </p>
         <ul class="mt-6 space-y-3">
           {
@@ -104,17 +98,21 @@ const included = [
           }
         </ul>
       </div>
-      <div class="rounded-xl border border-secondary/20 bg-secondary-soft p-8 text-center">
-        <h3 class="text-2xl text-primary">Vrei un pret exact?</h3>
+      <div class="rounded-xl border border-border bg-background p-8 text-center">
+        <h3 class="text-2xl text-primary">Vrei un pret pentru situatia ta?</h3>
         <p class="mx-auto mt-3 max-w-md text-muted">
-          Spune-ne unde te afli si ce ai nevoie, iar noi iti pregatim un deviz personalizat, gratuit.
+          Un telefon scurt si iti spunem la ce sa te astepti. Fara obligatii.
         </p>
         <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-          <Button href={withBase('contact')} variant="cta" icon="ph:paper-plane-tilt-fill">Cere deviz gratuit</Button>
+          <Button href={site.phoneHref} variant="cta" icon="ph:phone-call-fill">Suna acum</Button>
+          <Button href={withBase('contact')} variant="outline">Cere oferta</Button>
         </div>
       </div>
     </div>
   </section>
 
-  <CtaBand />
+  <CtaBand
+    title="Nu te complici cu preturi fixe. Suna si afli pe loc."
+    subtitle="Consultanta si devizul sunt gratuite, fara obligatii."
+  />
 </BaseLayout>

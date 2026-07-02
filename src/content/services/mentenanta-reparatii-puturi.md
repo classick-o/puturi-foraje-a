@@ -20,7 +20,7 @@ specs:
   - label: "Servicii"
     value: "Revizie, inlocuire pompa, adancire, reabilitare"
   - label: "Garantie lucrari"
-    value: "2-5 ani, in functie de interventie"
+    value: "In scris, in functie de interventie"
   - label: "Recomandare"
     value: "Verificare periodica la 2-3 ani"
 faq:
@@ -29,7 +29,7 @@ faq:
   - q: "Imi schimbati pompa?"
     a: "Da. Inlocuim pompe submersibile si hidrofoare, cu dimensionare corecta pentru putul tau."
 seoTitle: "Mentenanta si reparatii puturi | Revizii, pompa, adancire"
-seoDescription: "Intretinere si reparatii puturi: revizii, inlocuire pompa, adancire si reabilitare. Garantie 2-5 ani, contracte de mentenanta. Cere oferta."
+seoDescription: "Intretinere si reparatii puturi: revizii, inlocuire pompa, adancire si reabilitare. Garantie in scris, contracte de mentenanta. Cere oferta."
 ---
 
 ## Putul tau, ingrijit pe termen lung

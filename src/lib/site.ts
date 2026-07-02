@@ -37,7 +37,7 @@ export const nav = [
 export const stats = [
   { value: '15+', label: 'Ani de experienta' },
   { value: '2.500+', label: 'Foraje executate' },
-  { value: '5 ani', label: 'Garantie in scris' },
+  { value: 'Gratuit', label: 'Deviz si consultanta' },
   { value: '40+', label: 'Judete acoperite' },
 ] as const;
 
@@ -55,7 +55,7 @@ export const whyUs = [
   {
     icon: 'ph:seal-check-duotone',
     title: 'Garantie in scris',
-    text: 'Pana la 5 ani garantie, in contract, fara discutii ulterioare.',
+    text: 'Lucrari cu garantie in scris, in contract, fara discutii ulterioare.',
   },
   {
     icon: 'ph:file-text-duotone',
@@ -109,15 +109,6 @@ export const testimonials = [
   },
 ] as const;
 
-export const pricing = [
-  { service: 'Foraj put apa, diametru 125 mm', price: 'de la 160 lei/ml', note: 'Mica adancime, gospodarie' },
-  { service: 'Foraj put apa, diametru 160 mm', price: 'de la 200 lei/ml', note: 'Cel mai cerut, tubaj PVC inclus' },
-  { service: 'Foraj put apa, diametru 200 mm', price: 'de la 250 lei/ml', note: 'Debit mare, irigatii' },
-  { service: 'Foraj adancime peste 40 m', price: 'de la 350 lei/ml', note: 'Tehnologie pentru medii dure' },
-  { service: 'Denisipare put', price: 'de la 1.200 lei', note: 'In functie de adancime si diametru' },
-  { service: 'Foraj pompa de caldura (sonda)', price: 'oferta personalizata', note: 'In functie de necesarul termic' },
-] as const;
-
 export const zones = [
   'Bucuresti', 'Ilfov', 'Prahova', 'Dambovita', 'Arges', 'Giurgiu', 'Cluj', 'Timis',
   'Brasov', 'Constanta', 'Iasi', 'Dolj', 'Bihor', 'Sibiu', 'Mures', 'Olt',
@@ -126,7 +117,7 @@ export const zones = [
 export const faqs = [
   {
     q: 'Cat costa un foraj de put?',
-    a: 'Pretul porneste de la circa 160 lei/ml si depinde de adancime, diametru, tipul de sol si materiale. Iti dam un deviz exact, gratuit, dupa o scurta discutie despre teren.',
+    a: 'Nu exista un pret fix - depinde de adancime, diametru, tipul de sol si materiale. Cel mai simplu suni sau ceri o oferta, iar noi iti dam un pret exact, gratuit, dupa o scurta discutie despre teren.',
   },
   {
     q: 'La ce adancime se gaseste apa?',
@@ -142,7 +133,7 @@ export const faqs = [
   },
   {
     q: 'Ce garantie oferiti?',
-    a: 'Oferim pana la 5 ani garantie in scris, in contract, in functie de tipul lucrarii.',
+    a: 'Oferim garantie in scris, mentionata in contract, in functie de tipul lucrarii.',
   },
   {
     q: 'Faceti si mentenanta sau denisipare?',
