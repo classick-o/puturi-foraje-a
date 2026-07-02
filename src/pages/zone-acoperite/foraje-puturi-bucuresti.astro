@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import CollapsibleCards from '../../components/CollapsibleCards.astro';
 import TrustBar from '../../components/TrustBar.astro';
 import { Icon } from 'astro-icon/components';
 import { getCollection } from 'astro:content';
@@ -51,13 +52,15 @@ const localFacts = [
       </div>
 
       <h2 class="mt-16 text-3xl sm:text-4xl">Servicii oferite in zona</h2>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          services.map((s) => (
-            <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
-          ))
-        }
-      </div>
+      <CollapsibleCards label="Vezi toate serviciile" class="mt-8">
+        <div data-collapse-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            services.map((s) => (
+              <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
+            ))
+          }
+        </div>
+      </CollapsibleCards>
 
       <div class="mt-16">
         <TrustBar />

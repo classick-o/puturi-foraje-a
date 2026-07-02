@@ -12,6 +12,7 @@ import Testimonials from '../components/Testimonials.astro';
 import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 import WaterBackground from '../components/WaterBackground.astro';
+import CollapsibleCards from '../components/CollapsibleCards.astro';
 import { site, whyUs, faqs, zones } from '../lib/site';
 import { withBase } from '../lib/url';
 
@@ -100,13 +101,15 @@ const projects = [
         title="Tot ce tine de foraje, intr-un singur loc"
         subtitle="De la forajul putului pana la punerea in functiune si documentatie - ne ocupam noi de tot."
       />
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          services.map((s) => (
-            <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
-          ))
-        }
-      </div>
+      <CollapsibleCards label="Vezi toate serviciile" class="mt-12">
+        <div data-collapse-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            services.map((s) => (
+              <ServiceCard slug={s.id} title={s.data.title} icon={s.data.icon} excerpt={s.data.excerpt} />
+            ))
+          }
+        </div>
+      </CollapsibleCards>
     </div>
   </section>
 
@@ -118,19 +121,21 @@ const projects = [
         title="Calitate de incredere, la un pret corect"
         subtitle="Nu suntem cei mai ieftini, ci cel mai bun raport calitate-pret. Iata ce primesti:"
       />
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          whyUs.map((w) => (
-            <div class="rounded-xl border border-border bg-background p-6">
-              <div class="flex items-center gap-4">
-                <IconTile icon={w.icon} />
-                <h3 class="text-lg font-bold text-primary">{w.title}</h3>
+      <CollapsibleCards label="Vezi toate motivele" class="mt-12">
+        <div data-collapse-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            whyUs.map((w) => (
+              <div class="rounded-xl border border-border bg-background p-6">
+                <div class="flex items-center gap-4">
+                  <IconTile icon={w.icon} />
+                  <h3 class="text-lg font-bold text-primary">{w.title}</h3>
+                </div>
+                <p class="mt-4 text-sm leading-relaxed text-muted">{w.text}</p>
               </div>
-              <p class="mt-4 text-sm leading-relaxed text-muted">{w.text}</p>
-            </div>
-          ))
-        }
-      </div>
+            ))
+          }
+        </div>
+      </CollapsibleCards>
     </div>
   </section>
 

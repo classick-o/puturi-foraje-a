@@ -1,0 +1,50 @@
+---
+// Pe mobil (sub 640px) afiseaza doar primele 3 carduri + un buton "Vezi toate"
+// care le arata pe restul. Pe desktop nu schimba nimic (toate vizibile, buton ascuns).
+//
+// Utilizare: pune grila de carduri in slot si adauga-i atributul `data-collapse-grid`:
+//   <CollapsibleCards label="Vezi toate">
+//     <div data-collapse-grid class="grid ...">{items.map(...)}</div>
+//   </CollapsibleCards>
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  label?: string;
+  class?: string;
+}
+const { label = 'Vezi mai multe', class: cls = '' } = Astro.props;
+---
+
+<div class={cls} data-collapse>
+  <slot />
+  <div class="mt-6 flex sm:hidden" data-collapse-more>
+    <button
+      type="button"
+      data-collapse-btn
+      class="inline-flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-primary/20 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-secondary hover:bg-secondary-soft"
+    >
+      <span>{label}</span>
+      <Icon name="ph:caret-down-bold" class="text-xs" />
+    </button>
+  </div>
+</div>
+
+<style is:global>
+  @media (max-width: 639px) {
+    [data-collapse]:not(.is-open) [data-collapse-grid] > :nth-child(n + 4) {
+      display: none;
+    }
+  }
+  [data-collapse].is-open [data-collapse-more] {
+    display: none;
+  }
+</style>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement | null;
+    const btn = target?.closest('[data-collapse-btn]');
+    if (!btn) return;
+    btn.closest('[data-collapse]')?.classList.add('is-open');
+  });
+</script>

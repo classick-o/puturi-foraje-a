@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import TrustBar from '../components/TrustBar.astro';
 import IconTile from '../components/IconTile.astro';
+import CollapsibleCards from '../components/CollapsibleCards.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Button from '../components/Button.astro';
 import { Icon } from 'astro-icon/components';
@@ -72,19 +73,21 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
   <section class="py-16 sm:py-20">
     <div class="wrap">
       <h2 class="text-3xl sm:text-4xl">Ce ne deosebeste</h2>
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          values.map((v) => (
-            <div class="rounded-xl border border-border bg-surface p-6 shadow-sm">
-              <div class="flex items-center gap-4">
-                <IconTile icon={v.icon} />
-                <h3 class="text-lg font-bold text-primary">{v.title}</h3>
+      <CollapsibleCards label="Vezi toate valorile" class="mt-10">
+        <div data-collapse-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            values.map((v) => (
+              <div class="rounded-xl border border-border bg-surface p-6 shadow-sm">
+                <div class="flex items-center gap-4">
+                  <IconTile icon={v.icon} />
+                  <h3 class="text-lg font-bold text-primary">{v.title}</h3>
+                </div>
+                <p class="mt-4 text-sm leading-relaxed text-muted">{v.text}</p>
               </div>
-              <p class="mt-4 text-sm leading-relaxed text-muted">{v.text}</p>
-            </div>
-          ))
-        }
-      </div>
+            ))
+          }
+        </div>
+      </CollapsibleCards>
     </div>
   </section>
 
