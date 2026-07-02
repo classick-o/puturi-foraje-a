@@ -20,7 +20,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 const posts = (await getCollection('blog')).sort((a, b) => (a.data.date < b.data.date ? 1 : -1)).slice(0, 3);
 
 const heroPoints = ['Deplasare rapida', 'Deviz gratuit', 'Garantie in scris', 'Ne ocupam de acte'];
-const heroImg = 'https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1100';
+const heroImg = 'https://images.pexels.com/photos/20556695/pexels-photo-20556695.jpeg?auto=compress&cs=tinysrgb&w=1100';
 
 const projects = [
   { img: 'https://images.pexels.com/photos/15391048/pexels-photo-15391048.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Otopeni, Ilfov', depth: '45 m', service: 'Foraj put apa' },
@@ -68,7 +68,7 @@ const projects = [
       <div class="relative">
         <img
           src={heroImg}
-          alt="Instalatie de foraj in lucru pentru un put de apa"
+          alt="Apa curata si cristalina"
           width="1100"
           height="825"
           loading="eager"
