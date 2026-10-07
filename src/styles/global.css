@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Design tokens - directie PREMIUM (navy + auriu), vezi stack-ui.md
+   Design tokens - directie "SANTIER": grafit + albastru de tub PVC
+   + portocaliu de utilaj (culori luate din filmarile reale)
    ============================================================ */
 @theme {
   /* Culori brand */
-  --color-primary: #0B1F3B;          /* navy */
-  --color-secondary: #1D4ED8;        /* albastru */
-  --color-secondary-hover: #1E40AF;
-  --color-secondary-soft: #E8EFFD;
-  --color-accent: #FBBF24;           /* auriu */
-  --color-accent-hover: #F59E0B;
-  --color-background: #F8FAFC;
+  --color-primary: #0E1A22;          /* grafit */
+  --color-secondary: #0A6FBF;        /* albastru tub PVC */
+  --color-secondary-hover: #08599A;
+  --color-secondary-soft: #E4F1FB;
+  --color-accent: #FF8A1F;           /* portocaliu utilaj - CTA */
+  --color-accent-hover: #F27200;
+  --color-background: #F5F6F3;
   --color-surface: #FFFFFF;
-  --color-ink: #111827;              /* text de continut */
-  --color-muted: #64748B;
-  --color-border: #E2E8F0;
-  --color-success: #16A34A;
+  --color-ink: #141C22;              /* text de continut */
+  --color-muted: #56616B;
+  --color-border: #E1E4DF;
+  --color-success: #15803D;
+  --color-whatsapp: #1FAF54;
 
   /* Font */
   --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Variable", "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
 
   /* Border radius - MAXIM 12px (cap-am si tokenii mari) */
   --radius-xs: 4px;
@@ -31,9 +34,9 @@
   --radius-3xl: 12px;
 
   /* Umbre soft, tintate navy */
-  --shadow-sm: 0 1px 2px rgba(11, 31, 59, .06);
-  --shadow-md: 0 4px 12px rgba(11, 31, 59, .08);
-  --shadow-lg: 0 12px 28px rgba(11, 31, 59, .12);
+  --shadow-sm: 0 1px 2px rgba(14, 26, 34, .06);
+  --shadow-md: 0 4px 12px rgba(14, 26, 34, .08);
+  --shadow-lg: 0 12px 28px rgba(14, 26, 34, .12);
 }
 
 @layer base {
@@ -45,8 +48,12 @@
     @apply bg-background text-ink font-sans antialiased;
   }
   h1, h2, h3, h4 {
-    @apply font-bold tracking-tight text-primary;
+    @apply font-display font-bold tracking-tight text-primary;
+    font-stretch: 92%;
     text-wrap: balance;
+  }
+  h1, h2 {
+    @apply font-extrabold;
   }
   ::selection {
     @apply bg-accent text-primary;
@@ -70,7 +77,15 @@
   }
   /* Mic titlu deasupra unui H2 */
   .eyebrow {
-    @apply inline-block text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-secondary;
+    @apply inline-flex items-center gap-2 text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-secondary;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-[3px] w-6 bg-accent;
+  }
+  /* Banda "santier" (dungi diagonale) - accent vizual de identitate */
+  .hazard-stripe {
+    background-image: repeating-linear-gradient(-45deg, var(--color-accent) 0 12px, var(--color-primary) 12px 24px);
   }
   /* Continut editorial (blog, pagini legale) */
   .rte {

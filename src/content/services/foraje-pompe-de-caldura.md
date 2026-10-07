@@ -4,7 +4,7 @@ order: 3
 icon: "ph:thermometer-simple-duotone"
 excerpt: "Foraje verticale (sonde geotermale) pentru sisteme de pompe de caldura sol-apa, eficiente energetic."
 heroSubtitle: "Sonde geotermale executate corect, pentru o pompa de caldura eficienta ani la rand."
-image: "https://images.pexels.com/photos/14840752/pexels-photo-14840752.jpeg?auto=compress&cs=tinysrgb&w=1280"
+image: "/media/instalatie-foraj-camp.webp"
 forWhom:
   - "Case noi cu sistem geotermal sol-apa"
   - "Proiecte care vor costuri mici de incalzire"

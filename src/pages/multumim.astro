@@ -3,11 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import { Icon } from 'astro-icon/components';
 import { withBase } from '../lib/url';
-import { tracking, adsEnabled } from '../lib/tracking';
+import { tracking, adsSendTo } from '../lib/tracking';
+import { site } from '../lib/site';
 
 // Conversia Google Ads pentru lead (formular trimis) - doar daca e configurata.
-const leadReady = adsEnabled && !tracking.leadConversionLabel.includes('XXXX');
-const sendTo = leadReady ? `${tracking.adsId}/${tracking.leadConversionLabel}` : '';
+const sendTo = adsSendTo(tracking.leadConversionLabel);
 ---
 
 <BaseLayout
@@ -25,8 +25,8 @@ const sendTo = leadReady ? `${tracking.adsId}/${tracking.leadConversionLabel}` :
         Te contactam in cel mai scurt timp cu un raspuns. Daca e urgent, ne poti suna direct.
       </p>
       <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-        <Button href={withBase('')} variant="primary" icon="ph:house-fill">Inapoi la pagina principala</Button>
-        <Button href={withBase('servicii')} variant="outline">Vezi serviciile</Button>
+        <Button href={site.phoneHref} variant="cta" icon="ph:phone-call-fill" data-cta="multumim">Suna acum: {site.phone}</Button>
+        <Button href={withBase('')} variant="outline" icon="ph:house-fill">Inapoi la pagina principala</Button>
       </div>
     </div>
   </section>

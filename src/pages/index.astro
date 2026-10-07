@@ -13,84 +13,158 @@ import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 import WaterBackground from '../components/WaterBackground.astro';
 import CollapsibleCards from '../components/CollapsibleCards.astro';
+import VideoCard from '../components/VideoCard.astro';
 import { site, whyUs, faqs, zones } from '../lib/site';
 import { withBase } from '../lib/url';
+import { videos, photos, asset, videoLd } from '../lib/media';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const posts = (await getCollection('blog')).sort((a, b) => (a.data.date < b.data.date ? 1 : -1)).slice(0, 3);
 
-const heroPoints = ['Deplasare rapida', 'Deviz gratuit', 'Garantie in scris', 'Ne ocupam de acte'];
-const heroImg = 'https://images.pexels.com/photos/371717/pexels-photo-371717.jpeg?auto=compress&cs=tinysrgb&w=1100';
+const heroPoints = ['Utilaj si echipa proprie', 'Deviz gratuit la telefon', 'Garantie in scris', 'Ne ocupam de acte'];
+const heroPoster = withBase('media/put-arteziu-apa.webp');
+const heroLoop = withBase('media/put-arteziu-apa-loop.mp4');
 
-const projects = [
-  { img: 'https://images.pexels.com/photos/15391048/pexels-photo-15391048.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Otopeni, Ilfov', depth: '45 m', service: 'Foraj put apa' },
-  { img: 'https://images.pexels.com/photos/14840752/pexels-photo-14840752.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Floresti, Cluj', depth: '62 m', service: 'Foraj + pompa' },
-  { img: 'https://images.pexels.com/photos/31249536/pexels-photo-31249536.jpeg?auto=compress&cs=tinysrgb&w=800', loc: 'Giroc, Timis', depth: '38 m', service: 'Denisipare' },
+// Fiecare etapa, cu poza reala de pe santier
+const workSteps = [
+  { photo: photos.instalatieHidraulica, title: 'Forare cu utilaj propriu', text: 'Venim cu instalatia noastra, foram pana la stratul de apa potrivit si colectam namolul intr-un sant de decantare - curtea ramane curata.' },
+  { photo: photos.tubFiltru, title: 'Tubaj PVC cu filtru cu fanta', text: 'Coloana din PVC pentru apa, cu filtru cu fanta in dreptul stratului acvifer. Asa apa intra limpede si putul nu se colmateaza.' },
+  { photo: photos.jetApa, title: 'Denisipare si test de debit', text: 'Spalam putul pana iese apa curata si masuram debitul real inainte sa plecam. Stii exact cata apa ai.' },
+  { photo: photos.santRacord, title: 'Pompa si racord la casa', text: 'Montam pompa submersibila sau hidroforul si tragem teava pana in casa. Predam lucrarea functionala, cu garantie.' },
+];
+
+const homeLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: new URL(withBase(''), Astro.site).href,
+    inLanguage: 'ro-RO',
+  },
+  ...videos.map((v) => videoLd(v, Astro.site)),
 ];
 ---
 
-<BaseLayout title={`${site.name} | Foraje puturi de apa in toata tara`}>
+<BaseLayout
+  title={`Foraje Puturi Apa cu Utilaj Propriu - Deviz Gratuit | ${site.name}`}
+  description={`Foraje puturi de apa pentru casa, gradina si irigatii: forare, tubaj PVC, denisipare, pompa. Vezi filmari reale de pe santier. Suna ${site.phone} - pret pe loc.`}
+  jsonLd={homeLd}
+  preload={heroPoster}
+>
   <!-- ============ HERO ============ -->
   <section class="relative overflow-hidden bg-primary text-white">
     <div
-      class="pointer-events-none absolute inset-0 opacity-50"
-      style="background-image: radial-gradient(60% 60% at 80% 0%, rgba(29,78,216,.45) 0, transparent 60%), radial-gradient(50% 50% at 0% 100%, rgba(251,191,36,.10) 0, transparent 60%);"
+      class="pointer-events-none absolute inset-0"
+      style="background-image: radial-gradient(55% 60% at 85% 10%, rgba(10,111,191,.45) 0, transparent 60%), radial-gradient(45% 50% at 0% 100%, rgba(255,138,31,.12) 0, transparent 60%);"
     >
     </div>
-    <div class="wrap relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+    <div class="wrap relative grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:py-20">
       <div>
-        <h1 class="text-4xl font-extrabold leading-[1.08] !text-white sm:text-5xl">
-          Apa curata pe terenul tau, <span class="text-accent">garantata</span>
+        <span class="eyebrow !text-accent">Foraje puturi apa &middot; toata Romania</span>
+        <h1 class="mt-4 text-[2.15rem] leading-[1.05] !text-white sm:text-5xl lg:text-[3.4rem]">
+          Foraje puturi de apa cu <span class="text-accent">utilaj propriu</span>. Apa la tine in curte.
         </h1>
         <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
-          Peste 15 ani de experienta, mii de foraje executate si garantie in scris. Lucram in
-          toata tara, cu pret corect si transparent.
+          Forare, tubaj PVC cu filtru, denisipare si pompa montata - totul facut de echipa noastra,
+          de regula intr-o singura zi. Afli pretul exact printr-un singur telefon.
         </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button href={withBase('contact')} variant="cta" size="lg" icon="ph:paper-plane-tilt-fill">
-            Cere oferta gratuita
-          </Button>
-          <Button href={site.phoneHref} variant="outline-light" size="lg" icon="ph:phone-call-fill">
-            {site.phone}
-          </Button>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href={site.phoneHref}
+            data-cta="hero"
+            class="group inline-flex items-center justify-center gap-3 rounded-md bg-accent px-6 py-4 text-primary shadow-lg transition-all hover:-translate-y-px hover:bg-accent-hover"
+          >
+            <Icon name="ph:phone-call-fill" class="text-3xl" />
+            <span class="text-left leading-tight">
+              <span class="block text-xs font-semibold uppercase tracking-wide opacity-80">Suna acum, raspundem imediat</span>
+              <span class="block font-display text-2xl font-extrabold tabular-nums" style="font-stretch: 90%">{site.phone}</span>
+            </span>
+          </a>
+          <a
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener"
+            data-cta="hero"
+            class="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-white/25 px-5 py-4 font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            <Icon name="ph:whatsapp-logo-fill" class="text-2xl text-[#25D366]" />
+            Trimite poze pe WhatsApp
+          </a>
         </div>
-        <ul class="mt-9 grid max-w-md grid-cols-2 gap-3 text-sm">
+        <p class="mt-3 text-sm text-white/60">
+          {site.schedule} &middot;
+          <a href={withBase('contact')} class="underline underline-offset-2 hover:text-white">sau cere oferta scrisa</a>
+        </p>
+
+        <ul class="mt-8 grid max-w-md grid-cols-2 gap-3 text-sm">
           {
             heroPoints.map((p) => (
               <li class="flex items-center gap-2 text-white/85">
-                <Icon name="ph:check-circle-fill" class="text-lg text-accent" />
+                <Icon name="ph:check-circle-fill" class="shrink-0 text-lg text-accent" />
                 {p}
               </li>
             ))
           }
         </ul>
       </div>
-      <div class="relative">
-        <img
-          src={heroImg}
-          alt="Picatura de apa curata pe suprafata de apa"
-          width="1100"
-          height="825"
-          loading="eager"
-          class="aspect-[4/3] w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10"
-        />
-        <div class="absolute -bottom-5 left-4 hidden rounded-xl border border-border bg-surface p-4 shadow-lg sm:block">
+
+      <div class="relative mx-auto w-full max-w-[300px] sm:max-w-[340px]">
+        <div class="relative overflow-hidden rounded-2xl border-4 border-white/10 bg-black shadow-2xl">
+          <video
+            class="aspect-[9/16] w-full object-cover"
+            src={heroLoop}
+            poster={heroPoster}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Filmare reala: apa tasneste din putul forat de echipa noastra"
+          ></video>
+          <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-md bg-primary/85 px-2.5 py-1 text-xs font-semibold">
+            <span class="h-2 w-2 rounded-full bg-red-500"></span>
+            Filmare reala de pe santier
+          </span>
+        </div>
+        <div class="absolute -left-6 bottom-8 hidden rounded-xl border border-border bg-surface p-3.5 text-primary shadow-lg sm:block">
           <div class="flex items-center gap-3">
-            <IconTile icon="ph:seal-check-duotone" />
+            <IconTile icon="ph:drop-duotone" />
             <div>
-              <div class="text-sm font-bold text-primary">Calitate profesionala</div>
-              <div class="text-xs text-muted">la fiecare lucrare</div>
+              <div class="text-sm font-bold">Apa curata, cu presiune</div>
+              <div class="text-xs text-muted">put forat de echipa noastra</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="hazard-stripe h-2" aria-hidden="true"></div>
   </section>
 
   <!-- ============ TRUST BAR ============ -->
-  <div class="wrap relative z-10 -mt-10 pb-2">
+  <div class="wrap relative z-10 pt-8 pb-2">
     <TrustBar />
   </div>
+
+  <!-- ============ VIDEO SANTIER ============ -->
+  <section class="py-16 sm:py-20" id="filmari">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Lucrari reale"
+        title="Vezi cum lucram - filmat de echipa noastra"
+        subtitle="Fara poze de stoc. Acestea sunt filmari de pe santierele noastre: utilajul, materialele si rezultatul final."
+      />
+      <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+        {videos.map((v) => <VideoCard video={v} />)}
+      </div>
+      <div class="mt-10 flex flex-col items-center gap-3 text-center">
+        <p class="text-lg font-semibold text-primary">Vrei acelasi rezultat la tine in curte?</p>
+        <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="filmari">
+          Suna: {site.phone}
+        </Button>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ SERVICII ============ -->
   <section class="relative overflow-hidden py-16 sm:py-20">
@@ -153,14 +227,24 @@ const projects = [
   <section class="bg-surface py-16 sm:py-20">
     <div class="wrap grid items-center gap-12 lg:grid-cols-2">
       <div class="relative order-2 lg:order-1">
-        <img
-          src="https://images.pexels.com/photos/8961260/pexels-photo-8961260.jpeg?auto=compress&cs=tinysrgb&w=1000"
-          alt="Echipa de foraj pe santier, cu echipament de protectie"
-          width="1000"
-          height="667"
-          loading="lazy"
-          class="aspect-[3/2] w-full rounded-xl object-cover shadow-md"
-        />
+        <div class="grid grid-cols-2 gap-4">
+          <img
+            src={asset(photos.instalatieCamp.src)}
+            alt={photos.instalatieCamp.alt}
+            width="640"
+            height="1138"
+            loading="lazy"
+            class="aspect-[3/4] w-full rounded-xl object-cover shadow-md"
+          />
+          <img
+            src={asset(photos.instalatieGradina.src)}
+            alt={photos.instalatieGradina.alt}
+            width="640"
+            height="1138"
+            loading="lazy"
+            class="mt-10 aspect-[3/4] w-full rounded-xl object-cover shadow-md"
+          />
+        </div>
       </div>
       <div class="order-1 lg:order-2">
         <h2 class="text-3xl sm:text-4xl">O echipa serioasa, cu utilaje proprii</h2>
@@ -188,48 +272,38 @@ const projects = [
     </div>
   </section>
 
-  <!-- ============ PORTOFOLIU TEASER ============ -->
+  <!-- ============ CE PRIMESTI (poze reale) ============ -->
   <section class="py-16 sm:py-20">
     <div class="wrap">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <SectionHeader
           align="left"
-          eyebrow="Portofoliu"
-          title="Lucrari realizate recent"
-          subtitle="Cateva dintre proiectele noastre din toata tara."
+          eyebrow="Ce primesti"
+          title="Un put facut complet, nu doar o gaura in pamant"
+          subtitle="Fiecare etapa, asa cum arata la noi pe santier."
         />
         <Button href={withBase('portofoliu')} variant="ghost" iconRight="ph:arrow-right-bold" class="hidden sm:inline-flex">
-          Vezi toate lucrarile
+          Toate pozele si filmarile
         </Button>
       </div>
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
-          projects.map((p) => (
-            <article class="group overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
-              <div class="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={`Lucrare foraje in ${p.loc}`}
-                  width="800"
-                  height="600"
-                  loading="lazy"
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span class="absolute left-3 top-3 rounded-md bg-primary/90 px-2.5 py-1 text-xs font-semibold text-white">
-                  {p.service}
+          workSteps.map((w, i) => (
+            <li class="overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+              <div class="relative aspect-[4/5] overflow-hidden">
+                <img src={asset(w.photo.src)} alt={w.photo.alt} width="480" height="600" loading="lazy" class="h-full w-full object-cover" />
+                <span class="absolute left-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-accent font-display text-lg font-extrabold text-primary">
+                  {i + 1}
                 </span>
               </div>
-              <div class="flex items-center justify-between p-4">
-                <span class="flex items-center gap-1.5 text-sm font-medium text-primary">
-                  <Icon name="ph:map-pin-fill" class="text-secondary" />
-                  {p.loc}
-                </span>
-                <span class="text-sm text-muted">Adancime {p.depth}</span>
+              <div class="p-5">
+                <h3 class="text-lg">{w.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted">{w.text}</p>
               </div>
-            </article>
+            </li>
           ))
         }
-      </div>
+      </ol>
     </div>
   </section>
 
@@ -281,7 +355,7 @@ const projects = [
           despre terenul tau. Fara costuri ascunse - iti spunem din start la ce sa te astepti.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button href={site.phoneHref} variant="primary" icon="ph:phone-call-fill">Suna acum: {site.phone}</Button>
+          <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="pret">Suna acum: {site.phone}</Button>
           <Button href={withBase('contact')} variant="outline">Cere oferta</Button>
         </div>
       </div>
@@ -332,7 +406,7 @@ const projects = [
             >
               <div class="aspect-[16/9] overflow-hidden">
                 <img
-                  src={post.data.image}
+                  src={post.data.image && asset(post.data.image)}
                   alt={post.data.title}
                   width="800"
                   height="450"

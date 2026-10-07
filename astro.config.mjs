@@ -35,7 +35,7 @@ export default defineConfig({
   markdown: {
     rehypePlugins: [rehypeInternalLinks],
   },
-  integrations: [sitemap(), icon()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/multumim') }), icon()],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -9,12 +9,14 @@ export const site = {
   legalName: 'AquaForaj SRL', // [PLACEHOLDER]
   tagline: 'Foraje puturi de apa, oriunde in Romania',
   description:
-    'Firma de foraje puturi apa: executie, denisipari, pompe de caldura, mentenanta si documentatie. Calitate profesionala, garantie in scris, pret corect.',
-  phone: '0712 345 678', // [PLACEHOLDER]
-  phoneHref: 'tel:+40712345678', // [PLACEHOLDER]
-  whatsapp: 'https://wa.me/40712345678', // [PLACEHOLDER]
+    'Foraje puturi apa cu utilaj propriu: forare, tubaj PVC cu filtru, denisipare si pompa montata. Suna la 0761 251 596 pentru pret pe loc - deviz gratuit, garantie in scris.',
+  phone: '0761 251 596',
+  phoneIntl: '+40761251596',
+  phoneHref: 'tel:+40761251596',
+  whatsapp: `https://wa.me/40761251596?text=${encodeURIComponent('Buna ziua! As dori o oferta pentru un foraj de put.')}`,
+  whatsappBase: 'https://wa.me/40761251596',
   email: 'office@aquaforaj.ro', // [PLACEHOLDER]
-  address: 'Str. Forajului nr. 1, Romania', // [PLACEHOLDER]
+  address: 'Deplasare in toata Romania', // [PLACEHOLDER] adresa sediului, daca vrei sa apara (ajuta la Google Business)
   schedule: 'Luni - Vineri: 08:00 - 18:00 | Sambata: 09:00 - 14:00',
   social: {
     facebook: 'https://facebook.com', // [PLACEHOLDER]

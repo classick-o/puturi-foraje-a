@@ -4,7 +4,7 @@ order: 1
 icon: "ph:drop-duotone"
 excerpt: "Foram puturi de apa pentru gospodarie, gradina, irigatii sau industrie, la mica, medie si mare adancime."
 heroSubtitle: "Apa curata pe terenul tau, cu tubaj profesional, test de debit si garantie in scris."
-image: "https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1280"
+image: "/media/instalatie-foraj-hidraulica.webp"
 forWhom:
   - "Gospodarii care vor sursa proprie de apa"
   - "Gradini si sisteme de irigatii"

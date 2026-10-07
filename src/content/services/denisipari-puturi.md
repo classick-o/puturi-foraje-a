@@ -4,7 +4,7 @@ order: 2
 icon: "ph:waves-duotone"
 excerpt: "Curatam putul de nisip si depuneri ca sa revina debitul si apa sa fie din nou limpede."
 heroSubtitle: "Ti-a scazut debitul sau apa vine cu nisip? Denisiparea readuce putul la parametri."
-image: "https://images.pexels.com/photos/28240873/pexels-photo-28240873.jpeg?auto=compress&cs=tinysrgb&w=1280"
+image: "/media/jet-apa-put.webp"
 forWhom:
   - "Puturi cu debit scazut in timp"
   - "Apa care iese tulbure sau cu nisip"

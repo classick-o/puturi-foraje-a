@@ -8,23 +8,24 @@ interface Props {
   subtitle?: string;
 }
 const {
-  title = 'Ai nevoie de un put? Cere o oferta gratuita.',
-  subtitle = 'Iti raspundem rapid, cu un deviz clar si fara obligatii.',
+  title = 'Ai nevoie de un put? Afli pretul intr-un singur telefon.',
+  subtitle = 'Spune-ne localitatea si ce adancime crezi ca ai nevoie - iti dam pe loc o estimare, gratuit si fara obligatii.',
 } = Astro.props;
 ---
 
 <section class="bg-primary">
+  <div class="hazard-stripe h-2" aria-hidden="true"></div>
   <div class="wrap flex flex-col items-center gap-6 py-14 text-center lg:flex-row lg:justify-between lg:text-left">
     <div class="max-w-2xl">
-      <h2 class="text-2xl text-white sm:text-3xl">{title}</h2>
+      <h2 class="text-2xl !text-white sm:text-3xl">{title}</h2>
       <p class="mt-2 text-white/70">{subtitle}</p>
     </div>
     <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-      <Button href={withBase('contact')} variant="cta" size="lg" icon="ph:paper-plane-tilt-fill">
-        Cere oferta
+      <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="banda-cta">
+        Suna: {site.phone}
       </Button>
-      <Button href={site.phoneHref} variant="outline-light" size="lg" icon="ph:phone-call-fill">
-        {site.phone}
+      <Button href={withBase('contact')} variant="outline-light" size="lg" icon="ph:paper-plane-tilt-fill">
+        Cere oferta scrisa
       </Button>
     </div>
   </div>

@@ -11,8 +11,8 @@ interface Props {
 const {
   title,
   description = site.description,
-  // OG implicit: imagine reala (hero foraj). Inlocuieste cu /og-default.jpg propriu in productie.
-  image = 'https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  // OG implicit: poza reala cu instalatia de foraj (public/og-image.jpg, 1200x630).
+  image = '/og-image.jpg',
   type = 'website',
   noindex = false,
 } = Astro.props;
@@ -33,6 +33,9 @@ const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
+{image === '/og-image.jpg' && <meta property="og:image:width" content="1200" />}
+{image === '/og-image.jpg' && <meta property="og:image:height" content="630" />}
+<meta property="og:image:alt" content={fullTitle} />
 <meta property="og:url" content={canonical} />
 <meta property="og:locale" content="ro_RO" />
 <meta property="og:site_name" content={site.name} />

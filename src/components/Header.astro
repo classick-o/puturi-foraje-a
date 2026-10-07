@@ -24,7 +24,12 @@ const linkBase =
 >
   <div class="wrap flex h-16 items-center justify-between gap-4 lg:h-[72px]">
     <a href={withBase('')} class="flex items-center" aria-label={site.name}>
-      <span class="text-xl font-extrabold tracking-tight text-primary">{site.name}</span>
+      <span class="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight text-primary" style="font-stretch: 88%">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-accent">
+          <Icon name="ph:drop-fill" class="text-lg" />
+        </span>
+        {site.name}
+      </span>
     </a>
 
     <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navigatie principala">
@@ -65,12 +70,26 @@ const linkBase =
     <div class="flex items-center gap-2">
       <a
         href={site.phoneHref}
-        class="hidden items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/5 xl:flex"
+        data-cta="header"
+        class="hidden items-center gap-2 rounded-md px-3 py-2 text-[0.95rem] font-bold text-primary hover:bg-primary/5 xl:flex"
       >
-        <Icon name="ph:phone-call-fill" class="text-secondary" />
+        <Icon name="ph:phone-call-fill" class="text-accent" />
         {site.phone}
       </a>
-      <Button href={withBase('contact')} variant="cta" class="hidden sm:inline-flex">Cere oferta</Button>
+      <a
+        href={site.phoneHref}
+        data-cta="header"
+        class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-2 text-sm font-extrabold text-primary sm:hidden"
+      >
+        <Icon name="ph:phone-call-fill" class="text-base" />
+        Suna
+      </a>
+      <span class="hidden sm:inline-flex xl:hidden">
+        <Button href={site.phoneHref} variant="cta" icon="ph:phone-call-fill" data-cta="header">{site.phone}</Button>
+      </span>
+      <span class="hidden xl:inline-flex">
+        <Button href={withBase('contact')} variant="primary">Cere oferta</Button>
+      </span>
       <button
         id="menu-toggle"
         type="button"
@@ -105,8 +124,8 @@ const linkBase =
         ))
       }
       <div class="mt-4 flex flex-col gap-2">
-        <Button href={site.phoneHref} variant="outline" icon="ph:phone-call-fill">{site.phone}</Button>
-        <Button href={withBase('contact')} variant="cta">Cere oferta gratuita</Button>
+        <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="meniu-mobil">Suna: {site.phone}</Button>
+        <Button href={withBase('contact')} variant="outline">Cere oferta gratuita</Button>
       </div>
     </nav>
   </div>

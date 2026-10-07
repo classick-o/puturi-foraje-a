@@ -9,6 +9,7 @@ import Button from '../components/Button.astro';
 import { Icon } from 'astro-icon/components';
 import { site, whyUs } from '../lib/site';
 import { withBase } from '../lib/url';
+import { photos, asset } from '../lib/media';
 
 const values = whyUs.slice(0, 6);
 const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
@@ -48,12 +49,12 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
       </div>
       <div>
         <img
-          src="https://images.pexels.com/photos/8961006/pexels-photo-8961006.jpeg?auto=compress&cs=tinysrgb&w=1000"
-          alt="Membru al echipei de foraj, cu echipament de protectie"
-          width="1000"
-          height="667"
+          src={asset(photos.instalatieGradina.src)}
+          alt={photos.instalatieGradina.alt}
+          width="640"
+          height="800"
           loading="lazy"
-          class="aspect-[3/2] w-full rounded-xl object-cover shadow-md"
+          class="mx-auto aspect-[4/5] w-full max-w-md rounded-xl object-cover shadow-md"
         />
       </div>
     </div>

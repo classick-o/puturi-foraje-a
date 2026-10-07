@@ -3,21 +3,55 @@ import { Icon } from 'astro-icon/components';
 import { site } from '../lib/site';
 ---
 
-<div class="fixed bottom-4 right-4 z-40 flex flex-col gap-3 print:hidden">
-  <a
-    href={site.whatsapp}
-    target="_blank"
-    rel="noopener"
-    aria-label="Scrie pe WhatsApp"
-    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg transition-transform hover:-translate-y-0.5"
-  >
-    <Icon name="ph:whatsapp-logo-fill" class="text-2xl" />
-  </a>
-  <a
-    href={site.phoneHref}
-    aria-label="Suna acum"
-    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-white shadow-lg transition-transform hover:-translate-y-0.5 sm:hidden"
-  >
-    <Icon name="ph:phone-call-fill" class="text-2xl" />
-  </a>
+<!-- Mobil: bara fixa jos cu Suna + WhatsApp. Majoritatea clicurilor din Google Ads vin de pe telefon. -->
+<div
+  class="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-surface/95 px-3 pb-[calc(0.6rem+env(safe-area-inset-bottom))] pt-2.5 shadow-[0_-6px_20px_rgba(14,26,34,.12)] backdrop-blur sm:hidden print:hidden"
+>
+  <div class="flex gap-2">
+    <a
+      href={site.phoneHref}
+      data-cta="bara-mobil"
+      class="flex flex-[1.6] items-center justify-center gap-2 rounded-md bg-accent px-3 py-3 text-[1.05rem] font-extrabold text-primary shadow-md active:scale-[.98]"
+    >
+      <Icon name="ph:phone-call-fill" class="call-ring text-xl" />
+      Suna: {site.phone}
+    </a>
+    <a
+      href={site.whatsapp}
+      target="_blank"
+      rel="noopener"
+      data-cta="bara-mobil"
+      aria-label="Scrie-ne pe WhatsApp"
+      class="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-whatsapp px-3 py-3 font-bold text-white shadow-md active:scale-[.98]"
+    >
+      <Icon name="ph:whatsapp-logo-fill" class="text-xl" />
+      WhatsApp
+    </a>
+  </div>
 </div>
+
+<!-- Desktop: buton WhatsApp flotant -->
+<a
+  href={site.whatsapp}
+  target="_blank"
+  rel="noopener"
+  data-cta="flotant"
+  aria-label="Scrie pe WhatsApp"
+  class="fixed bottom-5 right-5 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg transition-transform hover:-translate-y-0.5 sm:inline-flex print:hidden"
+>
+  <Icon name="ph:whatsapp-logo-fill" class="text-3xl" />
+</a>
+
+<style>
+  .call-ring {
+    animation: ring 2.4s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
+  @keyframes ring {
+    0%, 70%, 100% { transform: rotate(0); }
+    74% { transform: rotate(-14deg); }
+    78% { transform: rotate(14deg); }
+    82% { transform: rotate(-10deg); }
+    86% { transform: rotate(8deg); }
+  }
+</style>

@@ -4,6 +4,7 @@ import CtaBand from '../../components/CtaBand.astro';
 import { Icon } from 'astro-icon/components';
 import { getCollection, render } from 'astro:content';
 import { site } from '../../lib/site';
+import { asset } from '../../lib/media';
 import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
@@ -64,7 +65,7 @@ const breadcrumbLd = {
     <div class="wrap py-12 sm:py-16">
       <div class="mx-auto max-w-3xl">
         <img
-          src={d.image}
+          src={d.image && asset(d.image)}
           alt={d.title}
           width="1280"
           height="720"
@@ -101,7 +102,7 @@ const breadcrumbLd = {
                 class="group flex items-center gap-4 rounded-xl border border-border bg-background p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <img
-                  src={p.data.image}
+                  src={p.data.image && asset(p.data.image)}
                   alt={p.data.title}
                   width="160"
                   height="120"

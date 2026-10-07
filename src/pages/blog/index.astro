@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import CollapsibleCards from '../../components/CollapsibleCards.astro';
 import { getCollection } from 'astro:content';
+import { asset } from '../../lib/media';
 import { withBase } from '../../lib/url';
 
 const posts = (await getCollection('blog')).sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
@@ -33,7 +34,7 @@ const fmt = (s: string) => s.split('-').reverse().join('.');
             >
               <div class="aspect-[16/9] overflow-hidden">
                 <img
-                  src={post.data.image}
+                  src={post.data.image && asset(post.data.image)}
                   alt={post.data.title}
                   width="800"
                   height="450"

@@ -4,7 +4,7 @@ order: 6
 icon: "ph:gauge-duotone"
 excerpt: "Hidrofoare, pompe submersibile si automatizari, dimensionate si montate corect pentru putul tau."
 heroSubtitle: "Apa la presiune constanta in casa si gradina, cu echipamente potrivite si montaj profesional."
-image: "https://images.pexels.com/photos/36834230/pexels-photo-36834230.jpeg?auto=compress&cs=tinysrgb&w=1280"
+image: "/media/sant-racord-put.webp"
 forWhom:
   - "Puturi noi care au nevoie de pompare"
   - "Inlocuirea unei pompe vechi sau subdimensionate"

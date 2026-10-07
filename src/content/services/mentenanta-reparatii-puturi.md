@@ -4,7 +4,7 @@ order: 4
 icon: "ph:wrench-duotone"
 excerpt: "Revizii, inlocuire pompa, adancire si reabilitare puturi, plus contracte de intretinere."
 heroSubtitle: "Pastram putul tau in cea mai buna forma, ani la rand, cu interventii rapide."
-image: "https://images.pexels.com/photos/31249536/pexels-photo-31249536.jpeg?auto=compress&cs=tinysrgb&w=1280"
+image: "/media/utilaj-foraj-teren.webp"
 forWhom:
   - "Puturi existente cu probleme de debit"
   - "Pompe defecte sau subdimensionate"

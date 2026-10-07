@@ -1,7 +1,8 @@
 ---
 import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/archivo/wdth.css';
 import '../styles/global.css';
-import { site } from '../lib/site';
+import { site, zones } from '../lib/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
@@ -16,20 +17,37 @@ interface Props {
   type?: string;
   noindex?: boolean;
   jsonLd?: object | object[];
+  /** Imagine/poster de preincarcat (LCP), ex. posterul video din hero */
+  preload?: string;
 }
-const { title, description, image, type, noindex, jsonLd } = Astro.props;
+const { title, description, image, type, noindex, jsonLd, preload } = Astro.props;
 
+const homeUrl = new URL(import.meta.env.BASE_URL, Astro.site).href;
 const orgLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': 'HomeAndConstructionBusiness',
+  '@id': `${homeUrl}#firma`,
   name: site.name,
   description: site.description,
-  telephone: site.phoneHref.replace('tel:', ''),
+  telephone: site.phoneIntl,
   email: site.email,
-  url: Astro.site?.href,
-  areaServed: 'RO',
+  url: homeUrl,
+  image: new URL('og-image.jpg', homeUrl).href,
+  logo: new URL('favicon.svg', homeUrl).href,
   address: { '@type': 'PostalAddress', addressCountry: 'RO' },
-  openingHours: 'Mo-Fr 08:00-18:00',
+  areaServed: zones.map((z) => ({ '@type': 'AdministrativeArea', name: z })),
+  knowsAbout: ['foraje puturi apa', 'denisipare put', 'tubaj PVC', 'pompe submersibile', 'foraje pompe de caldura'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: site.phoneIntl,
+    contactType: 'customer service',
+    areaServed: 'RO',
+    availableLanguage: 'Romanian',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' },
+  ],
   priceRange: '$$',
 };
 const pageLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
@@ -38,18 +56,19 @@ const faviconHref = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/favicon.svg
 ---
 
 <!doctype html>
-<html lang="ro">
+<html lang="ro-RO">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <Analytics />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
-    <meta name="theme-color" content="#0B1F3B" />
+    <meta name="theme-color" content="#0E1A22" />
     <meta name="generator" content={Astro.generator} />
+    {preload && <link rel="preload" as="image" href={preload} fetchpriority="high" />}
     <Seo title={title} description={description} image={image} type={type} noindex={noindex} />
     {allLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
   </head>
-  <body>
+  <body class="pb-[76px] sm:pb-0">
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
