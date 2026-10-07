@@ -8,7 +8,7 @@ OUT = os.path.join(os.path.dirname(__file__), 'import')
 os.makedirs(OUT, exist_ok=True)
 
 SITE = 'https://forajeputurideapa.ro'
-CAMPAIGN = 'Search - Foraje puturi apa - RO'
+CAMPAIGN = 'AcviForaj - Search - Foraje puturi'
 BUDGET = '60'  # RON/zi - de confirmat inainte de pornire
 
 # Titluri comune, potrivite in orice grup (se combina cu cele specifice)
@@ -219,3 +219,34 @@ write('9-apel.csv', ['Campaign', 'Phone Number', 'Country Code', 'Call reporting
 
 print(f'OK: {len(GROUPS)} grupuri, {len(kw_rows)} cuvinte cheie, {len(NEGATIVES)} negative, '
       f'{len(ad_rows)} anunturi, {len(SITELINKS)} sitelinkuri, {len(CALLOUTS)} callouts -> {OUT}')
+
+
+# ---------- Format pentru incarcarea in bloc din interfata web (Instrumente > Actiuni in bloc > Incarcari) ----------
+WEB = os.path.join(os.path.dirname(__file__), 'import-web')
+os.makedirs(WEB, exist_ok=True)
+def wwrite(name, header, rows):
+    with open(os.path.join(WEB, name), 'w', newline='', encoding='utf-8') as f:
+        w = csv.writer(f); w.writerow(header); w.writerows(rows)
+
+wwrite('1-campanie.csv',
+       ['Row Type', 'Action', 'Campaign status', 'Campaign', 'Campaign type', 'Networks', 'Budget', 'Budget type',
+        'Bid strategy type', 'Language', 'Location', 'EU political ads'],
+       [['Campaign', 'Add', 'Paused', CAMPAIGN, 'Search', 'Google search', BUDGET, 'Daily', 'Maximize clicks', 'ro', 'Romania', 'No']])
+wwrite('2-grupuri.csv', ['Row Type', 'Action', 'Ad group status', 'Campaign', 'Ad group', 'Ad group type', 'Default max. CPC'],
+       [['Ad group', 'Add', 'Enabled', CAMPAIGN, g['name'], 'Standard', g['cpc']] for g in GROUPS])
+krows = []
+for g in GROUPS:
+    for k in g['kw']:
+        for t in ('Phrase match', 'Exact match'):
+            krows.append(['Keyword', 'Add', 'Enabled', CAMPAIGN, g['name'], k, t, g['url']])
+wwrite('3-cuvinte-cheie.csv', ['Row Type', 'Action', 'Keyword status', 'Campaign', 'Ad group', 'Keyword', 'Type', 'Final URL'], krows)
+wwrite('4-negative.csv', ['Row Type', 'Action', 'Keyword status', 'Level', 'Campaign', 'Negative keyword', 'Type'],
+       [['Negative keyword', 'Add', 'Enabled', 'Campaign', CAMPAIGN, n, 'Phrase match'] for n in NEGATIVES])
+ah = ['Row Type', 'Action', 'Ad status', 'Campaign', 'Ad group', 'Ad type'] + [f'Headline {i}' for i in range(1, 16)] \
+     + [f'Description {i}' for i in range(1, 5)] + ['Path 1', 'Path 2', 'Final URL']
+arows = []
+for g in GROUPS:
+    hs = (g['h'] + COMMON_H + [''] * 15)[:15]
+    arows.append(['Ad', 'Add', 'Enabled', CAMPAIGN, g['name'], 'Responsive search ad'] + hs + g['d'] + list(g['path']) + [g['url']])
+wwrite('5-anunturi.csv', ah, arows)
+print('web ->', WEB)
