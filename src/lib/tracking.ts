@@ -16,10 +16,10 @@
 // ============================================================================
 export const tracking = {
   ga4Id: 'G-XXXXXXXXXX', // [PLACEHOLDER]
-  adsId: 'AW-XXXXXXXXXX', // [PLACEHOLDER]
-  leadConversionLabel: 'XXXXXXXXXXXXXXXXXX', // [PLACEHOLDER] conversie: formular trimis
-  callConversionLabel: 'XXXXXXXXXXXXXXXXXX', // [PLACEHOLDER] conversie: click telefon
-  whatsappConversionLabel: 'XXXXXXXXXXXXXXXXXX', // [PLACEHOLDER] conversie: click WhatsApp
+  adsId: 'AW-17583353606', // cont 711-216-5903
+  leadConversionLabel: 'ebA0CMCprZQdEIbessBB', // AcviForaj - Formular trimis (site)
+  callConversionLabel: 'iirMCLqprZQdEIbessBB', // AcviForaj - Clic telefon (site)
+  whatsappConversionLabel: '1vmzCL2prZQdEIbessBB', // AcviForaj - Clic WhatsApp (site)
   web3formsKey: '', // [PLACEHOLDER] optional - formular pe email
 };
 
