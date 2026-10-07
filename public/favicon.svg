@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" rx="4" fill="#FFCE1F"/>
-  <rect x="12" y="3" width="8" height="15" fill="#1570C9"/>
-  <path d="M8 18h16l-8 11z" fill="#14222E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <clipPath id="c"><rect width="40" height="40" rx="7"/></clipPath>
+  <g clip-path="url(#c)">
+    <rect width="40" height="10" fill="#3A2D22"/><rect y="10" width="40" height="8" fill="#C99A4B"/>
+    <rect y="18" width="40" height="7" fill="#E4D5AA"/><rect y="25" width="40" height="6" fill="#7B6F61"/>
+    <rect y="31" width="40" height="9" fill="#1570C9"/>
+    <rect x="16" y="0" width="8" height="30" fill="#1570C9" stroke="#0F5AA3"/>
+    <path d="M16 30h8l-4 6z" fill="#FFCE1F"/>
+  </g>
 </svg>

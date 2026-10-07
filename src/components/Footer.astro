@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { getCollection } from 'astro:content';
 import { site, nav, zones } from '../lib/site';
 import { withBase } from '../lib/url';
+import Logo from './Logo.astro';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order).slice(0, 6);
 const year = 2026;
@@ -12,7 +13,7 @@ const year = 2026;
   <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
     <div>
       <div class="flex items-center">
-        <span class="font-display text-[2rem] font-black text-white">{site.name}</span>
+        <Logo variant="light" />
       </div>
       <p class="mt-4 text-sm leading-relaxed">{site.description}</p>
     </div>
@@ -58,10 +59,12 @@ const year = 2026;
           <Icon name="ph:whatsapp-logo-fill" class="mt-0.5 text-accent" />
           <a href={site.whatsapp} target="_blank" rel="noopener" data-cta="footer" class="hover:text-white">WhatsApp: {site.phone}</a>
         </li>
-        <li class="flex items-start gap-2.5">
-          <Icon name="ph:envelope-simple-fill" class="mt-0.5 text-accent" />
-          <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a>
-        </li>
+        {site.email && (
+          <li class="flex items-start gap-2.5">
+            <Icon name="ph:envelope-simple-fill" class="mt-0.5 text-accent" />
+            <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a>
+          </li>
+        )}
         <li class="flex items-start gap-2.5">
           <Icon name="ph:map-pin-fill" class="mt-0.5 text-accent" />
           <span>{site.address}</span>

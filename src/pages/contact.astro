@@ -9,7 +9,7 @@ import { withBase } from '../lib/url';
 const contactCards = [
   { icon: 'ph:phone-call-duotone', label: 'Telefon', value: site.phone, href: site.phoneHref },
   { icon: 'ph:whatsapp-logo-duotone', label: 'WhatsApp', value: 'Scrie-ne pe WhatsApp', href: site.whatsapp },
-  { icon: 'ph:envelope-simple-duotone', label: 'Email', value: site.email, href: `mailto:${site.email}` },
+  ...(site.email ? [{ icon: 'ph:envelope-simple-duotone', label: 'Email', value: site.email, href: `mailto:${site.email}` }] : []),
 ];
 ---
 

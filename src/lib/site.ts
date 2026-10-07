@@ -5,8 +5,8 @@ import { withBase } from './url';
 // ale clientului (nume firma, telefon, email, adresa, social).
 // ============================================================
 export const site = {
-  name: 'AquaForaj', // [PLACEHOLDER] numele firmei
-  legalName: 'AquaForaj SRL', // [PLACEHOLDER]
+  name: 'AcviForaj',
+  legalName: 'AcviForaj', // [DE COMPLETAT] denumirea firmei (SRL/PFA) pentru pagini legale
   tagline: 'Foraje puțuri de apă, oriunde în România',
   description:
     'Foraje puțuri apă cu utilaj propriu: forare, tubaj PVC cu filtru, denisipare și pompă montată. Sună la 0761 251 596 pentru preț pe loc - deviz gratuit, garanție în scris.',
@@ -15,7 +15,7 @@ export const site = {
   phoneHref: 'tel:+40761251596',
   whatsapp: `https://wa.me/40761251596?text=${encodeURIComponent('Bună ziua! Aș dori o ofertă pentru un foraj de puț.')}`,
   whatsappBase: 'https://wa.me/40761251596',
-  email: 'office@aquaforaj.ro', // [PLACEHOLDER]
+  email: '', // optional: adresa de email, daca vreti sa apara pe site
   address: 'Deplasare în toată România', // [PLACEHOLDER] adresa sediului, daca vrei sa apara (ajuta la Google Business)
   schedule: 'Luni - Vineri: 08:00 - 18:00 | Sâmbătă: 09:00 - 14:00',
   social: {
@@ -37,10 +37,10 @@ export const nav = [
 ] as const;
 
 export const stats = [
-  { value: '15+', label: 'Ani de experiență' },
-  { value: '2.500+', label: 'Foraje executate' },
   { value: 'Gratuit', label: 'Deviz și consultanță' },
-  { value: '40+', label: 'Județe acoperite' },
+  { value: 'Propriu', label: 'Utilaj și echipă' },
+  { value: 'În scris', label: 'Garanție în contract' },
+  { value: 'Toată țara', label: 'Ne deplasăm cu utilajul' },
 ] as const;
 
 export const whyUs = [
@@ -52,7 +52,7 @@ export const whyUs = [
   {
     icon: 'ph:users-three-duotone',
     title: 'Echipă proprie',
-    text: 'Operatori și ingineri cu experiență - nu subcontractăm lucrarea.',
+    text: 'Lucrăm cu oamenii noștri la fiecare puț - nu dăm lucrarea mai departe.',
   },
   {
     icon: 'ph:seal-check-duotone',
@@ -82,33 +82,6 @@ export const steps = [
   { title: 'Programare', text: 'Stabilim data și venim cu utilajul la tine.' },
   { title: 'Execuție foraj', text: 'Forăm, tubăm și denisipăm puțul până la apă curată.' },
   { title: 'Punere în funcțiune', text: 'Montăm pompa sau hidroforul și predăm documentația + garanția.' },
-] as const;
-
-export const testimonials = [
-  {
-    name: 'Andrei P.',
-    city: 'Ilfov',
-    text: 'Au venit la timp, au lucrat curat și am avut apă în aceeași zi. Recomand cu încredere.',
-    rating: 5,
-  },
-  {
-    name: 'Maria D.',
-    city: 'Cluj',
-    text: 'M-au ajutat și cu actele la Apele Române. Preț corect, exact cât au spus la început.',
-    rating: 5,
-  },
-  {
-    name: 'Ionuț și familia',
-    city: 'Timiș',
-    text: 'Puț de 60 m pentru gospodărie și grădină. Echipă serioasă, garanție în scris.',
-    rating: 5,
-  },
-  {
-    name: 'Gabriel M.',
-    city: 'Brașov',
-    text: 'Denisipare rapidă la un puț vechi, debitul a revenit complet. Mulțumesc!',
-    rating: 5,
-  },
 ] as const;
 
 export const zones = [

@@ -1,0 +1,32 @@
+---
+// Sigla AcviForaj (acvifer + foraj): sectiune printr-un put - straturi de sol, tubul albastru,
+// iar jos stratul de apa. Varianta `light` e pentru fundaluri inchise.
+import { site } from '../lib/site';
+
+interface Props {
+  variant?: 'dark' | 'light';
+  class?: string;
+}
+const { variant = 'dark', class: cls = '' } = Astro.props;
+const text = variant === 'light' ? '#F2F4EF' : '#14222E';
+---
+
+<span class:list={['inline-flex items-center gap-2.5', cls]}>
+  <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0" aria-hidden="true">
+    <defs><clipPath id={`lc-${variant}`}><rect width="40" height="40" rx="7" /></clipPath></defs>
+    <g clip-path={`url(#lc-${variant})`}>
+      <rect width="40" height="10" fill="#3A2D22" />
+      <rect y="10" width="40" height="8" fill="#C99A4B" />
+      <rect y="18" width="40" height="7" fill="#E4D5AA" />
+      <rect y="25" width="40" height="6" fill="#7B6F61" />
+      <rect y="31" width="40" height="9" fill="#1570C9" />
+      <path d="M0 35.5c4-2.4 8-2.4 12 0s8 2.4 12 0 8-2.4 12 0 4 0 4 0" fill="none" stroke="#7DB8F0" stroke-width="1.4" />
+      <rect x="17" y="0" width="6" height="30" fill="#1570C9" />
+      <rect x="17" y="0" width="6" height="30" fill="none" stroke="#0F5AA3" stroke-width="1" />
+      <path d="M17 30h6l-3 5z" fill="#FFCE1F" />
+    </g>
+  </svg>
+  <span class="font-display text-[1.6rem] font-black leading-none tracking-tight" style={`color:${text}`}>
+    {site.name}
+  </span>
+</span>

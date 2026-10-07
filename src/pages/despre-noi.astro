@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import TrustBar from '../components/TrustBar.astro';
 import IconTile from '../components/IconTile.astro';
 import CollapsibleCards from '../components/CollapsibleCards.astro';
 import CtaBand from '../components/CtaBand.astro';
@@ -12,17 +11,16 @@ import { withBase } from '../lib/url';
 import { photos, asset } from '../lib/media';
 
 const values = whyUs.slice(0, 6);
-const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
 ---
 
 <BaseLayout
   title="Despre noi"
-  description="Firmă de foraje puțuri apă cu peste 15 ani de experiență, echipă și utilaje proprii, garanție în scris și preț corect."
+  description="AcviForaj: foraje puțuri de apă cu utilaj și echipă proprie, garanție în scris și preț spus din start. Vezi filmări de pe șantier."
 >
   <PageHero
     eyebrow="Despre noi"
     title="O echipă serioasă, cu utilaje proprii"
-    subtitle="Peste 15 ani de experiență în foraje puțuri de apă. Lucrăm corect, cu materiale de calitate, garanție în scris și documentație inclusă."
+    subtitle="Forăm puțuri de apă cu utilajul nostru, tubăm cu materiale bune și predăm lucrarea cu garanție în scris și actele în regulă."
     breadcrumb={[{ label: 'Acasă', href: withBase('') }, { label: 'Despre noi' }]}
   />
 
@@ -30,16 +28,16 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
   <section class="py-16 sm:py-20">
     <div class="wrap grid items-center gap-12 lg:grid-cols-2">
       <div>
-        <h2 class="text-3xl sm:text-4xl">Foraje făcute ca la carte, de peste 15 ani</h2>
+        <h2 class="text-3xl sm:text-4xl">De ce ne cheamă AcviForaj</h2>
         <div class="mt-4 space-y-4 leading-relaxed text-muted">
           <p>
-            Am pornit de la un singur utilaj și o promisiune simplă: lucrări de calitate, la un preț
-            corect. Cu timpul am crescut, am investit în echipamente moderne și ne-am format o echipă
-            de oameni cu experiență, dar promisiunea a rămas aceeași.
+            Acviferul e stratul din pământ care ține apa. Un puț e bun doar dacă ajunge la acviferul
+            potrivit: prea sus, apa e puțină sau tulbure; la stratul bun, ai apă limpede ani de zile.
+            De aici vine și numele: forăm până la acviferul bun pentru terenul tău.
           </p>
           <p>
             Astăzi executăm foraje în toată țara, de la puțuri pentru gospodărie până la sonde pentru
-            pompe de căldură, și ne ocupăm inclusiv de documentația necesara. Punem accent pe
+            pompe de căldură, și ne ocupăm inclusiv de documentația necesară. Punem accent pe
             transparență: știi din start la ce să te aștepți, fără costuri ascunse.
           </p>
         </div>
@@ -56,16 +54,6 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
           loading="lazy"
           class="mx-auto aspect-[4/5] w-full max-w-md rounded-xl object-cover shadow-md"
         />
-      </div>
-    </div>
-  </section>
-
-  <!-- Cifre -->
-  <section class="bg-surface py-16 sm:py-20">
-    <div class="wrap">
-      <h2 class="text-center text-3xl">Cifrele care ne reprezintă</h2>
-      <div class="mt-10">
-        <TrustBar />
       </div>
     </div>
   </section>
@@ -92,7 +80,7 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
     </div>
   </section>
 
-  <!-- Garantii + Parteneri -->
+  <!-- Garantii + Lucrari -->
   <section class="bg-surface py-16 sm:py-20">
     <div class="wrap grid gap-10 lg:grid-cols-2">
       <div class="rounded-xl border border-border bg-background p-8">
@@ -107,22 +95,14 @@ const partners = ['Grundfos', 'Wilo', 'Pedrollo', 'DAB', 'Lowara'];
       </div>
       <div class="rounded-xl border border-border bg-background p-8">
         <div class="flex items-center gap-4">
-          <IconTile icon="ph:medal-duotone" size="lg" />
-          <h2 class="text-2xl">Mărci de încredere</h2>
+          <IconTile icon="ph:video-camera-duotone" size="lg" />
+          <h2 class="text-2xl">Vezi înainte să suni</h2>
         </div>
         <p class="mt-4 leading-relaxed text-muted">
-          Pentru sistemele de pompare lucrăm cu branduri recunoscute, pentru durabilitate și
-          performanță în timp.
+          Pe pagina de lucrări găsești filmări și poze reale de pe șantierele noastre: utilajul,
+          țevile și apa ieșind din puț.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2">
-          {
-            partners.map((p) => (
-              <span class="rounded-md border border-border bg-surface px-3 py-1.5 text-sm font-semibold text-primary">
-                {p}
-              </span>
-            ))
-          }
-        </div>
+        <a href={withBase('portofoliu')} class="mt-5 inline-block font-bold text-secondary underline decoration-2 underline-offset-4">Vezi lucrările</a>
       </div>
     </div>
   </section>

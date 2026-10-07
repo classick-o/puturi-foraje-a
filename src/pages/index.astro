@@ -6,7 +6,7 @@ import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Strata from '../components/Strata.astro';
 import VideoCard from '../components/VideoCard.astro';
-import { site, faqs, zones, testimonials } from '../lib/site';
+import { site, faqs, zones, whyUs } from '../lib/site';
 import { withBase } from '../lib/url';
 import { videos, photos, asset, videoLd } from '../lib/media';
 
@@ -265,7 +265,7 @@ const homeLd = [
       <div>
         <h2 class="text-[3rem] sm:text-[4.2rem]">Unde lucrăm</h2>
         <p class="mt-6 text-[1.1rem] leading-relaxed">
-          Ne deplasăm în toată țara. Am lucrat deja în {zones.join(', ')}.
+          Ne deplasăm în toată țara. Mergem, printre altele, în {zones.join(', ')}.
         </p>
         <p class="mt-4 text-[1.1rem] leading-relaxed text-muted">
           Nu-ți vezi județul? Sună-ne, cel mai probabil ajungem și la tine.
@@ -275,19 +275,17 @@ const homeLd = [
         </a>
       </div>
       <div>
-        <h2 class="text-[3rem] sm:text-[4.2rem]">Ce zic clienții</h2>
-        <div class="mt-8 space-y-8">
+        <h2 class="text-[3rem] sm:text-[4.2rem]">Cum lucrăm</h2>
+        <dl class="mt-8 space-y-6">
           {
-            testimonials.slice(0, 3).map((t) => (
-              <figure class="border-l-[6px] border-loess pl-5">
-                <blockquote class="text-[1.15rem] leading-relaxed">„{t.text}”</blockquote>
-                <figcaption class="mt-2 font-bold text-muted">
-                  {t.name}, {t.city}
-                </figcaption>
-              </figure>
+            whyUs.map((w) => (
+              <div class="border-l-[6px] border-loess pl-5">
+                <dt class="font-display text-[1.6rem] font-extrabold leading-tight text-primary">{w.title}</dt>
+                <dd class="mt-1 text-[1.05rem] leading-relaxed text-muted">{w.text}</dd>
+              </div>
             ))
           }
-        </div>
+        </dl>
       </div>
     </div>
   </section>

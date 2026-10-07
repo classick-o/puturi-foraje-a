@@ -34,7 +34,7 @@ const orgLd = {
   name: site.name,
   description: site.description,
   telephone: site.phoneIntl,
-  email: site.email,
+  ...(site.email ? { email: site.email } : {}),
   url: homeUrl,
   image: new URL('og-image.jpg', homeUrl).href,
   logo: new URL('favicon.svg', homeUrl).href,
