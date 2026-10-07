@@ -8,17 +8,17 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 const year = 2026;
 ---
 
-<footer class="border-t border-white/10 bg-primary text-white/70">
+<footer class="bg-water-deep text-white/75">
   <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
     <div>
       <div class="flex items-center">
-        <span class="text-lg font-extrabold text-white">{site.name}</span>
+        <span class="font-display text-[2rem] font-black text-white">{site.name}</span>
       </div>
       <p class="mt-4 text-sm leading-relaxed">{site.description}</p>
     </div>
 
     <div>
-      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Servicii</h3>
+      <h3 class="font-display text-[1.5rem] font-extrabold !text-white">Servicii</h3>
       <ul class="mt-4 space-y-2.5 text-sm">
         {
           services.map((s) => (
@@ -33,7 +33,7 @@ const year = 2026;
     </div>
 
     <div>
-      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Zone deservite</h3>
+      <h3 class="font-display text-[1.5rem] font-extrabold !text-white">Zone deservite</h3>
       <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
         {
           zones.slice(0, 10).map((z) => (
@@ -48,7 +48,7 @@ const year = 2026;
     </div>
 
     <div>
-      <h3 class="text-sm font-bold uppercase tracking-wide text-white">Contact</h3>
+      <h3 class="font-display text-[1.5rem] font-extrabold !text-white">Contact</h3>
       <ul class="mt-4 space-y-3 text-sm">
         <li class="flex items-start gap-2.5">
           <Icon name="ph:phone-call-fill" class="mt-0.5 text-accent" />
@@ -78,7 +78,7 @@ const year = 2026;
     <div class="wrap flex flex-col gap-3 py-5 text-xs sm:flex-row sm:items-center sm:justify-between">
       <p>&copy; {year} {site.legalName}. Toate drepturile rezervate.</p>
       <div class="flex flex-wrap gap-x-4 gap-y-1">
-        <a href={withBase('politica-de-confidentialitate')} class="hover:text-white">Confidentialitate</a>
+        <a href={withBase('politica-de-confidentialitate')} class="hover:text-white">Confidențialitate</a>
         <a href={withBase('politica-cookies')} class="hover:text-white">Cookies</a>
         <a href={withBase('termeni-si-conditii')} class="hover:text-white">Termeni</a>
         <a href="https://anpc.ro" target="_blank" rel="noopener" class="hover:text-white">ANPC</a>

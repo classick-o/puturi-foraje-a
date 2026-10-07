@@ -1,21 +1,21 @@
 ---
-title: "Studiu geotehnic si hidrogeologic"
+title: "Studiu geotehnic și hidrogeologic"
 order: 7
 icon: "ph:ruler-duotone"
-excerpt: "Studii necesare pentru avize, pentru a sti la ce adancime e apa si pentru proiecte de constructii."
-heroSubtitle: "Datele corecte despre teren si panza freatica, inainte sa forezi sau sa construiesti."
+excerpt: "Studii necesare pentru avize, pentru a ști la ce adâncime e apa și pentru proiecte de construcții."
+heroSubtitle: "Datele corecte despre teren și pânza freatică, înainte să forezi sau să construiești."
 image: "https://images.pexels.com/photos/15391048/pexels-photo-15391048.jpeg?auto=compress&cs=tinysrgb&w=1280"
 forWhom:
-  - "Proiecte care necesita aviz de gospodarire a apelor"
-  - "Constructii ce cer studiu geotehnic"
-  - "Cei care vor sa stie unde se afla apa"
+  - "Proiecte care necesită aviz de gospodărire a apelor"
+  - "Construcții ce cer studiu geotehnic"
+  - "Cei care vor să știe unde se află apa"
 benefits:
   - title: "Decizii informate"
-    text: "Afli la ce adancime se afla apa si ce calitate are, inainte de investitie."
+    text: "Afli la ce adâncime se află apa și ce calitate are, înainte de investiție."
   - title: "Suport pentru avize"
-    text: "Studiul hidrogeologic este deseori necesar pentru documentatia la Apele Romane."
-  - title: "Util la constructii"
-    text: "Studiul geotehnic ofera datele de care au nevoie proiectantii pentru fundatii."
+    text: "Studiul hidrogeologic este deseori necesar pentru documentația la Apele Române."
+  - title: "Util la construcții"
+    text: "Studiul geotehnic oferă datele de care au nevoie proiectanții pentru fundații."
 specs:
   - label: "Tipuri"
     value: "Studiu geotehnic, studiu hidrogeologic"
@@ -23,17 +23,17 @@ specs:
     value: "Avize, proiectare, dimensionare foraj"
 faq:
   - q: "De ce am nevoie de studiu hidrogeologic?"
-    a: "Pentru a sti adancimea si calitatea apei si, in multe cazuri, pentru documentatia avizului de gospodarire a apelor."
-  - q: "Faceti si studiu pentru constructii?"
-    a: "Da, oferim studiu geotehnic cu datele necesare proiectarii fundatiilor."
-seoTitle: "Studiu geotehnic si hidrogeologic | Date corecte despre teren"
-seoDescription: "Studii geotehnice si hidrogeologice pentru foraje, avize si constructii. Afli adancimea si calitatea apei inainte de investitie."
+    a: "Pentru a ști adâncimea și calitatea apei și, în multe cazuri, pentru documentația avizului de gospodărire a apelor."
+  - q: "Faceți și studiu pentru construcții?"
+    a: "Da, oferim studiu geotehnic cu datele necesare proiectării fundațiilor."
+seoTitle: "Studiu geotehnic și hidrogeologic | Date corecte despre teren"
+seoDescription: "Studii geotehnice și hidrogeologice pentru foraje, avize și construcții. Afli adâncimea și calitatea apei înainte de investiție."
 ---
 
-## De ce conteaza studiul
+## De ce contează studiul
 
-Inainte de a fora un put sau de a construi, datele corecte despre teren fac diferenta. Studiul hidrogeologic stabileste la ce adancime se afla apa si ce calitate are, iar studiul geotehnic ofera informatiile necesare proiectarii fundatiilor.
+Înainte de a fora un puț sau de a construi, datele corecte despre teren fac diferența. Studiul hidrogeologic stabilește la ce adâncime se află apa și ce calitate are, iar studiul geotehnic oferă informațiile necesare proiectării fundațiilor.
 
-## Cand este necesar
+## Când este necesar
 
-Studiul hidrogeologic este deseori cerut in documentatia pentru avizul de gospodarire a apelor, iar studiul geotehnic este standard pentru multe proiecte de constructii. Te ajutam cu studiul potrivit nevoii tale.
+Studiul hidrogeologic este deseori cerut în documentația pentru avizul de gospodărire a apelor, iar studiul geotehnic este standard pentru multe proiecte de construcții. Te ajutăm cu studiul potrivit nevoii tale.

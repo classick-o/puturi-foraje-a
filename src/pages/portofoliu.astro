@@ -13,25 +13,25 @@ const jsonLd = videos.map((v) => videoLd(v, Astro.site));
 ---
 
 <BaseLayout
-  title="Lucrari Reale - Poze si Filmari de pe Santier"
-  description="Poze si filmari reale cu puturile forate de echipa noastra: utilaj de foraj propriu, tubaj PVC cu filtru, denisipare si apa la suprafata."
+  title="Lucrări Reale - Poze și Filmări de pe Șantier"
+  description="Poze și filmări reale cu puțurile forate de echipa noastră: utilaj de foraj propriu, tubaj PVC cu filtru, denisipare și apă la suprafață."
   jsonLd={jsonLd}
 >
   <PageHero
     eyebrow="Portofoliu"
-    title="Lucrari reale, filmate pe santier"
-    subtitle="Nu folosim poze de stoc. Tot ce vezi aici e filmat de echipa noastra, la clienti: utilajul, materialele si rezultatul."
-    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Portofoliu' }]}
+    title="Lucrări reale, filmate pe șantier"
+    subtitle="Nu folosim poze de stoc. Tot ce vezi aici e filmat de echipa noastră, la clienți: utilajul, materialele și rezultatul."
+    breadcrumb={[{ label: 'Acasă', href: withBase('') }, { label: 'Portofoliu' }]}
   />
 
   <section class="py-16 sm:py-20">
     <div class="wrap">
-      <h2 class="text-2xl sm:text-3xl">Filmari de pe santier</h2>
+      <h2 class="text-2xl sm:text-3xl">Filmări de pe șantier</h2>
       <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
         {videos.map((v) => <VideoCard video={v} />)}
       </div>
 
-      <h2 class="mt-16 text-2xl sm:text-3xl">Poze din lucrari</h2>
+      <h2 class="mt-16 text-2xl sm:text-3xl">Poze din lucrări</h2>
       <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:gap-6">
         {
           gallery.map((p) => (
@@ -45,15 +45,15 @@ const jsonLd = videos.map((v) => videoLd(v, Astro.site));
 
       <div class="mt-12 flex flex-col items-center gap-4 rounded-xl border border-secondary/20 bg-secondary-soft p-8 text-center">
         <p class="max-w-xl text-lg text-primary">
-          Ai un teren si vrei sa stii daca gasim apa? Trimite-ne pe WhatsApp o poza cu locul si localitatea.
+          Ai un teren și vrei să știi dacă găsim apă? Trimite-ne pe WhatsApp o poză cu locul și localitatea.
         </p>
         <div class="flex flex-col gap-3 sm:flex-row">
-          <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="portofoliu">Suna: {site.phone}</Button>
+          <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="portofoliu">Sună: {site.phone}</Button>
           <Button href={site.whatsapp} variant="outline" size="lg" icon="ph:whatsapp-logo-fill" target="_blank" rel="noopener" data-cta="portofoliu">WhatsApp</Button>
         </div>
       </div>
     </div>
   </section>
 
-  <CtaBand title="Vrei sa fii urmatorul proiect reusit?" />
+  <CtaBand title="Vrei să fii următorul proiect reușit?" />
 </BaseLayout>

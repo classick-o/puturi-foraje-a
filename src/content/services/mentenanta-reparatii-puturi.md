@@ -1,41 +1,41 @@
 ---
-title: "Mentenanta si reparatii puturi"
+title: "Mentenanță și reparații puțuri"
 order: 4
 icon: "ph:wrench-duotone"
-excerpt: "Revizii, inlocuire pompa, adancire si reabilitare puturi, plus contracte de intretinere."
-heroSubtitle: "Pastram putul tau in cea mai buna forma, ani la rand, cu interventii rapide."
+excerpt: "Revizii, înlocuire pompă, adâncire și reabilitare puțuri, plus contracte de întreținere."
+heroSubtitle: "Păstrăm puțul tău în cea mai bună formă, ani la rând, cu intervenții rapide."
 image: "/media/utilaj-foraj-teren.webp"
 forWhom:
-  - "Puturi existente cu probleme de debit"
+  - "Puțuri existente cu probleme de debit"
   - "Pompe defecte sau subdimensionate"
-  - "Proprietari care vor intretinere periodica"
+  - "Proprietari care vor întreținere periodică"
 benefits:
-  - title: "Diagnoza corecta"
-    text: "Identificam cauza problemei (pompa, colmatare, tubaj) inainte sa intervenim."
-  - title: "Adancire si reabilitare"
-    text: "Cand e nevoie, adancim sau reabilitam putul existent ca sa recapete debitul."
-  - title: "Contracte de intretinere"
-    text: "Iti propunem un plan de mentenanta periodica, ca putul sa nu te lase niciodata."
+  - title: "Diagnoză corectă"
+    text: "Identificăm cauza problemei (pompă, colmatare, tubaj) înainte să intervenim."
+  - title: "Adâncire și reabilitare"
+    text: "Când e nevoie, adâncim sau reabilităm puțul existent ca să recapete debitul."
+  - title: "Contracte de întreținere"
+    text: "Îți propunem un plan de mentenanță periodică, ca puțul să nu te lase niciodată."
 specs:
   - label: "Servicii"
-    value: "Revizie, inlocuire pompa, adancire, reabilitare"
-  - label: "Garantie lucrari"
-    value: "In scris, in functie de interventie"
+    value: "Revizie, înlocuire pompă, adâncire, reabilitare"
+  - label: "Garanție lucrări"
+    value: "În scris, în funcție de intervenție"
   - label: "Recomandare"
-    value: "Verificare periodica la 2-3 ani"
+    value: "Verificare periodică la 2-3 ani"
 faq:
-  - q: "Imi puteti adanci un put existent?"
-    a: "In multe cazuri, da. Evaluam putul si iti spunem daca adancirea este posibila si recomandata."
-  - q: "Imi schimbati pompa?"
-    a: "Da. Inlocuim pompe submersibile si hidrofoare, cu dimensionare corecta pentru putul tau."
-seoTitle: "Mentenanta si reparatii puturi | Revizii, pompa, adancire"
-seoDescription: "Intretinere si reparatii puturi: revizii, inlocuire pompa, adancire si reabilitare. Garantie in scris, contracte de mentenanta. Cere oferta."
+  - q: "Îmi puteți adânci un puț existent?"
+    a: "În multe cazuri, da. Evaluăm puțul și îți spunem dacă adâncirea este posibilă și recomandată."
+  - q: "Îmi schimbați pompa?"
+    a: "Da. Înlocuim pompe submersibile și hidrofoare, cu dimensionare corectă pentru puțul tău."
+seoTitle: "Mentenanță și reparații puțuri | Revizii, pompă, adâncire"
+seoDescription: "Întreținere și reparații puțuri: revizii, înlocuire pompă, adâncire și reabilitare. Garanție în scris, contracte de mentenanță. Cere ofertă."
 ---
 
-## Putul tau, ingrijit pe termen lung
+## Puțul tău, îngrijit pe termen lung
 
-Un put are nevoie de intretinere periodica pentru a-si pastra debitul si calitatea apei. Oferim revizii, inlocuire de pompe, adancire si reabilitare a puturilor existente, plus contracte de mentenanta pentru cei care vor liniste pe termen lung.
+Un puț are nevoie de întreținere periodică pentru a-și păstra debitul și calitatea apei. Oferim revizii, înlocuire de pompe, adâncire și reabilitare a puțurilor existente, plus contracte de mentenanță pentru cei care vor liniște pe termen lung.
 
-## Cum te ajutam
+## Cum te ajutăm
 
-Pornim mereu de la o diagnoza corecta: stabilim daca problema vine de la pompa, de la colmatare sau de la tubaj, apoi propunem solutia potrivita si un deviz clar. La cerere, programam verificari periodice ca sa preintampinam defectiunile.
+Pornim mereu de la o diagnoză corectă: stabilim dacă problema vine de la pompă, de la colmatare sau de la tubaj, apoi propunem soluția potrivită și un deviz clar. La cerere, programăm verificări periodice ca să preîntâmpinăm defecțiunile.

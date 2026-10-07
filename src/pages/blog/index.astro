@@ -12,14 +12,14 @@ const fmt = (s: string) => s.split('-').reverse().join('.');
 ---
 
 <BaseLayout
-  title="Blog - resurse despre foraje si puturi"
-  description="Ghiduri si articole utile despre foraje puturi apa: costuri, legislatie, intretinere si sfaturi practice."
+  title="Blog - resurse despre foraje și puțuri"
+  description="Ghiduri și articole utile despre foraje puțuri apă: costuri, legislație, întreținere și sfaturi practice."
 >
   <PageHero
     eyebrow="Blog"
-    title="Resurse si ghiduri despre foraje"
-    subtitle="Sfaturi practice despre costuri, legislatie si intretinerea puturilor, scrise pe intelesul tuturor."
-    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Blog' }]}
+    title="Resurse și ghiduri despre foraje"
+    subtitle="Sfaturi practice despre costuri, legislație și întreținerea puțurilor, scrise pe înțelesul tuturor."
+    breadcrumb={[{ label: 'Acasă', href: withBase('') }, { label: 'Blog' }]}
   />
 
   <section class="py-16 sm:py-20">
@@ -49,7 +49,7 @@ const fmt = (s: string) => s.split('-').reverse().join('.');
                 </div>
                 <h2 class="mt-2 text-lg font-bold leading-snug text-primary">{post.data.title}</h2>
                 <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{post.data.excerpt}</p>
-                <span class="mt-4 text-sm font-semibold text-secondary">Citeste articolul</span>
+                <span class="mt-4 text-sm font-semibold text-secondary">Citește articolul</span>
               </div>
             </a>
           ))

@@ -7,18 +7,18 @@ import { Icon } from 'astro-icon/components';
 import { zones } from '../../lib/site';
 import { withBase } from '../../lib/url';
 
-const featured = { name: 'Bucuresti si Ilfov', slug: 'foraje-puturi-bucuresti' };
+const featured = { name: 'București și Ilfov', slug: 'foraje-puturi-bucuresti' };
 ---
 
 <BaseLayout
-  title="Zone acoperite - foraje puturi in toata tara"
-  description="Executam foraje puturi apa la nivel national. Vezi zonele in care lucram si cere o oferta pentru localitatea ta."
+  title="Zone acoperite - foraje puțuri în toată țara"
+  description="Executăm foraje puțuri apă la nivel național. Vezi zonele în care lucrăm și cere o ofertă pentru localitatea ta."
 >
   <PageHero
     eyebrow="Zone acoperite"
-    title="Lucram in toata tara"
-    subtitle="Ne deplasam la nivel national. Daca nu vezi zona ta in lista, intreaba-ne - cel mai probabil ajungem si la tine."
-    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Zone acoperite' }]}
+    title="Lucrăm în toată țara"
+    subtitle="Ne deplasăm la nivel național. Dacă nu vezi zona ta în listă, întreabă-ne - cel mai probabil ajungem și la tine."
+    breadcrumb={[{ label: 'Acasă', href: withBase('') }, { label: 'Zone acoperite' }]}
   />
 
   <section class="py-16 sm:py-20">
@@ -33,7 +33,7 @@ const featured = { name: 'Bucuresti si Ilfov', slug: 'foraje-puturi-bucuresti' }
             <Icon name="ph:map-pin-duotone" />
           </span>
           <div>
-            <h2 class="text-xl text-primary">Foraje puturi {featured.name}</h2>
+            <h2 class="text-xl text-primary">Foraje puțuri {featured.name}</h2>
             <p class="mt-1 text-sm text-muted">Zona cu cea mai mare cerere - vezi detalii specifice.</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const featured = { name: 'Bucuresti si Ilfov', slug: 'foraje-puturi-bucuresti' }
       </a>
 
       <!-- Lista judete -->
-      <h2 class="mt-14 text-2xl">Judete in care am executat lucrari</h2>
+      <h2 class="mt-14 text-2xl">Județe în care am executat lucrări</h2>
       <ul class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {
           zones.map((z) => (
@@ -57,8 +57,8 @@ const featured = { name: 'Bucuresti si Ilfov', slug: 'foraje-puturi-bucuresti' }
       </ul>
 
       <div class="mt-10 flex flex-col items-start gap-4 rounded-xl border border-border bg-surface p-6 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-muted">Nu iti gasesti localitatea? Spune-ne unde te afli si verificam disponibilitatea.</p>
-        <Button href={withBase('contact')} variant="primary" iconRight="ph:arrow-right-bold">Intreaba pentru zona ta</Button>
+        <p class="text-muted">Nu îți găsești localitatea? Spune-ne unde te afli și verificăm disponibilitatea.</p>
+        <Button href={withBase('contact')} variant="primary" iconRight="ph:arrow-right-bold">Întreabă pentru zona ta</Button>
       </div>
     </div>
   </section>

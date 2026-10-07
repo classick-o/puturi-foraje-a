@@ -1,13 +1,15 @@
 ---
+import Strata from './Strata.astro';
+
 interface Props {
-  eyebrow?: string; // pastrat pentru compatibilitate, nu se mai afiseaza
+  eyebrow?: string; // pastrat pentru compatibilitate, nu se afiseaza
   title: string;
   subtitle?: string;
   breadcrumb?: { label: string; href?: string }[];
 }
 const { title, subtitle, breadcrumb = [] } = Astro.props;
 
-// Breadcrumb pastrat DOAR pentru SEO (BreadcrumbList JSON-LD), nu se mai afiseaza in UI.
+// Breadcrumb doar pentru SEO (BreadcrumbList JSON-LD), nu se afiseaza in UI.
 const crumbLd =
   breadcrumb.length > 0
     ? {
@@ -23,10 +25,11 @@ const crumbLd =
     : null;
 ---
 
-<section class="border-b border-border bg-surface">
-  <div class="wrap py-12 sm:py-16">
-    <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem]">{title}</h1>
-    {subtitle && <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{subtitle}</p>}
+<section class="soil-texture text-[#F2F4EF]">
+  <div class="wrap py-12 sm:py-20">
+    <h1 class="max-w-4xl text-[3rem] !text-[#F2F4EF] sm:text-[4.6rem]">{title}</h1>
+    {subtitle && <p class="mt-5 max-w-2xl text-[1.15rem] leading-relaxed text-[#F2F4EF]/80">{subtitle}</p>}
   </div>
   {crumbLd && <script type="application/ld+json" set:html={JSON.stringify(crumbLd)} />}
 </section>
+<Strata layer="soil" />

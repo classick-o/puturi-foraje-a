@@ -1,34 +1,34 @@
 ---
-title: "Cum aleg pompa potrivita pentru put (submersibila vs hidrofor)"
+title: "Cum aleg pompa potrivită pentru puț (submersibilă vs hidrofor)"
 date: "2026-05-08"
 category: "Ghiduri"
-excerpt: "Diferenta dintre pompa submersibila si hidrofor, cum dimensionezi corect si ce sa eviti."
+excerpt: "Diferența dintre pompa submersibilă și hidrofor, cum dimensionezi corect și ce să eviți."
 image: "https://images.pexels.com/photos/36834230/pexels-photo-36834230.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Cum aleg pompa pentru put: submersibila vs hidrofor"
-seoDescription: "Cum alegi pompa potrivita pentru put: diferenta dintre pompa submersibila si hidrofor, cum o dimensionezi corect si ce greseli sa eviti."
+seoTitle: "Cum aleg pompa pentru puț: submersibilă vs hidrofor"
+seoDescription: "Cum alegi pompa potrivită pentru puț: diferența dintre pompa submersibilă și hidrofor, cum o dimensionezi corect și ce greșeli să eviți."
 ---
 
-Alegerea pompei depinde de **adancimea putului**, de **debitul** necesar si de **presiunea** dorita in instalatie. Pentru puturi adanci se foloseste de regula o pompa submersibila, iar pentru presiune constanta in casa se adauga un hidrofor.
+Alegerea pompei depinde de **adâncimea puțului**, de **debitul** necesar și de **presiunea** dorită în instalație. Pentru puțuri adânci se folosește de regulă o pompă submersibilă, iar pentru presiune constantă în casă se adaugă un hidrofor.
 
-## Pompa submersibila vs hidrofor
+## Pompa submersibilă vs hidrofor
 
-- **Pompa submersibila** - coboara in put si impinge apa la suprafata; potrivita pentru adancimi medii si mari.
-- **Hidrofor** - mentine presiunea constanta si porneste/opreste automat pompa; ideal pentru consum casnic.
+- **Pompa submersibilă** - coboară în puț și împinge apa la suprafață; potrivită pentru adâncimi medii și mari.
+- **Hidrofor** - menține presiunea constantă și pornește/oprește automat pompa; ideal pentru consum casnic.
 
-De multe ori cele doua se folosesc impreuna, ca parte a unui [sistem de pompare](/servicii/sisteme-de-pompare) complet.
+De multe ori cele două se folosesc împreună, ca parte a unui [sistem de pompare](/servicii/sisteme-de-pompare) complet.
 
 ## Cum dimensionezi corect
 
-Tine cont de:
+Ține cont de:
 
-- Adancimea putului si nivelul hidrostatic
-- Numarul de consumatori (robinete, irigatii)
-- Presiunea necesara la punctul cel mai indepartat
+- Adâncimea puțului și nivelul hidrostatic
+- Numărul de consumatori (robinete, irigații)
+- Presiunea necesară la punctul cel mai îndepărtat
 
-## Greseli de evitat
+## Greșeli de evitat
 
-- O pompa subdimensionata - presiune slaba si uzura rapida
-- O pompa supradimensionata - consum inutil si cost mai mare
-- Montaj fara automatizare - porniri/opriri dese care scurteaza durata de viata
+- O pompă subdimensionată - presiune slabă și uzură rapidă
+- O pompă supradimensionată - consum inutil și cost mai mare
+- Montaj fără automatizare - porniri/opriri dese care scurtează durata de viață
 
-Nu esti sigur ce pompa iti trebuie? [Scrie-ne](/contact) si o dimensionam impreuna, corect.
+Nu ești sigur ce pompă îți trebuie? [Scrie-ne](/contact) și o dimensionăm împreună, corect.

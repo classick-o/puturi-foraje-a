@@ -23,7 +23,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
   <div class="grid gap-4 sm:grid-cols-2">
     <div>
       <label class={labelCls} for="nume">Nume</label>
-      <input id="nume" name="nume" autocomplete="name" class={inputCls} placeholder="Numele tau" />
+      <input id="nume" name="nume" autocomplete="name" class={inputCls} placeholder="Numele tău" />
     </div>
     <div>
       <label class={labelCls} for="telefon">Telefon <span class="text-secondary">*</span></label>
@@ -34,7 +34,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
       <input id="email" name="email" type="email" class={inputCls} placeholder="email@exemplu.ro" />
     </div>
     <div>
-      <label class={labelCls} for="localitate">Localitate / Judet</label>
+      <label class={labelCls} for="localitate">Localitate / Județ</label>
       <input id="localitate" name="localitate" class={inputCls} placeholder="Ex: Otopeni, Ilfov" />
     </div>
     <div class="sm:col-span-2">
@@ -52,7 +52,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
         name="mesaj"
         rows="4"
         class={inputCls}
-        placeholder="Adancime estimata, ce stii despre teren, alte detalii..."></textarea>
+        placeholder="Adâncime estimată, ce știi despre teren, alte detalii..."></textarea>
     </div>
   </div>
 
@@ -61,7 +61,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
     <span>
       Sunt de acord cu prelucrarea datelor conform
       <a href={withBase('politica-de-confidentialitate')} class="text-secondary underline underline-offset-2">
-        politicii de confidentialitate</a>.
+        politicii de confidențialitate</a>.
     </span>
   </label>
 
@@ -71,7 +71,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
     </Button>
     <p id="form-error" class="mt-3 hidden text-sm font-medium text-red-700" role="alert"></p>
     <p class="mt-3 text-sm text-muted">
-      Mai rapid: suna direct la
+      Mai rapid: sună direct la
       <a href={site.phoneHref} data-cta="formular" class="font-bold text-primary underline underline-offset-2">{site.phone}</a>.
     </p>
   </div>
@@ -106,7 +106,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: key,
-            subject: `Cerere oferta foraj - ${val('localitate') || 'site'}`,
+            subject: `Cerere ofertă foraj - ${val('localitate') || 'site'}`,
             from_name: form.dataset.site,
             nume: val('nume'),
             telefon: val('telefon'),
@@ -121,7 +121,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
       } catch {
         if (submitBtn) submitBtn.disabled = false;
         if (errorEl) {
-          errorEl.textContent = 'Nu am putut trimite formularul. Te rugam sa ne suni sau sa ne scrii pe WhatsApp.';
+          errorEl.textContent = 'Nu am putut trimite formularul. Te rugăm să ne suni sau să ne scrii pe WhatsApp.';
           errorEl.classList.remove('hidden');
         }
       }
@@ -129,7 +129,7 @@ const labelCls = 'mb-1.5 block text-sm font-medium text-primary';
     }
 
     const lines = [
-      'Buna ziua! Cerere oferta de pe site:',
+      'Bună ziua! Cerere ofertă de pe site:',
       val('nume') && `Nume: ${val('nume')}`,
       `Telefon: ${val('telefon')}`,
       val('localitate') && `Localitate: ${val('localitate')}`,

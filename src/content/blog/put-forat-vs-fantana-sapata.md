@@ -1,30 +1,30 @@
 ---
-title: "Put forat vs fantana sapata: care e mai bun?"
+title: "Puț forat vs fântână săpată: care e mai bun?"
 date: "2026-06-12"
-category: "Comparatii"
-excerpt: "Diferentele dintre un put forat si o fantana sapata: calitatea apei, debitul, costurile si intretinerea."
+category: "Comparații"
+excerpt: "Diferențele dintre un puț forat și o fântână săpată: calitatea apei, debitul, costurile și întreținerea."
 image: "https://images.pexels.com/photos/14840752/pexels-photo-14840752.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Put forat vs fantana sapata: comparatie completa 2026"
-seoDescription: "Put forat sau fantana sapata? Comparam calitatea apei, debitul, costurile si intretinerea, ca sa alegi solutia potrivita pentru terenul tau."
+seoTitle: "Puț forat vs fântână săpată: comparație completă 2026"
+seoDescription: "Puț forat sau fântână săpată? Comparăm calitatea apei, debitul, costurile și întreținerea, ca să alegi soluția potrivită pentru terenul tău."
 ---
 
-Un put forat ajunge la straturi de apa mai adanci si mai curate, cu debit constant si risc mai mic de contaminare, in timp ce fantana sapata este mai putin adanca si mai expusa la impuritati de la suprafata. Pentru majoritatea nevoilor de azi, [putul forat](/servicii/foraje-puturi-apa) este alegerea mai sigura.
+Un puț forat ajunge la straturi de apă mai adânci și mai curate, cu debit constant și risc mai mic de contaminare, în timp ce fântâna săpată este mai puțin adâncă și mai expusă la impurități de la suprafață. Pentru majoritatea nevoilor de azi, [puțul forat](/servicii/foraje-puturi-apa) este alegerea mai sigură.
 
 ## Calitatea apei
 
-- **Put forat**: apa provine dintr-un strat adanc, protejat, deci este de regula mai curata.
-- **Fantana sapata**: apa vine din stratul freatic de suprafata, mai expus la nitrati si contaminanti.
+- **Puț forat**: apa provine dintr-un strat adânc, protejat, deci este de regulă mai curată.
+- **Fântână săpată**: apa vine din stratul freatic de suprafață, mai expus la nitrați și contaminanți.
 
-## Debitul si constanta
+## Debitul și constanța
 
-Putul forat ofera un debit mai constant pe tot parcursul anului, in timp ce fantana poate scadea semnificativ in perioadele secetoase.
+Puțul forat oferă un debit mai constant pe tot parcursul anului, în timp ce fântâna poate scădea semnificativ în perioadele secetoase.
 
-## Costuri si spatiu
+## Costuri și spațiu
 
-Fantana sapata poate parea mai ieftina initial, dar ocupa mai mult spatiu si necesita intretinere frecventa. Putul forat este mai compact si mai durabil. Vezi o estimare in [pagina de preturi](/preturi).
+Fântâna săpată poate părea mai ieftină inițial, dar ocupă mai mult spațiu și necesită întreținere frecventă. Puțul forat este mai compact și mai durabil. Vezi o estimare în [pagina de prețuri](/preturi).
 
-## Intretinere
+## Întreținere
 
-Ambele au nevoie de ingrijire, dar la putul forat intretinerea este predictibila: o [denisipare](/servicii/denisipari-puturi) la 3-4 ani mentine debitul si calitatea apei.
+Ambele au nevoie de îngrijire, dar la puțul forat întreținerea este predictibilă: o [denisipare](/servicii/denisipari-puturi) la 3-4 ani menține debitul și calitatea apei.
 
-Nu esti sigur ce se potriveste terenului tau? [Intreaba-ne](/contact) si te sfatuim corect.
+Nu ești sigur ce se potrivește terenului tău? [Întreabă-ne](/contact) și te sfătuim corect.

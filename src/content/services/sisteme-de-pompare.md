@@ -2,40 +2,40 @@
 title: "Sisteme de pompare"
 order: 6
 icon: "ph:gauge-duotone"
-excerpt: "Hidrofoare, pompe submersibile si automatizari, dimensionate si montate corect pentru putul tau."
-heroSubtitle: "Apa la presiune constanta in casa si gradina, cu echipamente potrivite si montaj profesional."
+excerpt: "Hidrofoare, pompe submersibile și automatizări, dimensionate și montate corect pentru puțul tău."
+heroSubtitle: "Apă la presiune constantă în casă și grădină, cu echipamente potrivite și montaj profesional."
 image: "/media/sant-racord-put.webp"
 forWhom:
-  - "Puturi noi care au nevoie de pompare"
-  - "Inlocuirea unei pompe vechi sau subdimensionate"
-  - "Gospodarii care vor presiune constanta"
+  - "Puțuri noi care au nevoie de pompare"
+  - "Înlocuirea unei pompe vechi sau subdimensionate"
+  - "Gospodării care vor presiune constantă"
 benefits:
-  - title: "Dimensionare corecta"
-    text: "Alegem pompa si hidroforul dupa adancime, debit si presiunea de care ai nevoie."
-  - title: "Branduri de incredere"
-    text: "Lucram cu marci recunoscute de pompe si hidrofoare, pentru durabilitate."
-  - title: "Montaj si automatizare"
-    text: "Instalam si configuram sistemul, inclusiv automatizari pentru pornire/oprire."
+  - title: "Dimensionare corectă"
+    text: "Alegem pompa și hidroforul după adâncime, debit și presiunea de care ai nevoie."
+  - title: "Branduri de încredere"
+    text: "Lucrăm cu mărci recunoscute de pompe și hidrofoare, pentru durabilitate."
+  - title: "Montaj și automatizare"
+    text: "Instalăm și configurăm sistemul, inclusiv automatizări pentru pornire/oprire."
 specs:
   - label: "Echipamente"
-    value: "Pompe submersibile, hidrofoare, automatizari"
+    value: "Pompe submersibile, hidrofoare, automatizări"
   - label: "Criterii dimensionare"
-    value: "Adancime, debit, presiune necesara"
+    value: "Adâncime, debit, presiune necesară"
   - label: "Servicii"
     value: "Furnizare, montaj, configurare"
 faq:
-  - q: "Ce pompa imi trebuie?"
-    a: "Depinde de adancimea putului, debit si numarul de consumatori. Te ajutam sa alegi varianta potrivita."
-  - q: "Montati si automatizare?"
-    a: "Da. Configuram sistemul pentru presiune constanta si pornire/oprire automata."
-seoTitle: "Sisteme de pompare | Hidrofoare si pompe submersibile"
-seoDescription: "Furnizam si montam pompe submersibile, hidrofoare si automatizari, dimensionate corect pentru putul tau. Presiune constanta, montaj profesional."
+  - q: "Ce pompă îmi trebuie?"
+    a: "Depinde de adâncimea puțului, debit și numărul de consumatori. Te ajutăm să alegi varianta potrivită."
+  - q: "Montați și automatizare?"
+    a: "Da. Configurăm sistemul pentru presiune constantă și pornire/oprire automată."
+seoTitle: "Sisteme de pompare | Hidrofoare și pompe submersibile"
+seoDescription: "Furnizăm și montăm pompe submersibile, hidrofoare și automatizări, dimensionate corect pentru puțul tău. Presiune constantă, montaj profesional."
 ---
 
-## Apa, livrata la presiune constanta
+## Apă, livrată la presiune constantă
 
-Un put are nevoie de un sistem de pompare bine ales pentru a livra apa la presiunea si debitul de care ai nevoie. Furnizam si montam pompe submersibile, hidrofoare si automatizari, cu dimensionare corecta in functie de adancimea putului si de consumatori.
+Un puț are nevoie de un sistem de pompare bine ales pentru a livra apa la presiunea și debitul de care ai nevoie. Furnizăm și montăm pompe submersibile, hidrofoare și automatizări, cu dimensionare corectă în funcție de adâncimea puțului și de consumatori.
 
-## Cum lucram
+## Cum lucrăm
 
-Stabilim impreuna echipamentul potrivit, il montam si il configuram, inclusiv partea de automatizare pentru pornire si oprire automata. Astfel ai apa constanta in casa si gradina, fara griji.
+Stabilim împreună echipamentul potrivit, îl montăm și îl configurăm, inclusiv partea de automatizare pentru pornire și oprire automată. Astfel ai apă constantă în casă și grădină, fără griji.

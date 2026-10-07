@@ -9,19 +9,13 @@ const { variant = 'light', class: cls = '' } = Astro.props;
 const onDark = variant === 'dark';
 ---
 
-<div class={`grid grid-cols-2 gap-4 lg:grid-cols-4 ${cls}`}>
+<dl class={`grid grid-cols-2 gap-y-6 border-y-2 py-6 lg:grid-cols-4 ${onDark ? 'border-white/30' : 'border-primary'} ${cls}`}>
   {
     stats.map((s) => (
-      <div
-        class={`rounded-xl border p-5 text-center ${onDark ? 'border-white/15 bg-white/5' : 'border-border bg-surface shadow-sm'}`}
-      >
-        <div
-          class={`text-3xl font-extrabold tracking-tight tabular-nums ${onDark ? 'text-accent' : 'text-primary'}`}
-        >
-          {s.value}
-        </div>
-        <div class={`mt-1 text-sm ${onDark ? 'text-white/70' : 'text-muted'}`}>{s.label}</div>
+      <div class="px-1">
+        <dt class={`order-2 text-[0.95rem] ${onDark ? 'text-white/70' : 'text-muted'}`}>{s.label}</dt>
+        <dd class={`font-display text-[2.6rem] font-black leading-none tabular-nums ${onDark ? 'text-accent' : 'text-primary'}`}>{s.value}</dd>
       </div>
     ))
   }
-</div>
+</dl>

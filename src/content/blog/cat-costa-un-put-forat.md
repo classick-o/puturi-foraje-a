@@ -1,32 +1,32 @@
 ---
-title: "Cat costa un put forat in 2026? Ghid de preturi"
+title: "Cât costă un puț forat în 2026? Ghid de prețuri"
 date: "2026-05-20"
 category: "Costuri"
-excerpt: "De la ce porneste pretul unui foraj, ce factori il influenteaza si ce intra in deviz. Tot ce trebuie sa stii inainte sa ceri o oferta."
+excerpt: "De la ce pornește prețul unui foraj, ce factori îl influențează și ce intră în deviz. Tot ce trebuie să știi înainte să ceri o ofertă."
 image: "https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Cat costa un put forat in 2026? Ghid complet de preturi"
-seoDescription: "Cat costa un foraj de put de apa in 2026: pret pe metru liniar, factorii care influenteaza costul si ce intra in deviz. Ghid practic si transparent."
+seoTitle: "Cât costă un puț forat în 2026? Ghid complet de prețuri"
+seoDescription: "Cât costă un foraj de puț de apă în 2026: preț pe metru liniar, factorii care influențează costul și ce intră în deviz. Ghid practic și transparent."
 ---
 
-Nu exista un pret unic pentru un put forat: costul depinde de adancime, diametru, tipul de sol si materiale. Cel mai corect afli printr-o oferta personalizata sau un simplu telefon. Mai jos vezi ce influenteaza pretul si ce ar trebui sa contina un deviz corect.
+Nu există un preț unic pentru un puț forat: costul depinde de adâncime, diametru, tipul de sol și materiale. Cel mai corect afli printr-o ofertă personalizată sau un simplu telefon. Mai jos vezi ce influențează prețul și ce ar trebui să conțină un deviz corect.
 
-## Cum se stabileste pretul
+## Cum se stabilește prețul
 
-Pentru un [foraj de put de apa](/servicii/foraje-puturi-apa), pretul se calculeaza in functie de conditiile concrete ale terenului tau, de aceea nu exista un tarif fix. Cel mai simplu ceri o oferta sau ne suni, iar noi iti dam un pret exact, gratuit. Vezi si [cum stabilim pretul](/preturi).
+Pentru un [foraj de puț de apă](/servicii/foraje-puturi-apa), prețul se calculează în funcție de condițiile concrete ale terenului tău, de aceea nu există un tarif fix. Cel mai simplu ceri o ofertă sau ne suni, iar noi îți dăm un preț exact, gratuit. Vezi și [cum stabilim prețul](/preturi).
 
-## Ce factori influenteaza costul
+## Ce factori influențează costul
 
-- **Adancimea** la care se afla apa de calitate
-- **Diametrul** putului (125, 160, 200, 250 mm)
-- **Tipul de sol si roca** (terenurile dure cer tehnologie diferita)
-- **Materialele** folosite la tubaj si filtre
-- **Zona** si accesul utilajului
-- **Sezonul** si nivelul panzei freatice
+- **Adâncimea** la care se află apa de calitate
+- **Diametrul** puțului (125, 160, 200, 250 mm)
+- **Tipul de sol și rocă** (terenurile dure cer tehnologie diferită)
+- **Materialele** folosite la tubaj și filtre
+- **Zona** și accesul utilajului
+- **Sezonul** și nivelul pânzei freatice
 
-## Ce ar trebui sa contina devizul
+## Ce ar trebui să conțină devizul
 
-Un deviz corect mentioneaza clar ce include: forajul, tubajul si filtrele, eventual deplasarea, [denisiparea](/servicii/denisipari-puturi) si testul de debit. Cere mereu un deviz scris, ca sa eviti costurile ascunse.
+Un deviz corect menționează clar ce include: forajul, tubajul și filtrele, eventual deplasarea, [denisiparea](/servicii/denisipari-puturi) și testul de debit. Cere mereu un deviz scris, ca să eviți costurile ascunse.
 
-> Sfat: nu alege doar dupa pretul cel mai mic. Conteaza calitatea tubajului, garantia in scris si seriozitatea echipei.
+> Sfat: nu alege doar după prețul cel mai mic. Contează calitatea tubajului, garanția în scris și seriozitatea echipei.
 
-Vrei un calcul exact pentru terenul tau? [Cere o oferta gratuita](/contact) si iti raspundem rapid.
+Vrei un calcul exact pentru terenul tău? [Cere o ofertă gratuită](/contact) și îți răspundem rapid.

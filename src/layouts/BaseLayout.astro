@@ -1,6 +1,9 @@
 ---
-import '@fontsource-variable/plus-jakarta-sans';
-import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/big-shoulders-display';
+import '@fontsource/atkinson-hyperlegible/latin-400.css';
+import '@fontsource/atkinson-hyperlegible/latin-ext-400.css';
+import '@fontsource/atkinson-hyperlegible/latin-700.css';
+import '@fontsource/atkinson-hyperlegible/latin-ext-700.css';
 import '../styles/global.css';
 import { site, zones } from '../lib/site';
 import Header from '../components/Header.astro';
@@ -9,6 +12,7 @@ import FloatingButtons from '../components/FloatingButtons.astro';
 import Seo from '../components/Seo.astro';
 import Analytics from '../components/Analytics.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import DepthGauge from '../components/DepthGauge.astro';
 
 interface Props {
   title: string;
@@ -62,18 +66,19 @@ const faviconHref = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/favicon.svg
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <Analytics />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
-    <meta name="theme-color" content="#0E1A22" />
+    <meta name="theme-color" content="#14222E" />
     <meta name="generator" content={Astro.generator} />
     {preload && <link rel="preload" as="image" href={preload} fetchpriority="high" />}
     <Seo title={title} description={description} image={image} type={type} noindex={noindex} />
     {allLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
   </head>
-  <body class="pb-[76px] sm:pb-0">
+  <body class="pb-[78px] sm:pb-0">
+    <DepthGauge />
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
     >
-      Sari la continut
+      Sari la conținut
     </a>
     <Header />
     <main id="main">

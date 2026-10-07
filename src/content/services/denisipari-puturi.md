@@ -1,41 +1,41 @@
 ---
-title: "Denisipari puturi"
+title: "Denisipări puțuri"
 order: 2
 icon: "ph:waves-duotone"
-excerpt: "Curatam putul de nisip si depuneri ca sa revina debitul si apa sa fie din nou limpede."
-heroSubtitle: "Ti-a scazut debitul sau apa vine cu nisip? Denisiparea readuce putul la parametri."
+excerpt: "Curățăm puțul de nisip și depuneri ca să revină debitul și apa să fie din nou limpede."
+heroSubtitle: "Ți-a scăzut debitul sau apa vine cu nisip? Denisiparea readuce puțul la parametri."
 image: "/media/jet-apa-put.webp"
 forWhom:
-  - "Puturi cu debit scazut in timp"
-  - "Apa care iese tulbure sau cu nisip"
-  - "Puturi care nu au mai fost intretinute de ani"
+  - "Puțuri cu debit scăzut în timp"
+  - "Apă care iese tulbure sau cu nisip"
+  - "Puțuri care nu au mai fost întreținute de ani"
 benefits:
   - title: "Recuperezi debitul"
-    text: "Indepartam nisipul si depunerile din coloana si filtre, iar putul revine la capacitatea initiala."
-  - title: "Apa limpede din nou"
-    text: "Dupa denisipare, apa iese curata, fara particule care iti uzeaza pompa si instalatiile."
-  - title: "Interventie rapida"
-    text: "De regula intre 2 si 8 ore, in functie de adancime, diametru si gradul de colmatare."
+    text: "Îndepărtăm nisipul și depunerile din coloană și filtre, iar puțul revine la capacitatea inițială."
+  - title: "Apă limpede din nou"
+    text: "După denisipare, apa iese curată, fără particule care îți uzează pompa și instalațiile."
+  - title: "Intervenție rapidă"
+    text: "De regulă între 2 și 8 ore, în funcție de adâncime, diametru și gradul de colmatare."
 specs:
-  - label: "Durata"
-    value: "2-8 ore, in functie de put"
+  - label: "Durată"
+    value: "2-8 ore, în funcție de puț"
   - label: "Recomandare"
     value: "O denisipare la fiecare 3-4 ani"
-  - label: "Ce ne ajuta sa stim"
-    value: "Adancime, diametru, tip tubaj, nivel hidrostatic"
+  - label: "Ce ne ajută să știm"
+    value: "Adâncime, diametru, tip tubaj, nivel hidrostatic"
 faq:
-  - q: "Cat costa o denisipare?"
-    a: "Depinde de adancime, diametru si gradul de colmatare. Suna-ne pentru un pret exact, gratuit."
-  - q: "Cat de des trebuie facuta?"
-    a: "Recomandam o denisipare la 3-4 ani, sau mai devreme daca observi scaderi de debit ori apa cu nisip."
-seoTitle: "Denisipari puturi | Recuperezi debitul si apa limpede"
-seoDescription: "Denisipare profesionala a puturilor: indepartam nisipul si depunerile, recuperam debitul. Interventie rapida, pret la cerere. Cere oferta."
+  - q: "Cât costă o denisipare?"
+    a: "Depinde de adâncime, diametru și gradul de colmatare. Sună-ne pentru un preț exact, gratuit."
+  - q: "Cât de des trebuie făcută?"
+    a: "Recomandăm o denisipare la 3-4 ani, sau mai devreme dacă observi scăderi de debit ori apă cu nisip."
+seoTitle: "Denisipări puțuri | Recuperezi debitul și apa limpede"
+seoDescription: "Denisipare profesională a puțurilor: îndepărtăm nisipul și depunerile, recuperăm debitul. Intervenție rapidă, preț la cerere. Cere ofertă."
 ---
 
-## Cand ai nevoie de denisipare
+## Când ai nevoie de denisipare
 
-In timp, in coloana putului si in zona filtrelor se depun nisip si particule fine care reduc debitul si fac apa sa iasa tulbure. Denisiparea este operatiunea prin care curatam putul si readucem apa la limpezimea si debitul de la inceput.
+În timp, în coloana puțului și în zona filtrelor se depun nisip și particule fine care reduc debitul și fac apa să iasă tulbure. Denisiparea este operațiunea prin care curățăm puțul și readucem apa la limpezimea și debitul de la început.
 
 ## Cum decurge
 
-Folosim compresor si echipamente specializate pentru a antrena si evacua nisipul din put. Inainte de interventie ne ajuta sa stim cateva detalii despre put (adancime, diametru, tipul tubajului si, daca se cunoaste, nivelul hidrostatic), ca sa alegem metoda potrivita si sa estimam corect durata.
+Folosim compresor și echipamente specializate pentru a antrena și evacua nisipul din puț. Înainte de intervenție ne ajută să știm câteva detalii despre puț (adâncime, diametru, tipul tubajului și, dacă se cunoaște, nivelul hidrostatic), ca să alegem metoda potrivită și să estimăm corect durata.

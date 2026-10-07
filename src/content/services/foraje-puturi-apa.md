@@ -1,45 +1,45 @@
 ---
-title: "Foraje puturi apa"
+title: "Foraje puțuri apă"
 order: 1
 icon: "ph:drop-duotone"
-excerpt: "Foram puturi de apa pentru gospodarie, gradina, irigatii sau industrie, la mica, medie si mare adancime."
-heroSubtitle: "Apa curata pe terenul tau, cu tubaj profesional, test de debit si garantie in scris."
+excerpt: "Forăm puțuri de apă pentru gospodărie, grădină, irigații sau industrie, la mică, medie și mare adâncime."
+heroSubtitle: "Apă curată pe terenul tău, cu tubaj profesional, test de debit și garanție în scris."
 image: "/media/instalatie-foraj-hidraulica.webp"
 forWhom:
-  - "Gospodarii care vor sursa proprie de apa"
-  - "Gradini si sisteme de irigatii"
-  - "Ferme si consumatori industriali"
+  - "Gospodării care vor sursă proprie de apă"
+  - "Grădini și sisteme de irigații"
+  - "Ferme și consumatori industriali"
 benefits:
-  - title: "Apa pentru orice nevoie"
-    text: "De la consum casnic la irigatii si procese industriale, dimensionam putul dupa debitul de care ai nevoie."
-  - title: "Tubaj si filtre de calitate"
-    text: "Coloana din PVC alimentar sau inox, cu filtre potrivite stratului, pentru apa limpede si durabilitate."
+  - title: "Apă pentru orice nevoie"
+    text: "De la consum casnic la irigații și procese industriale, dimensionăm puțul după debitul de care ai nevoie."
+  - title: "Tubaj și filtre de calitate"
+    text: "Coloană din PVC alimentar sau inox, cu filtre potrivite stratului, pentru apă limpede și durabilitate."
   - title: "Test de debit inclus"
-    text: "Verificam debitul real al putului inainte de predare, ca sa stii exact pe ce te bazezi."
+    text: "Verificăm debitul real al puțului înainte de predare, ca să știi exact pe ce te bazezi."
 specs:
-  - label: "Adancimi"
-    value: "Mica (1-30 m), medie (31-80 m), mare (81-450 m)"
+  - label: "Adâncimi"
+    value: "Mică (1-30 m), medie (31-80 m), mare (81-450 m)"
   - label: "Diametre uzuale"
     value: "125 / 160 / 200 / 250 mm"
   - label: "Materiale tubaj"
-    value: "PVC alimentar, inox, filtre cu fanta"
-  - label: "Durata executie"
-    value: "De regula 1 zi pentru adancimi obisnuite"
+    value: "PVC alimentar, inox, filtre cu fantă"
+  - label: "Durată execuție"
+    value: "De regulă 1 zi pentru adâncimi obișnuite"
 faq:
-  - q: "Apa de put este potabila?"
-    a: "Depinde de strat si zona. Recomandam o analiza de laborator; putem fora si la stratul de adancime cu apa de calitate mai buna."
-  - q: "Ce diametru imi trebuie?"
-    a: "Pentru gospodarie, de obicei 125-160 mm. Pentru irigatii sau debit mare, 200 mm sau mai mult. Te sfatuim in functie de necesar."
-seoTitle: "Foraje puturi apa in toata tara | Pret corect, garantie"
-seoDescription: "Foraje puturi de apa pentru gospodarie, gradina, irigatii si industrie. Tubaj profesional, test de debit, garantie in scris. Cere oferta gratuita."
+  - q: "Apa de puț este potabilă?"
+    a: "Depinde de strat și zonă. Recomandăm o analiză de laborator; putem fora și la stratul de adâncime cu apă de calitate mai bună."
+  - q: "Ce diametru îmi trebuie?"
+    a: "Pentru gospodărie, de obicei 125-160 mm. Pentru irigații sau debit mare, 200 mm sau mai mult. Te sfătuim în funcție de necesar."
+seoTitle: "Foraje puțuri apă în toată țara | Preț corect, garanție"
+seoDescription: "Foraje puțuri de apă pentru gospodărie, grădină, irigații și industrie. Tubaj profesional, test de debit, garanție în scris. Cere ofertă gratuită."
 ---
 
-## Ce inseamna un foraj de put de apa
+## Ce înseamnă un foraj de puț de apă
 
-Un put forat iti aduce o sursa proprie de apa, independenta de reteaua publica, utila pentru consum casnic, gradina, irigatii sau activitati agricole si industriale. Spre deosebire de o fantana sapata, putul forat ajunge la straturi de apa mai adanci si mai curate, cu debit constant si risc mai mic de contaminare de la suprafata.
+Un puț forat îți aduce o sursă proprie de apă, independentă de rețeaua publică, utilă pentru consum casnic, grădină, irigații sau activități agricole și industriale. Spre deosebire de o fântână săpată, puțul forat ajunge la straturi de apă mai adânci și mai curate, cu debit constant și risc mai mic de contaminare de la suprafață.
 
-## Cum lucram
+## Cum lucrăm
 
-Evaluam terenul si stabilim adancimea estimata in functie de panza freatica din zona. Foram, introducem coloana de tubaj si filtrele potrivite, apoi denisipam putul pana cand apa iese limpede. La final facem un test de debit si punem la dispozitie, optional, montajul pompei sau hidroforului.
+Evaluăm terenul și stabilim adâncimea estimată în funcție de pânza freatică din zonă. Forăm, introducem coloana de tubaj și filtrele potrivite, apoi denisipăm puțul până când apa iese limpede. La final facem un test de debit și punem la dispoziție, opțional, montajul pompei sau hidroforului.
 
-Ne ocupam, la cerere, si de documentatia si avizele necesare la Apele Romane sau Primarie, ca tu sa nu te complici cu actele.
+Ne ocupăm, la cerere, și de documentația și avizele necesare la Apele Române sau Primărie, ca tu să nu te complici cu actele.

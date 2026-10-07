@@ -1,6 +1,5 @@
 ---
-// Card video vertical: arata doar posterul (zero MB pana la clic), apoi
-// porneste filmarea inline cu sunet si controale.
+// Card video vertical: doar posterul pana la clic (zero MB), apoi porneste inline cu sunet.
 import { Icon } from 'astro-icon/components';
 import { type Video, videoSrc, videoPoster } from '../lib/media';
 
@@ -11,8 +10,8 @@ interface Props {
 const { video, class: cls = '' } = Astro.props;
 ---
 
-<figure class:list={['group overflow-hidden rounded-xl bg-primary shadow-md', cls]}>
-  <div class="video-card relative aspect-[9/16] overflow-hidden">
+<figure class:list={['group', cls]}>
+  <div class="video-card relative aspect-[9/16] overflow-hidden rounded-[14px] bg-primary">
     <video
       class="h-full w-full object-cover"
       src={videoSrc(video)}
@@ -23,20 +22,16 @@ const { video, class: cls = '' } = Astro.props;
     ></video>
     <button
       type="button"
-      class="video-play absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-t from-primary/85 via-primary/10 to-transparent text-white"
-      aria-label={`Porneste filmarea: ${video.title}`}
+      class="video-play absolute inset-0 flex items-end justify-start p-4"
+      aria-label={`Pornește filmarea: ${video.title}`}
     >
-      <span
-        class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg transition-transform group-hover:scale-110"
-      >
-        <Icon name="ph:play-fill" class="ml-1 text-3xl" />
-      </span>
-      <span class="absolute left-3 top-3 rounded-md bg-primary/80 px-2 py-1 text-xs font-semibold">
-        {video.tag} &middot; 0:{String(video.seconds).padStart(2, '0')}
+      <span class="inline-flex items-center gap-2 rounded-md bg-accent py-2 pl-3 pr-4 font-bold text-primary shadow-lg">
+        <Icon name="ph:play-fill" class="text-xl" />
+        0:{String(video.seconds).padStart(2, '0')}
       </span>
     </button>
   </div>
-  <figcaption class="px-4 py-3 text-sm font-semibold leading-snug text-white">{video.title}</figcaption>
+  <figcaption class="mt-3 text-[1.02rem] font-bold leading-snug text-primary">{video.title}</figcaption>
 </figure>
 
 <script>
@@ -44,7 +39,6 @@ const { video, class: cls = '' } = Astro.props;
     const video = card.querySelector('video');
     const btn = card.querySelector<HTMLButtonElement>('.video-play');
     btn?.addEventListener('click', () => {
-      // Opreste alte filmari care ruleaza
       document.querySelectorAll<HTMLVideoElement>('.video-card video').forEach((v) => v !== video && v.pause());
       video?.setAttribute('controls', '');
       video?.play();

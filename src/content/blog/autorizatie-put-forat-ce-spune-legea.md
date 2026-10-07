@@ -1,31 +1,31 @@
 ---
-title: "Ai nevoie de autorizatie pentru un put forat? Ce spune legea"
+title: "Ai nevoie de autorizație pentru un puț forat? Ce spune legea"
 date: "2026-04-15"
-category: "Legislatie"
-excerpt: "Cand este nevoie de aviz de la Apele Romane, ce acte se cer si cum te putem ajuta cu documentatia."
+category: "Legislație"
+excerpt: "Când este nevoie de aviz de la Apele Române, ce acte se cer și cum te putem ajuta cu documentația."
 image: "https://images.pexels.com/photos/1078879/pexels-photo-1078879.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Autorizatie put forat: ce spune legea in Romania (2026)"
-seoDescription: "Cand ai nevoie de aviz pentru un put forat, ce prevede Legea Apelor 107/2006 si ce acte se cer la Apele Romane si Primarie. Ghid practic."
+seoTitle: "Autorizație puț forat: ce spune legea în România (2026)"
+seoDescription: "Când ai nevoie de aviz pentru un puț forat, ce prevede Legea Apelor 107/1996 și ce acte se cer la Apele Române și Primărie. Ghid practic."
 ---
 
-Pe scurt: peste anumite adancimi sau debite, un put forat are nevoie de **aviz de gospodarire a apelor** de la Apele Romane. Practica difera pe zone, asa ca cel mai sigur este sa ceri consultanta inainte de a incepe.
+Pe scurt: peste anumite adâncimi sau debite, un puț forat are nevoie de **aviz de gospodărire a apelor** de la Apele Române. Practica diferă pe zone, așa că cel mai sigur este să ceri consultanță înainte de a începe.
 
 ## Ce prevede legea
 
-Conform **Legii Apelor 107/2006**, executarea forajelor peste anumite limite necesita un aviz de gospodarire a apelor, emis de Administratia Nationala Apele Romane (ANAR). Forajele facute fara avizele necesare pot fi sanctionate.
+Conform **Legii Apelor 107/1996**, executarea forajelor peste anumite limite necesită un aviz de gospodărire a apelor, emis de Administrația Națională Apele Române (ANAR). Forajele făcute fără avizele necesare pot fi sancționate.
 
 ## Ce acte se cer de obicei
 
-- **Studiul hidrogeologic**, care stabileste adancimea si calitatea apei
-- **Certificatul de urbanism** de la Primarie
-- Documentatia pentru **avizul de gospodarire a apelor**
+- **Studiul hidrogeologic**, care stabilește adâncimea și calitatea apei
+- **Certificatul de urbanism** de la Primărie
+- Documentația pentru **avizul de gospodărire a apelor**
 
-## Practica difera pe zone
+## Practica diferă pe zone
 
-In unele zone se cere aviz, in altele doar notificare, iar conditiile pot varia. De aceea, o discutie cu un specialist iti economiseste timp si evita problemele.
+În unele zone se cere aviz, în altele doar notificare, iar condițiile pot varia. De aceea, o discuție cu un specialist îți economisește timp și evită problemele.
 
-## Cum te ajutam
+## Cum te ajutăm
 
-Ne ocupam de partea de [avize si autorizatii](/servicii/avize-si-autorizatii): te consiliem in functie de cazul tau si pregatim documentatia necesara. Pe scurt, tu nu te complici cu actele.
+Ne ocupăm de partea de [avize și autorizații](/servicii/avize-si-autorizatii): te consiliem în funcție de cazul tău și pregătim documentația necesară. Pe scurt, tu nu te complici cu actele.
 
-Ai un proiect si vrei sa fie totul in regula? [Scrie-ne](/contact) si te indrumam.
+Ai un proiect și vrei să fie totul în regulă? [Scrie-ne](/contact) și te îndrumăm.

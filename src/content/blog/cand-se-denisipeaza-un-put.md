@@ -1,32 +1,32 @@
 ---
-title: "Cand si de ce se denisipeaza un put"
+title: "Când și de ce se denisipează un puț"
 date: "2026-03-10"
-category: "Intretinere"
-excerpt: "Semnele ca putul tau are nevoie de denisipare, cat dureaza interventia si cat de des ar trebui facuta."
+category: "Întreținere"
+excerpt: "Semnele că puțul tău are nevoie de denisipare, cât durează intervenția și cât de des ar trebui făcută."
 image: "https://images.pexels.com/photos/28240873/pexels-photo-28240873.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Cand se denisipeaza un put? Semne, durata si recomandari"
-seoDescription: "Cand are nevoie putul de denisipare: semnele, durata interventiei si cat de des ar trebui facuta. Ghid practic de intretinere a puturilor de apa."
+seoTitle: "Când se denisipează un puț? Semne, durată și recomandări"
+seoDescription: "Când are nevoie puțul de denisipare: semnele, durata intervenției și cât de des ar trebui făcută. Ghid practic de întreținere a puțurilor de apă."
 ---
 
-Un put se denisipeaza atunci cand debitul scade sau apa iese cu nisip. Ca regula generala, o [denisipare](/servicii/denisipari-puturi) se recomanda la fiecare **3-4 ani**, iar interventia dureaza de obicei intre 2 si 8 ore.
+Un puț se denisipează atunci când debitul scade sau apa iese cu nisip. Ca regulă generală, o [denisipare](/servicii/denisipari-puturi) se recomandă la fiecare **3-4 ani**, iar intervenția durează de obicei între 2 și 8 ore.
 
 ## Ce este denisiparea
 
-In timp, in coloana putului si in zona filtrelor se aduna nisip si depuneri care reduc debitul si fac apa sa iasa tulbure. Denisiparea curata putul si readuce apa la limpezimea si debitul initial.
+În timp, în coloana puțului și în zona filtrelor se adună nisip și depuneri care reduc debitul și fac apa să iasă tulbure. Denisiparea curăță puțul și readuce apa la limpezimea și debitul inițial.
 
-## Semne ca ai nevoie de denisipare
+## Semne că ai nevoie de denisipare
 
-- Debitul a scazut vizibil
+- Debitul a scăzut vizibil
 - Apa iese cu nisip sau tulbure
-- Pompa se infunda sau se uzeaza mai des
-- Au trecut multi ani de la ultima interventie
+- Pompa se înfundă sau se uzează mai des
+- Au trecut mulți ani de la ultima intervenție
 
-## Cat dureaza si cat de des
+## Cât durează și cât de des
 
-O denisipare dureaza, de regula, intre 2 si 8 ore, in functie de adancimea si diametrul putului si de gradul de colmatare. Recomandam o interventie la fiecare 3-4 ani, sau mai devreme daca observi semnele de mai sus. Daca problema tine de pompa, vezi si serviciul de [mentenanta si reparatii puturi](/servicii/mentenanta-reparatii-puturi).
+O denisipare durează, de regulă, între 2 și 8 ore, în funcție de adâncimea și diametrul puțului și de gradul de colmatare. Recomandăm o intervenție la fiecare 3-4 ani, sau mai devreme dacă observi semnele de mai sus. Dacă problema ține de pompă, vezi și serviciul de [mentenanță și reparații puțuri](/servicii/mentenanta-reparatii-puturi).
 
-## Ce ne ajuta sa stim
+## Ce ne ajută să știm
 
-Inainte de interventie ne sunt utile cateva detalii: adancimea putului, diametrul, tipul tubajului si, daca il cunosti, nivelul hidrostatic. Cu acestea estimam corect durata si pretul.
+Înainte de intervenție ne sunt utile câteva detalii: adâncimea puțului, diametrul, tipul tubajului și, dacă îl cunoști, nivelul hidrostatic. Cu acestea estimăm corect durata și prețul.
 
-Ti-a scazut debitul? [Cere o oferta pentru denisipare](/contact) si revenim rapid.
+Ți-a scăzut debitul? [Cere o ofertă pentru denisipare](/contact) și revenim rapid.

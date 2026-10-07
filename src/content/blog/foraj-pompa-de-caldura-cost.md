@@ -1,31 +1,31 @@
 ---
-title: "Foraj pentru pompa de caldura: cum functioneaza si cat costa"
+title: "Foraj pentru pompă de căldură: cum funcționează și cât costă"
 date: "2026-02-20"
 category: "Costuri"
-excerpt: "Ce inseamna forajul pentru o pompa de caldura sol-apa, cum se dimensioneaza sondele si de ce depinde pretul."
+excerpt: "Ce înseamnă forajul pentru o pompă de căldură sol-apă, cum se dimensionează sondele și de ce depinde prețul."
 image: "https://images.pexels.com/photos/21047659/pexels-photo-21047659.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Foraj pompa de caldura: cum functioneaza si cat costa"
-seoDescription: "Foraj pentru pompa de caldura sol-apa: cum functioneaza sondele geotermale, cum se dimensioneaza si de ce factori depinde pretul. Ghid 2026."
+seoTitle: "Foraj pompă de căldură: cum funcționează și cât costă"
+seoDescription: "Foraj pentru pompă de căldură sol-apă: cum funcționează sondele geotermale, cum se dimensionează și de ce factori depinde prețul. Ghid 2026."
 ---
 
-Un sistem geotermal sol-apa are nevoie de unul sau mai multe **foraje verticale (sonde)** prin care circula agentul termic. Calitatea acestor [foraje pentru pompe de caldura](/servicii/foraje-pompe-de-caldura) influenteaza direct eficienta sistemului si costurile de incalzire pe termen lung.
+Un sistem geotermal sol-apă are nevoie de unul sau mai multe **foraje verticale (sonde)** prin care circulă agentul termic. Calitatea acestor [foraje pentru pompe de căldură](/servicii/foraje-pompe-de-caldura) influențează direct eficiența sistemului și costurile de încălzire pe termen lung.
 
-## Cum functioneaza
+## Cum funcționează
 
-In sonde se monteaza bucle prin care circula un agent termic ce preia caldura din sol. Pompa de caldura foloseste aceasta energie pentru a incalzi locuinta, cu un consum electric redus.
+În sonde se montează bucle prin care circulă un agent termic ce preia căldura din sol. Pompa de căldură folosește această energie pentru a încălzi locuința, cu un consum electric redus.
 
-## Cum se dimensioneaza
+## Cum se dimensionează
 
-Numarul si adancimea sondelor se calculeaza in functie de:
+Numărul și adâncimea sondelor se calculează în funcție de:
 
-- **Necesarul termic** al cladirii (kW)
-- **Tipul solului** si conductivitatea lui termica
-- **Spatiul disponibil** pe teren
+- **Necesarul termic** al clădirii (kW)
+- **Tipul solului** și conductivitatea lui termică
+- **Spațiul disponibil** pe teren
 
-Sondele au uzual intre 80 si 150 m adancime fiecare.
+Sondele au uzual între 80 și 150 m adâncime fiecare.
 
-## De ce depinde pretul
+## De ce depinde prețul
 
-Costul se stabileste personalizat, in functie de numarul si adancimea sondelor, de tipul terenului si de complexitatea proiectului. Pentru orientare generala, vezi [pagina de preturi](/preturi).
+Costul se stabilește personalizat, în funcție de numărul și adâncimea sondelor, de tipul terenului și de complexitatea proiectului. Pentru orientare generală, vezi [pagina de prețuri](/preturi).
 
-Ai un proiect cu pompa de caldura? [Cere o oferta personalizata](/contact) si o dimensionam corect.
+Ai un proiect cu pompă de căldură? [Cere o ofertă personalizată](/contact) și o dimensionăm corect.

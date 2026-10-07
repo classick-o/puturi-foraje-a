@@ -3,18 +3,19 @@ import { Icon } from 'astro-icon/components';
 import { site } from '../lib/site';
 ---
 
-<!-- Mobil: bara fixa jos cu Suna + WhatsApp. Majoritatea clicurilor din Google Ads vin de pe telefon. -->
-<div
-  class="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-surface/95 px-3 pb-[calc(0.6rem+env(safe-area-inset-bottom))] pt-2.5 shadow-[0_-6px_20px_rgba(14,26,34,.12)] backdrop-blur sm:hidden print:hidden"
->
+<!-- Mobil: bara fixa jos. Majoritatea clicurilor din Google Ads vin de pe telefon. -->
+<div class="fixed inset-x-0 bottom-0 z-40 bg-primary px-3 pb-[calc(0.55rem+env(safe-area-inset-bottom))] pt-2.5 sm:hidden print:hidden">
   <div class="flex gap-2">
     <a
       href={site.phoneHref}
       data-cta="bara-mobil"
-      class="flex flex-[1.6] items-center justify-center gap-2 rounded-md bg-accent px-3 py-3 text-[1.05rem] font-extrabold text-primary shadow-md active:scale-[.98]"
+      class="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-accent py-2.5 text-primary active:bg-accent-hover"
     >
-      <Icon name="ph:phone-call-fill" class="call-ring text-xl" />
-      Suna: {site.phone}
+      <Icon name="ph:phone-fill" class="text-2xl" />
+      <span class="leading-none">
+        <span class="block text-[0.8rem] font-bold">Sună acum, e gratuit</span>
+        <span class="block font-display text-[1.65rem] font-black tabular-nums">{site.phone}</span>
+      </span>
     </a>
     <a
       href={site.whatsapp}
@@ -22,36 +23,23 @@ import { site } from '../lib/site';
       rel="noopener"
       data-cta="bara-mobil"
       aria-label="Scrie-ne pe WhatsApp"
-      class="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-whatsapp px-3 py-3 font-bold text-white shadow-md active:scale-[.98]"
+      class="flex w-[64px] flex-col items-center justify-center gap-0.5 rounded-md bg-whatsapp text-white"
     >
-      <Icon name="ph:whatsapp-logo-fill" class="text-xl" />
-      WhatsApp
+      <Icon name="ph:whatsapp-logo-fill" class="text-[1.7rem]" />
+      <span class="text-[0.7rem] font-bold">WhatsApp</span>
     </a>
   </div>
 </div>
 
-<!-- Desktop: buton WhatsApp flotant -->
+<!-- Desktop: WhatsApp flotant -->
 <a
   href={site.whatsapp}
   target="_blank"
   rel="noopener"
   data-cta="flotant"
   aria-label="Scrie pe WhatsApp"
-  class="fixed bottom-5 right-5 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg transition-transform hover:-translate-y-0.5 sm:inline-flex print:hidden"
+  class="fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-md bg-whatsapp py-3 pl-3.5 pr-4 font-bold text-white shadow-lg hover:bg-[#178a45] sm:inline-flex print:hidden"
 >
-  <Icon name="ph:whatsapp-logo-fill" class="text-3xl" />
+  <Icon name="ph:whatsapp-logo-fill" class="text-2xl" />
+  WhatsApp
 </a>
-
-<style>
-  .call-ring {
-    animation: ring 2.4s ease-in-out infinite;
-    transform-origin: 50% 50%;
-  }
-  @keyframes ring {
-    0%, 70%, 100% { transform: rotate(0); }
-    74% { transform: rotate(-14deg); }
-    78% { transform: rotate(14deg); }
-    82% { transform: rotate(-10deg); }
-    86% { transform: rotate(8deg); }
-  }
-</style>

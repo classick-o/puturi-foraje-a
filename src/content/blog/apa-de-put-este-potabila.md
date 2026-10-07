@@ -1,30 +1,30 @@
 ---
-title: "Apa de put este potabila? Cum faci analiza apei"
+title: "Apa de puț este potabilă? Cum faci analiza apei"
 date: "2026-04-02"
 category: "Ghiduri"
-excerpt: "Cand este potabila apa dintr-un put, ce analize sunt utile si cum obtii apa de calitate mai buna."
+excerpt: "Când este potabilă apa dintr-un puț, ce analize sunt utile și cum obții apă de calitate mai bună."
 image: "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Apa de put este potabila? Analiza apei si sfaturi"
-seoDescription: "Este potabila apa de put? Afla cand poate fi consumata, ce analize de laborator sunt utile si cum obtii apa de calitate mai buna printr-un foraj."
+seoTitle: "Apa de puț este potabilă? Analiza apei și sfaturi"
+seoDescription: "Este potabilă apa de puț? Află când poate fi consumată, ce analize de laborator sunt utile și cum obții apă de calitate mai bună printr-un foraj."
 ---
 
-Apa de put **poate fi potabila**, insa acest lucru depinde de stratul din care provine si de zona. Singurul mod sigur de a confirma este o **analiza de laborator**. Un [foraj de adancime](/servicii/foraje-puturi-apa) ajunge de obicei la apa de calitate mai buna decat o fantana de suprafata.
+Apa de puț **poate fi potabilă**, însă acest lucru depinde de stratul din care provine și de zonă. Singurul mod sigur de a confirma este o **analiză de laborator**. Un [foraj de adâncime](/servicii/foraje-puturi-apa) ajunge de obicei la apă de calitate mai bună decât o fântână de suprafață.
 
-## De ce conteaza stratul
+## De ce contează stratul
 
-Apa din stratul freatic de suprafata este mai expusa la nitrati si contaminanti (din agricultura sau canalizari). Apa din straturi mai adanci este, de regula, mai protejata si mai curata.
+Apa din stratul freatic de suprafață este mai expusă la nitrați și contaminanți (din agricultură sau canalizări). Apa din straturi mai adânci este, de regulă, mai protejată și mai curată.
 
 ## Ce analize sunt utile
 
-- **Analiza bacteriologica** (bacterii, contaminare)
-- **Analiza fizico-chimica** (nitrati, duritate, fier, pH)
+- **Analiza bacteriologică** (bacterii, contaminare)
+- **Analiza fizico-chimică** (nitrați, duritate, fier, pH)
 
-Recomandarea este sa faci analiza dupa executarea putului si periodic ulterior.
+Recomandarea este să faci analiza după executarea puțului și periodic ulterior.
 
-## Cum obtii apa mai buna
+## Cum obții apă mai bună
 
-- Forezi la stratul de adancime potrivit
-- Folosesti tubaj si filtre de calitate
-- Faci [mentenanta](/servicii/mentenanta-reparatii-puturi) periodica a putului
+- Forezi la stratul de adâncime potrivit
+- Folosești tubaj și filtre de calitate
+- Faci [mentenanță](/servicii/mentenanta-reparatii-puturi) periodică a puțului
 
-Vrei un put cu apa de calitate? [Cere o oferta](/contact) si iti recomandam solutia potrivita.
+Vrei un puț cu apă de calitate? [Cere o ofertă](/contact) și îți recomandăm soluția potrivită.

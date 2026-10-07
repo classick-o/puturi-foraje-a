@@ -1,0 +1,12 @@
+---
+// Banda de strat (simbol litologic) intre sectiuni - pagina "coboara" prin sol.
+interface Props {
+  layer: 'soil' | 'loess' | 'sand' | 'gravel' | 'clay' | 'water';
+  label?: string;
+}
+const { layer, label } = Astro.props;
+---
+
+<div class={`litho litho-${layer}`} role="presentation">
+  {label && <span class="litho-label hidden sm:inline">{label}</span>}
+</div>

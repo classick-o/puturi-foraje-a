@@ -1,5 +1,7 @@
 ---
-import Button from './Button.astro';
+// Finalul fiecarei pagini: "stratul de apa", cu apelul principal.
+import { Icon } from 'astro-icon/components';
+import Strata from './Strata.astro';
 import { site } from '../lib/site';
 import { withBase } from '../lib/url';
 
@@ -8,25 +10,35 @@ interface Props {
   subtitle?: string;
 }
 const {
-  title = 'Ai nevoie de un put? Afli pretul intr-un singur telefon.',
-  subtitle = 'Spune-ne localitatea si ce adancime crezi ca ai nevoie - iti dam pe loc o estimare, gratuit si fara obligatii.',
+  title = 'Ai nevoie de un puț? Afli prețul într-un telefon.',
+  subtitle = 'Spune-ne localitatea și pentru ce îți trebuie apa. Oferta e gratuită și fără obligații.',
 } = Astro.props;
 ---
 
-<section class="bg-primary">
-  <div class="hazard-stripe h-2" aria-hidden="true"></div>
-  <div class="wrap flex flex-col items-center gap-6 py-14 text-center lg:flex-row lg:justify-between lg:text-left">
-    <div class="max-w-2xl">
-      <h2 class="text-2xl !text-white sm:text-3xl">{title}</h2>
-      <p class="mt-2 text-white/70">{subtitle}</p>
-    </div>
-    <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-      <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill" data-cta="banda-cta">
-        Suna: {site.phone}
-      </Button>
-      <Button href={withBase('contact')} variant="outline-light" size="lg" icon="ph:paper-plane-tilt-fill">
-        Cere oferta scrisa
-      </Button>
+<Strata layer="water" label="strat acvifer" />
+<section class="water-texture text-white">
+  <div class="wrap py-16 sm:py-24">
+    <h2 class="max-w-4xl text-[3.4rem] !text-white sm:text-[5.6rem]">{title}</h2>
+    <p class="mt-5 max-w-xl text-[1.15rem] leading-relaxed text-white/85">{subtitle}</p>
+    <div class="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
+      <a
+        href={site.phoneHref}
+        data-cta="banda-cta"
+        class="inline-flex items-center justify-center gap-3 rounded-md bg-accent px-6 py-4 font-display text-[2.3rem] font-black tabular-nums text-primary shadow-[0_5px_0_#b38c00] hover:bg-accent-hover sm:text-[2.6rem]"
+      >
+        <Icon name="ph:phone-fill" class="text-[2rem]" />
+        {site.phone}
+      </a>
+      <div class="flex flex-col gap-2.5">
+        <a href={site.whatsapp} target="_blank" rel="noopener" data-cta="banda-cta" class="inline-flex items-center gap-2 font-bold underline decoration-2 underline-offset-4">
+          <Icon name="ph:whatsapp-logo-fill" class="text-2xl" />
+          Scrie-ne pe WhatsApp
+        </a>
+        <a href={withBase('contact')} class="inline-flex items-center gap-2 font-bold underline decoration-2 underline-offset-4">
+          <Icon name="ph:envelope-simple-fill" class="text-2xl" />
+          Cere ofertă scrisă
+        </a>
+      </div>
     </div>
   </div>
 </section>

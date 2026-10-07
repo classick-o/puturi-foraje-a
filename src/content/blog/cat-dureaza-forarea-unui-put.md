@@ -1,32 +1,32 @@
 ---
-title: "Cat dureaza forarea unui put de apa?"
+title: "Cât durează forarea unui puț de apă?"
 date: "2026-05-30"
 category: "Ghiduri"
-excerpt: "Cat timp ia un foraj, ce influenteaza durata si la ce sa te astepti in ziua lucrarii."
+excerpt: "Cât timp ia un foraj, ce influențează durata și la ce să te aștepți în ziua lucrării."
 image: "https://images.pexels.com/photos/31249536/pexels-photo-31249536.jpeg?auto=compress&cs=tinysrgb&w=1280"
-seoTitle: "Cat dureaza forarea unui put de apa? Ghid practic"
-seoDescription: "Cat dureaza un foraj de put: pentru adancimi obisnuite, de regula o zi. Afla ce influenteaza durata si la ce sa te astepti in ziua lucrarii."
+seoTitle: "Cât durează forarea unui puț de apă? Ghid practic"
+seoDescription: "Cât durează un foraj de puț: pentru adâncimi obișnuite, de regulă o zi. Află ce influențează durata și la ce să te aștepți în ziua lucrării."
 ---
 
-Pentru adancimi obisnuite, forarea unui put dureaza de regula **o singura zi**. La adancimi mari sau in terenuri dificile poate dura mai mult, insa iti spunem estimarea din start.
+Pentru adâncimi obișnuite, forarea unui puț durează de regulă **o singură zi**. La adâncimi mari sau în terenuri dificile poate dura mai mult, însă îți spunem estimarea din start.
 
-## Ce influenteaza durata
+## Ce influențează durata
 
-- **Adancimea** putului
-- **Tipul de sol si roca** - terenurile dure inainteaza mai greu
-- **Diametrul** si tipul de tubaj
-- **Accesul** utilajului la locatie
+- **Adâncimea** puțului
+- **Tipul de sol și rocă** - terenurile dure înaintează mai greu
+- **Diametrul** și tipul de tubaj
+- **Accesul** utilajului la locație
 
-## Ce se intampla in ziua lucrarii
+## Ce se întâmplă în ziua lucrării
 
-1. Pozitionam utilajul si pregatim zona
-2. Executam [forajul](/servicii/foraje-puturi-apa) pana la stratul de apa
-3. Introducem coloana de tubaj si filtrele
-4. Denisipam putul pana cand apa iese limpede
+1. Poziționăm utilajul și pregătim zona
+2. Executăm [forajul](/servicii/foraje-puturi-apa) până la stratul de apă
+3. Introducem coloana de tubaj și filtrele
+4. Denisipăm puțul până când apa iese limpede
 5. Facem testul de debit
 
-## Dupa foraj
+## După foraj
 
-Montajul pompei sau al hidroforului se poate face imediat sau ulterior. Vezi optiunile la [sisteme de pompare](/servicii/sisteme-de-pompare).
+Montajul pompei sau al hidroforului se poate face imediat sau ulterior. Vezi opțiunile la [sisteme de pompare](/servicii/sisteme-de-pompare).
 
-Vrei sa programezi un foraj? [Cere o oferta](/contact) si stabilim o data.
+Vrei să programezi un foraj? [Cere o ofertă](/contact) și stabilim o dată.

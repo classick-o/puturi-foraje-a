@@ -11,30 +11,30 @@ import { withBase } from '../../lib/url';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order).slice(0, 6);
 const localFacts = [
-  { icon: 'ph:ruler-duotone', title: 'Adancimi uzuale', text: 'In Bucuresti si Ilfov, apa de calitate se gaseste frecvent intre 40 si 90 m, in functie de zona.' },
-  { icon: 'ph:mountains-duotone', title: 'Tipul terenului', text: 'Straturi alternante de argila, nisip si pietris - adaptam tehnologia de foraj la fiecare locatie.' },
-  { icon: 'ph:lightning-duotone', title: 'Deplasare rapida', text: 'Fiind aproape, ajungem repede la tine pentru evaluare si executie.' },
+  { icon: 'ph:ruler-duotone', title: 'Adâncimi uzuale', text: 'În București și Ilfov, apa de calitate se găsește frecvent între 40 și 90 m, în funcție de zonă.' },
+  { icon: 'ph:mountains-duotone', title: 'Tipul terenului', text: 'Straturi alternante de argilă, nisip și pietriș - adaptăm tehnologia de foraj la fiecare locație.' },
+  { icon: 'ph:lightning-duotone', title: 'Deplasare rapidă', text: 'Fiind aproape, ajungem repede la tine pentru evaluare și execuție.' },
 ];
 ---
 
 <BaseLayout
-  title="Foraje puturi apa Bucuresti si Ilfov | Pret corect"
-  description="Foraje puturi de apa in Bucuresti si Ilfov: executie, denisipari si pompe de caldura. Adancimi uzuale, deplasare rapida, garantie in scris."
+  title="Foraje puțuri apă București și Ilfov | Preț corect"
+  description="Foraje puțuri de apă în București și Ilfov: execuție, denisipări și pompe de căldură. Adâncimi uzuale, deplasare rapidă, garanție în scris."
 >
   <PageHero
-    eyebrow="Zona: Bucuresti si Ilfov"
-    title="Foraje puturi apa in Bucuresti si Ilfov"
-    subtitle="Cunoastem bine terenul din zona si stim la ce adancimi sa cautam apa de calitate. Deplasare rapida si garantie in scris."
+    eyebrow="Zona: București și Ilfov"
+    title="Foraje puțuri apă în București și Ilfov"
+    subtitle="Cunoaștem bine terenul din zonă și știm la ce adâncimi să căutăm apă de calitate. Deplasare rapidă și garanție în scris."
     breadcrumb={[
-      { label: 'Acasa', href: withBase('') },
+      { label: 'Acasă', href: withBase('') },
       { label: 'Zone acoperite', href: withBase('zone-acoperite') },
-      { label: 'Bucuresti si Ilfov' },
+      { label: 'București și Ilfov' },
     ]}
   />
 
   <section class="py-16 sm:py-20">
     <div class="wrap">
-      <h2 class="text-3xl sm:text-4xl">Ce trebuie sa stii despre zona</h2>
+      <h2 class="text-3xl sm:text-4xl">Ce trebuie să știi despre zonă</h2>
       <div class="mt-8 grid gap-6 sm:grid-cols-3">
         {
           localFacts.map((f) => (
@@ -51,7 +51,7 @@ const localFacts = [
         }
       </div>
 
-      <h2 class="mt-16 text-3xl sm:text-4xl">Servicii oferite in zona</h2>
+      <h2 class="mt-16 text-3xl sm:text-4xl">Servicii oferite în zonă</h2>
       <CollapsibleCards label="Vezi toate serviciile" class="mt-8">
         <div data-collapse-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {
@@ -68,5 +68,5 @@ const localFacts = [
     </div>
   </section>
 
-  <CtaBand title="Faci un put in Bucuresti sau Ilfov? Cere oferta." />
+  <CtaBand title="Faci un puț în București sau Ilfov? Cere ofertă." />
 </BaseLayout>

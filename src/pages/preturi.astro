@@ -8,29 +8,29 @@ import { site } from '../lib/site';
 import { withBase } from '../lib/url';
 
 const factors = [
-  { icon: 'ph:ruler-duotone', label: 'Adancimea putului' },
+  { icon: 'ph:ruler-duotone', label: 'Adâncimea puțului' },
   { icon: 'ph:circle-dashed-duotone', label: 'Diametrul ales' },
-  { icon: 'ph:mountains-duotone', label: 'Tipul de sol si roca' },
+  { icon: 'ph:mountains-duotone', label: 'Tipul de sol și rocă' },
   { icon: 'ph:stack-duotone', label: 'Materialele de tubaj' },
-  { icon: 'ph:map-pin-duotone', label: 'Zona si accesul' },
+  { icon: 'ph:map-pin-duotone', label: 'Zona și accesul' },
   { icon: 'ph:calendar-dots-duotone', label: 'Sezonul' },
 ];
 const included = [
   'Forajul propriu-zis',
-  'Tubaj PVC si filtre',
-  'Denisiparea putului',
+  'Tubaj PVC și filtre',
+  'Denisiparea puțului',
   'Test de debit la final',
 ];
 ---
 
 <BaseLayout
-  title="Preturi foraje puturi apa"
-  description="Cat costa un foraj de put? Pretul se stabileste personalizat, in functie de terenul tau. Suna-ne pentru o oferta exacta, gratuita."
+  title="Prețuri foraje puțuri apă"
+  description="Cât costă un foraj de puț? Prețul se stabilește personalizat, în funcție de terenul tău. Sună-ne pentru o ofertă exactă, gratuită."
 >
   <PageHero
-    title="Cat costa un foraj de put?"
-    subtitle="Nu afisam un pret fix, pentru ca fiecare lucrare e diferita. Cel mai corect afli printr-un telefon: iti dam un pret exact, gratuit."
-    breadcrumb={[{ label: 'Acasa', href: withBase('') }, { label: 'Preturi' }]}
+    title="Cât costă un foraj de puț?"
+    subtitle="Nu afișăm un preț fix, pentru că fiecare lucrare e diferită. Cel mai corect afli printr-un telefon: îți dăm un preț exact, gratuit."
+    breadcrumb={[{ label: 'Acasă', href: withBase('') }, { label: 'Prețuri' }]}
   />
 
   <!-- CTA telefon principal -->
@@ -41,17 +41,17 @@ const included = [
           <Icon name="ph:phone-call-duotone" />
         </span>
         <div>
-          <h2 class="text-2xl sm:text-3xl">Afla pretul exact printr-un telefon</h2>
+          <h2 class="text-2xl sm:text-3xl">Află prețul exact printr-un telefon</h2>
           <p class="mx-auto mt-3 max-w-xl text-muted">
-            Spune-ne ce ai nevoie si unde te afli, iar noi iti dam pe loc o estimare corecta.
-            Consultanta si devizul sunt gratuite, fara obligatii.
+            Spune-ne ce ai nevoie și unde te afli, iar noi îți dăm pe loc o estimare corectă.
+            Consultanța și devizul sunt gratuite, fără obligații.
           </p>
         </div>
         <div class="flex flex-col gap-3 sm:flex-row">
           <Button href={site.phoneHref} variant="cta" size="lg" icon="ph:phone-call-fill">
-            Suna acum: {site.phone}
+            Sună acum: {site.phone}
           </Button>
-          <Button href={withBase('contact')} variant="outline" size="lg">Cere oferta online</Button>
+          <Button href={withBase('contact')} variant="outline" size="lg">Cere ofertă online</Button>
         </div>
       </div>
     </div>
@@ -60,10 +60,10 @@ const included = [
   <!-- De ce difera pretul -->
   <section class="pb-16 sm:pb-20">
     <div class="wrap">
-      <h2 class="text-3xl sm:text-4xl">De ce difera pretul</h2>
+      <h2 class="text-3xl sm:text-4xl">De ce diferă prețul</h2>
       <p class="mt-3 max-w-2xl text-muted">
-        Pretul unui foraj se calculeaza in functie de conditiile concrete ale terenului tau. Iata ce
-        conteaza cel mai mult:
+        Prețul unui foraj se calculează în funcție de condițiile concrete ale terenului tău. Iată ce
+        contează cel mai mult:
       </p>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
@@ -84,8 +84,8 @@ const included = [
       <div>
         <h2 class="text-3xl sm:text-4xl">Ce include oferta</h2>
         <p class="mt-4 leading-relaxed text-muted">
-          Vrem sa stii exact pe ce dai banii. In oferta pe care ti-o dam includem tot ce e necesar ca
-          putul sa functioneze, fara surprize pe parcurs.
+          Vrem să știi exact pe ce dai banii. În oferta pe care ți-o dăm includem tot ce e necesar ca
+          puțul să funcționeze, fără surprize pe parcurs.
         </p>
         <ul class="mt-6 space-y-3">
           {
@@ -99,20 +99,20 @@ const included = [
         </ul>
       </div>
       <div class="rounded-xl border border-border bg-background p-8 text-center">
-        <h3 class="text-2xl text-primary">Vrei un pret pentru situatia ta?</h3>
+        <h3 class="text-2xl text-primary">Vrei un preț pentru situația ta?</h3>
         <p class="mx-auto mt-3 max-w-md text-muted">
-          Un telefon scurt si iti spunem la ce sa te astepti. Fara obligatii.
+          Un telefon scurt și îți spunem la ce să te aștepți. Fără obligații.
         </p>
         <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-          <Button href={site.phoneHref} variant="cta" icon="ph:phone-call-fill">Suna acum</Button>
-          <Button href={withBase('contact')} variant="outline">Cere oferta</Button>
+          <Button href={site.phoneHref} variant="cta" icon="ph:phone-call-fill">Sună acum</Button>
+          <Button href={withBase('contact')} variant="outline">Cere ofertă</Button>
         </div>
       </div>
     </div>
   </section>
 
   <CtaBand
-    title="Nu te complici cu preturi fixe. Suna si afli pe loc."
-    subtitle="Consultanta si devizul sunt gratuite, fara obligatii."
+    title="Nu te complici cu prețuri fixe. Sună și afli pe loc."
+    subtitle="Consultanța și devizul sunt gratuite, fără obligații."
   />
 </BaseLayout>

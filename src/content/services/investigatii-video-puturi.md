@@ -1,39 +1,39 @@
 ---
-title: "Investigatii video puturi"
+title: "Investigații video puțuri"
 order: 8
 icon: "ph:video-camera-duotone"
-excerpt: "Inspectie cu camera video in interiorul putului, pentru o diagnoza precisa a problemelor."
-heroSubtitle: "Vedem exact ce se intampla in interiorul putului, ca sa rezolvam corect problema."
+excerpt: "Inspecție cu camera video în interiorul puțului, pentru o diagnoză precisă a problemelor."
+heroSubtitle: "Vedem exact ce se întâmplă în interiorul puțului, ca să rezolvăm corect problema."
 image: "https://images.pexels.com/photos/8961006/pexels-photo-8961006.jpeg?auto=compress&cs=tinysrgb&w=1280"
 forWhom:
-  - "Puturi cu probleme greu de identificat"
-  - "Inainte de o reabilitare sau adancire"
-  - "Verificarea starii tubajului si filtrelor"
+  - "Puțuri cu probleme greu de identificat"
+  - "Înainte de o reabilitare sau adâncire"
+  - "Verificarea stării tubajului și filtrelor"
 benefits:
-  - title: "Diagnoza precisa"
-    text: "Camera arata starea reala a coloanei, filtrelor si depunerilor, fara presupuneri."
+  - title: "Diagnoză precisă"
+    text: "Camera arată starea reală a coloanei, filtrelor și depunerilor, fără presupuneri."
   - title: "Decizii corecte"
-    text: "Pe baza filmarii stabilim exact ce interventie e necesara si evitam costuri inutile."
+    text: "Pe baza filmării stabilim exact ce intervenție e necesară și evităm costuri inutile."
   - title: "Raport clar"
-    text: "Primesti o imagine clara a starii putului, utila si pentru lucrari viitoare."
+    text: "Primești o imagine clară a stării puțului, utilă și pentru lucrări viitoare."
 specs:
-  - label: "Metoda"
-    value: "Inspectie cu camera video specializata"
+  - label: "Metodă"
+    value: "Inspecție cu camera video specializată"
   - label: "Util pentru"
-    value: "Diagnoza, denisipare, reabilitare, adancire"
+    value: "Diagnoză, denisipare, reabilitare, adâncire"
 faq:
-  - q: "Cand e utila investigatia video?"
-    a: "Cand putul are probleme greu de identificat sau inainte de o reabilitare, ca sa stim exact unde si cum sa intervenim."
+  - q: "Când e utilă investigația video?"
+    a: "Când puțul are probleme greu de identificat sau înainte de o reabilitare, ca să știm exact unde și cum să intervenim."
   - q: "Primesc filmarea?"
-    a: "Da, iti punem la dispozitie inregistrarea si concluziile pentru deciziile urmatoare."
-seoTitle: "Investigatii video puturi | Inspectie cu camera, diagnoza"
-seoDescription: "Inspectie video in interiorul putului pentru o diagnoza precisa: starea tubajului, filtrelor si depunerilor. Decizii corecte, fara costuri inutile."
+    a: "Da, îți punem la dispoziție înregistrarea și concluziile pentru deciziile următoare."
+seoTitle: "Investigații video puțuri | Inspecție cu camera, diagnoză"
+seoDescription: "Inspecție video în interiorul puțului pentru o diagnoză precisă: starea tubajului, filtrelor și depunerilor. Decizii corecte, fără costuri inutile."
 ---
 
 ## Vedem problema, nu o ghicim
 
-Investigatia video presupune introducerea unei camere specializate in interiorul putului, pentru a vedea exact starea coloanei, a filtrelor si nivelul depunerilor. Este cel mai sigur mod de a stabili o diagnoza corecta.
+Investigația video presupune introducerea unei camere specializate în interiorul puțului, pentru a vedea exact starea coloanei, a filtrelor și nivelul depunerilor. Este cel mai sigur mod de a stabili o diagnoză corectă.
 
-## Cand o recomandam
+## Când o recomandăm
 
-Este foarte utila cand putul are probleme greu de identificat sau inainte de o denisipare, reabilitare ori adancire. Pe baza filmarii stabilim exact interventia necesara si evitam cheltuielile inutile.
+Este foarte utilă când puțul are probleme greu de identificat sau înainte de o denisipare, reabilitare ori adâncire. Pe baza filmării stabilim exact intervenția necesară și evităm cheltuielile inutile.

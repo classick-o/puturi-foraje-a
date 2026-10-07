@@ -24,20 +24,19 @@ const {
 } = Astro.props;
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold rounded-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-60 disabled:pointer-events-none';
+  'inline-flex items-center justify-center gap-2 font-bold rounded-md transition-colors duration-150 disabled:opacity-60 disabled:pointer-events-none';
 
 const sizes: Record<string, string> = {
-  md: 'text-[0.95rem] px-5 py-2.5',
-  lg: 'text-base px-7 py-3.5',
+  md: 'text-[1rem] px-5 py-2.5',
+  lg: 'text-[1.05rem] px-6 py-3.5',
 };
 
 const variants: Record<string, string> = {
-  cta: 'bg-accent text-primary hover:bg-accent-hover shadow-md hover:-translate-y-px focus-visible:ring-accent',
-  primary: 'bg-secondary text-white hover:bg-secondary-hover shadow-sm focus-visible:ring-secondary',
-  outline:
-    'border-[1.5px] border-primary/20 text-primary hover:border-secondary hover:bg-secondary-soft focus-visible:ring-secondary',
-  'outline-light': 'border-[1.5px] border-white/30 text-white hover:bg-white/10 focus-visible:ring-white',
-  ghost: 'text-primary hover:bg-primary/5 focus-visible:ring-secondary',
+  cta: 'bg-accent text-primary hover:bg-accent-hover shadow-[0_3px_0_#b38c00]',
+  primary: 'bg-secondary text-white hover:bg-secondary-hover shadow-[0_3px_0_#0b4a86]',
+  outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
+  'outline-light': 'border-2 border-white/60 text-white hover:bg-white hover:text-primary',
+  ghost: 'text-primary underline decoration-2 underline-offset-4 decoration-secondary hover:decoration-primary',
 };
 
 const cl = [base, sizes[size], variants[variant], cls].join(' ');
