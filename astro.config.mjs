@@ -3,12 +3,11 @@ import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 
-// --- GitHub Pages (TEMPORAR) ------------------------------------------------
-// Subpath-ul sub care ruleaza site-ul. Este singura sursa de adevar:
-// il folosesc si `base`, si helper-ul `withBase`, si linkurile interne din
-// continut (via plugin-ul de mai jos). La mutarea pe domeniu propriu:
-// schimba `site` pe domeniul real si seteaza BASE = '/'.
-const BASE = '/puturi-foraje-a/';
+// --- Domeniu: forajeputurideapa.ro (Cloudflare Pages) ------------------------
+// BASE este singura sursa de adevar pentru subpath: il folosesc `base`, helper-ul
+// `withBase` si linkurile interne din continut (via plugin-ul de mai jos).
+// Pe domeniul propriu site-ul ruleaza la radacina, deci BASE = '/'.
+const BASE = '/';
 // ---------------------------------------------------------------------------
 
 // Prefixeaza automat linkurile interne din Markdown (ex: /servicii/...) cu BASE,
@@ -30,7 +29,7 @@ function rehypeInternalLinks() {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://classick-o.github.io',
+  site: 'https://forajeputurideapa.ro',
   base: BASE,
   markdown: {
     rehypePlugins: [rehypeInternalLinks],

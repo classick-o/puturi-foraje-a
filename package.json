@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build && set -a && . ./secrets.env && set +a && wrangler pages deploy dist --project-name=forajeputurideapa --branch=main"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
@@ -19,5 +20,8 @@
     "astro": "^5.7.0",
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.148.0"
   }
 }

@@ -15,3 +15,7 @@ pnpm-debug.log*
 # macOS / editor
 .DS_Store
 Thumbs.db
+
+# secrete locale
+secrets.env
+*.env
